@@ -1,0 +1,3 @@
+[![Build status](https://ci.appveyor.com/api/projects/status/eajbppflhmoeu3wk?svg=true)](https://ci.appveyor.com/project/dariogriffo/tron-net-protocol)
+[![NuGet](https://img.shields.io/nuget/v/Tron.Net.Protocol.svg?style=flat)](https://www.nuget.org/packages/Tron.Net.Protocol/) 
+[![GitHub license](https://img.shields.io/github/license/griffo-io/tron.net.protocol.svg)](https://github.com/griffo-io/tron.net.protocol/blob/master/src/LICENSE)
