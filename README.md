@@ -25,3 +25,6 @@ The latest stable release of the Tron.Net.Protocol [available on NuGet](https://
   - Edit the .csproj file and remove the `:: ` from the `Exec Command=`
   - Build the solution
   
+  
+Logo Provided by [Vecteezy](https://vecteezy.com)
+  
