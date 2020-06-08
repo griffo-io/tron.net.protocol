@@ -1,8 +1,8 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 
 <PropertyGroup>
     <TargetFrameworks>netstandard2.0;netstandard2.1;net45;net46</TargetFrameworks>
-    <Version>3.6.6</Version>
+    <Version>3.7.0</Version>
     <Authors>https://github.com/griffo-io</Authors>
     <Company>https://github.com/griffo-io</Company>
     <Product>Tron.Net.Protocol</Product>

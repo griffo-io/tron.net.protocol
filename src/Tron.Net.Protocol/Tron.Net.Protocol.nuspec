@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2013/05/nuspec.xsd">
   <metadata>
     <id>Tron.Net.Protocol</id>
-    <version>3.6.6</version>
+    <version>3.7.0</version>
     <authors>https://github.com/griffo-io</authors>
     <owners>https://github.com/griffo-io</owners>
     <tags>Tron</tags>
@@ -13,7 +13,7 @@
     <description>Tron Protocol GRPC calls</description>
     <copyright>griffo.io</copyright>
     <repository url="https://github.com/griffo-io/tron.net.protocol" />
-    <releaseNotes>Fixed nuspec file to remove deprecated warnings. Fixed packages dependencies. Moved project to own git repository</releaseNotes>
+    <releaseNotes>Updated to Odyssey-3.7</releaseNotes>
     <dependencies>
         <group targetFramework=".NETFramework4.5">
             <dependency id="Google.Protobuf" version="3.11.2" exclude="Build,Analyzers" />
