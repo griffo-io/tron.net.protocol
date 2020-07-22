@@ -2,7 +2,7 @@
 
 <PropertyGroup>
     <TargetFrameworks>netstandard2.0;netstandard2.1;net45;net46</TargetFrameworks>
-    <Version>3.7.0</Version>
+    <Version>4.0.0</Version>
     <Authors>https://github.com/griffo-io</Authors>
     <Company>https://github.com/griffo-io</Company>
     <Product>Tron.Net.Protocol</Product>
@@ -27,7 +27,7 @@
   </ItemGroup>
 
   <Target Name="PreBuild" BeforeTargets="PreBuildEvent">
-    <Exec Command=":: $(ProjectDir)PreBuild\generate-classes-from-protofiles.cmd &quot;$(SolutionDir)&quot; &quot;$(ProjectDir)&quot; &quot;$(NuGetPackageRoot)&quot; 3.11.2 2.26.0 &quot;$(SolutionDir)requirements\protos&quot;" />
+    <Exec Command="$(ProjectDir)PreBuild\generate-classes-from-protofiles.cmd &quot;$(SolutionDir)&quot; &quot;$(ProjectDir)&quot; &quot;$(NuGetPackageRoot)&quot; 3.11.2 2.26.0 &quot;$(SolutionDir)requirements\protos&quot;" />
   </Target>
 
 </Project>

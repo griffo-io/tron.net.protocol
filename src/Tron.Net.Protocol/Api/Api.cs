@@ -25,104 +25,209 @@ namespace Tron.Net.Protocol {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Chp0cm9ucHJvdG9jb2wvYXBpL2FwaS5wcm90bxIIcHJvdG9jb2waD2NvcmUv",
-            "VHJvbi5wcm90bxoTY29yZS9Db250cmFjdC5wcm90bxocZ29vZ2xlL2FwaS9h",
-            "bm5vdGF0aW9ucy5wcm90byKUAwoGUmV0dXJuEg4KBnJlc3VsdBgBIAEoCBIs",
-            "CgRjb2RlGAIgASgOMh4ucHJvdG9jb2wuUmV0dXJuLnJlc3BvbnNlX2NvZGUS",
-            "DwoHbWVzc2FnZRgDIAEoDCK6AgoNcmVzcG9uc2VfY29kZRILCgdTVUNDRVNT",
-            "EAASDAoIU0lHRVJST1IQARIbChdDT05UUkFDVF9WQUxJREFURV9FUlJPUhAC",
-            "EhYKEkNPTlRSQUNUX0VYRV9FUlJPUhADEhIKDkJBTkRXSVRIX0VSUk9SEAQS",
-            "GQoVRFVQX1RSQU5TQUNUSU9OX0VSUk9SEAUSDwoLVEFQT1NfRVJST1IQBhId",
-            "ChlUT09fQklHX1RSQU5TQUNUSU9OX0VSUk9SEAcSIAocVFJBTlNBQ1RJT05f",
-            "RVhQSVJBVElPTl9FUlJPUhAIEg8KC1NFUlZFUl9CVVNZEAkSEQoNTk9fQ09O",
-            "TkVDVElPThAKEiMKH05PVF9FTk9VR0hfRUZGRUNUSVZFX0NPTk5FQ1RJT04Q",
-            "CxIPCgtPVEhFUl9FUlJPUhAUIjcKDkJsb2NrUmVmZXJlbmNlEhEKCWJsb2Nr",
-            "X251bRgBIAEoAxISCgpibG9ja19oYXNoGAIgASgMIjMKC1dpdG5lc3NMaXN0",
-            "EiQKCXdpdG5lc3NlcxgBIAMoCzIRLnByb3RvY29sLldpdG5lc3MiNQoMUHJv",
-            "cG9zYWxMaXN0EiUKCXByb3Bvc2FscxgBIAMoCzISLnByb3RvY29sLlByb3Bv",
-            "c2FsIjUKDEV4Y2hhbmdlTGlzdBIlCglleGNoYW5nZXMYASADKAsyEi5wcm90",
-            "b2NvbC5FeGNoYW5nZSJCCg5Bc3NldElzc3VlTGlzdBIwCgphc3NldElzc3Vl",
-            "GAEgAygLMhwucHJvdG9jb2wuQXNzZXRJc3N1ZUNvbnRyYWN0IisKCUJsb2Nr",
-            "TGlzdBIeCgVibG9jaxgBIAMoCzIPLnByb3RvY29sLkJsb2NrIj0KD1RyYW5z",
-            "YWN0aW9uTGlzdBIqCgt0cmFuc2FjdGlvbhgBIAMoCzIVLnByb3RvY29sLlRy",
-            "YW5zYWN0aW9uIkIKGERlbGVnYXRlZFJlc291cmNlTWVzc2FnZRITCgtmcm9t",
-            "QWRkcmVzcxgBIAEoDBIRCgl0b0FkZHJlc3MYAiABKAwiTwoVRGVsZWdhdGVk",
-            "UmVzb3VyY2VMaXN0EjYKEWRlbGVnYXRlZFJlc291cmNlGAEgAygLMhsucHJv",
-            "dG9jb2wuRGVsZWdhdGVkUmVzb3VyY2UiKQoITm9kZUxpc3QSHQoFbm9kZXMY",
-            "ASADKAsyDi5wcm90b2NvbC5Ob2RlIioKBE5vZGUSIgoHYWRkcmVzcxgBIAEo",
-            "CzIRLnByb3RvY29sLkFkZHJlc3MiJQoHQWRkcmVzcxIMCgRob3N0GAEgASgM",
-            "EgwKBHBvcnQYAiABKAUiDgoMRW1wdHlNZXNzYWdlIhwKDU51bWJlck1lc3Nh",
-            "Z2USCwoDbnVtGAEgASgDIh0KDEJ5dGVzTWVzc2FnZRINCgV2YWx1ZRgBIAEo",
-            "DCJFCgtUaW1lTWVzc2FnZRIbChNiZWdpbkluTWlsbGlzZWNvbmRzGAEgASgD",
-            "EhkKEWVuZEluTWlsbGlzZWNvbmRzGAIgASgDIi4KCkJsb2NrTGltaXQSEAoI",
-            "c3RhcnROdW0YASABKAMSDgoGZW5kTnVtGAIgASgDIjsKEFRyYW5zYWN0aW9u",
-            "TGltaXQSFQoNdHJhbnNhY3Rpb25JZBgBIAEoDBIQCghsaW1pdE51bRgCIAEo",
-            "AyJVChBBY2NvdW50UGFnaW5hdGVkEiIKB2FjY291bnQYASABKAsyES5wcm90",
-            "b2NvbC5BY2NvdW50Eg4KBm9mZnNldBgCIAEoAxINCgVsaW1pdBgDIAEoAyJh",
-            "ChRUaW1lUGFnaW5hdGVkTWVzc2FnZRIqCgt0aW1lTWVzc2FnZRgBIAEoCzIV",
-            "LnByb3RvY29sLlRpbWVNZXNzYWdlEg4KBm9mZnNldBgCIAEoAxINCgVsaW1p",
-            "dBgDIAEoAyKHAwoRQWNjb3VudE5ldE1lc3NhZ2USEwoLZnJlZU5ldFVzZWQY",
-            "ASABKAMSFAoMZnJlZU5ldExpbWl0GAIgASgDEg8KB05ldFVzZWQYAyABKAMS",
-            "EAoITmV0TGltaXQYBCABKAMSQwoMYXNzZXROZXRVc2VkGAUgAygLMi0ucHJv",
-            "dG9jb2wuQWNjb3VudE5ldE1lc3NhZ2UuQXNzZXROZXRVc2VkRW50cnkSRQoN",
-            "YXNzZXROZXRMaW1pdBgGIAMoCzIuLnByb3RvY29sLkFjY291bnROZXRNZXNz",
-            "YWdlLkFzc2V0TmV0TGltaXRFbnRyeRIVCg1Ub3RhbE5ldExpbWl0GAcgASgD",
-            "EhYKDlRvdGFsTmV0V2VpZ2h0GAggASgDGjMKEUFzc2V0TmV0VXNlZEVudHJ5",
-            "EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgCIAEoAzoCOAEaNAoSQXNzZXROZXRM",
-            "aW1pdEVudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgCIAEoAzoCOAEinwQK",
-            "FkFjY291bnRSZXNvdXJjZU1lc3NhZ2USEwoLZnJlZU5ldFVzZWQYASABKAMS",
-            "FAoMZnJlZU5ldExpbWl0GAIgASgDEg8KB05ldFVzZWQYAyABKAMSEAoITmV0",
-            "TGltaXQYBCABKAMSSAoMYXNzZXROZXRVc2VkGAUgAygLMjIucHJvdG9jb2wu",
-            "QWNjb3VudFJlc291cmNlTWVzc2FnZS5Bc3NldE5ldFVzZWRFbnRyeRJKCg1h",
-            "c3NldE5ldExpbWl0GAYgAygLMjMucHJvdG9jb2wuQWNjb3VudFJlc291cmNl",
-            "TWVzc2FnZS5Bc3NldE5ldExpbWl0RW50cnkSFQoNVG90YWxOZXRMaW1pdBgH",
-            "IAEoAxIWCg5Ub3RhbE5ldFdlaWdodBgIIAEoAxISCgpFbmVyZ3lVc2VkGA0g",
-            "ASgDEhMKC0VuZXJneUxpbWl0GA4gASgDEhgKEFRvdGFsRW5lcmd5TGltaXQY",
-            "DyABKAMSGQoRVG90YWxFbmVyZ3lXZWlnaHQYECABKAMSEwoLc3RvcmFnZVVz",
-            "ZWQYFSABKAMSFAoMc3RvcmFnZUxpbWl0GBYgASgDGjMKEUFzc2V0TmV0VXNl",
-            "ZEVudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgCIAEoAzoCOAEaNAoSQXNz",
-            "ZXROZXRMaW1pdEVudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgCIAEoAzoC",
-            "OAEiMQoQUGFnaW5hdGVkTWVzc2FnZRIOCgZvZmZzZXQYASABKAMSDQoFbGlt",
-            "aXQYAiABKAMiTAoTRWFzeVRyYW5zZmVyTWVzc2FnZRISCgpwYXNzUGhyYXNl",
-            "GAEgASgMEhEKCXRvQWRkcmVzcxgCIAEoDBIOCgZhbW91bnQYAyABKAMiYgoY",
-            "RWFzeVRyYW5zZmVyQXNzZXRNZXNzYWdlEhIKCnBhc3NQaHJhc2UYASABKAwS",
-            "EQoJdG9BZGRyZXNzGAIgASgMEg8KB2Fzc2V0SWQYAyABKAkSDgoGYW1vdW50",
-            "GAQgASgDIlUKHEVhc3lUcmFuc2ZlckJ5UHJpdmF0ZU1lc3NhZ2USEgoKcHJp",
-            "dmF0ZUtleRgBIAEoDBIRCgl0b0FkZHJlc3MYAiABKAwSDgoGYW1vdW50GAMg",
-            "ASgDImsKIUVhc3lUcmFuc2ZlckFzc2V0QnlQcml2YXRlTWVzc2FnZRISCgpw",
-            "cml2YXRlS2V5GAEgASgMEhEKCXRvQWRkcmVzcxgCIAEoDBIPCgdhc3NldElk",
-            "GAMgASgJEg4KBmFtb3VudBgEIAEoAyJyChRFYXN5VHJhbnNmZXJSZXNwb25z",
-            "ZRIqCgt0cmFuc2FjdGlvbhgBIAEoCzIVLnByb3RvY29sLlRyYW5zYWN0aW9u",
-            "EiAKBnJlc3VsdBgCIAEoCzIQLnByb3RvY29sLlJldHVybhIMCgR0eGlkGAMg",
-            "ASgMIj4KF0FkZHJlc3NQcktleVBhaXJNZXNzYWdlEg8KB2FkZHJlc3MYASAB",
-            "KAkSEgoKcHJpdmF0ZUtleRgCIAEoCSKLAQoUVHJhbnNhY3Rpb25FeHRlbnRp",
-            "b24SKgoLdHJhbnNhY3Rpb24YASABKAsyFS5wcm90b2NvbC5UcmFuc2FjdGlv",
-            "bhIMCgR0eGlkGAIgASgMEhcKD2NvbnN0YW50X3Jlc3VsdBgDIAMoDBIgCgZy",
-            "ZXN1bHQYBCABKAsyEC5wcm90b2NvbC5SZXR1cm4ihAEKDkJsb2NrRXh0ZW50",
-            "aW9uEjQKDHRyYW5zYWN0aW9ucxgBIAMoCzIeLnByb3RvY29sLlRyYW5zYWN0",
-            "aW9uRXh0ZW50aW9uEisKDGJsb2NrX2hlYWRlchgCIAEoCzIVLnByb3RvY29s",
-            "LkJsb2NrSGVhZGVyEg8KB2Jsb2NraWQYAyABKAwiPQoSQmxvY2tMaXN0RXh0",
-            "ZW50aW9uEicKBWJsb2NrGAEgAygLMhgucHJvdG9jb2wuQmxvY2tFeHRlbnRp",
-            "b24iTwoYVHJhbnNhY3Rpb25MaXN0RXh0ZW50aW9uEjMKC3RyYW5zYWN0aW9u",
-            "GAEgAygLMh4ucHJvdG9jb2wuVHJhbnNhY3Rpb25FeHRlbnRpb24i3wMKFVRy",
-            "YW5zYWN0aW9uU2lnbldlaWdodBIoCgpwZXJtaXNzaW9uGAEgASgLMhQucHJv",
-            "dG9jb2wuUGVybWlzc2lvbhIVCg1hcHByb3ZlZF9saXN0GAIgAygMEhYKDmN1",
-            "cnJlbnRfd2VpZ2h0GAMgASgDEjYKBnJlc3VsdBgEIAEoCzImLnByb3RvY29s",
-            "LlRyYW5zYWN0aW9uU2lnbldlaWdodC5SZXN1bHQSMwoLdHJhbnNhY3Rpb24Y",
-            "BSABKAsyHi5wcm90b2NvbC5UcmFuc2FjdGlvbkV4dGVudGlvbhr/AQoGUmVz",
-            "dWx0EkIKBGNvZGUYASABKA4yNC5wcm90b2NvbC5UcmFuc2FjdGlvblNpZ25X",
-            "ZWlnaHQuUmVzdWx0LnJlc3BvbnNlX2NvZGUSDwoHbWVzc2FnZRgCIAEoCSKf",
-            "AQoNcmVzcG9uc2VfY29kZRIVChFFTk9VR0hfUEVSTUlTU0lPThAAEhkKFU5P",
-            "VF9FTk9VR0hfUEVSTUlTU0lPThABEhoKFlNJR05BVFVSRV9GT1JNQVRfRVJS",
-            "T1IQAhIZChVDT01QVVRFX0FERFJFU1NfRVJST1IQAxIUChBQRVJNSVNTSU9O",
-            "X0VSUk9SEAQSDwoLT1RIRVJfRVJST1IQFCLnAgoXVHJhbnNhY3Rpb25BcHBy",
-            "b3ZlZExpc3QSFQoNYXBwcm92ZWRfbGlzdBgCIAMoDBI4CgZyZXN1bHQYBCAB",
-            "KAsyKC5wcm90b2NvbC5UcmFuc2FjdGlvbkFwcHJvdmVkTGlzdC5SZXN1bHQS",
-            "MwoLdHJhbnNhY3Rpb24YBSABKAsyHi5wcm90b2NvbC5UcmFuc2FjdGlvbkV4",
-            "dGVudGlvbhrFAQoGUmVzdWx0EkQKBGNvZGUYASABKA4yNi5wcm90b2NvbC5U",
-            "cmFuc2FjdGlvbkFwcHJvdmVkTGlzdC5SZXN1bHQucmVzcG9uc2VfY29kZRIP",
-            "CgdtZXNzYWdlGAIgASgJImQKDXJlc3BvbnNlX2NvZGUSCwoHU1VDQ0VTUxAA",
-            "EhoKFlNJR05BVFVSRV9GT1JNQVRfRVJST1IQARIZChVDT01QVVRFX0FERFJF",
-            "U1NfRVJST1IQAhIPCgtPVEhFUl9FUlJPUhAUMoBUCgZXYWxsZXQSZwoKR2V0",
+            "VHJvbi5wcm90bxocZ29vZ2xlL2FwaS9hbm5vdGF0aW9ucy5wcm90bxooY29y",
+            "ZS9jb250cmFjdC9hc3NldF9pc3N1ZV9jb250cmFjdC5wcm90bxokY29yZS9j",
+            "b250cmFjdC9hY2NvdW50X2NvbnRyYWN0LnByb3RvGiRjb3JlL2NvbnRyYWN0",
+            "L3dpdG5lc3NfY29udHJhY3QucHJvdG8aJGNvcmUvY29udHJhY3QvYmFsYW5j",
+            "ZV9jb250cmFjdC5wcm90bxolY29yZS9jb250cmFjdC9wcm9wb3NhbF9jb250",
+            "cmFjdC5wcm90bxokY29yZS9jb250cmFjdC9zdG9yYWdlX2NvbnRyYWN0LnBy",
+            "b3RvGiVjb3JlL2NvbnRyYWN0L2V4Y2hhbmdlX2NvbnRyYWN0LnByb3RvGiJj",
+            "b3JlL2NvbnRyYWN0L3NtYXJ0X2NvbnRyYWN0LnByb3RvGiNjb3JlL2NvbnRy",
+            "YWN0L3NoaWVsZF9jb250cmFjdC5wcm90byKUAwoGUmV0dXJuEg4KBnJlc3Vs",
+            "dBgBIAEoCBIsCgRjb2RlGAIgASgOMh4ucHJvdG9jb2wuUmV0dXJuLnJlc3Bv",
+            "bnNlX2NvZGUSDwoHbWVzc2FnZRgDIAEoDCK6AgoNcmVzcG9uc2VfY29kZRIL",
+            "CgdTVUNDRVNTEAASDAoIU0lHRVJST1IQARIbChdDT05UUkFDVF9WQUxJREFU",
+            "RV9FUlJPUhACEhYKEkNPTlRSQUNUX0VYRV9FUlJPUhADEhIKDkJBTkRXSVRI",
+            "X0VSUk9SEAQSGQoVRFVQX1RSQU5TQUNUSU9OX0VSUk9SEAUSDwoLVEFQT1Nf",
+            "RVJST1IQBhIdChlUT09fQklHX1RSQU5TQUNUSU9OX0VSUk9SEAcSIAocVFJB",
+            "TlNBQ1RJT05fRVhQSVJBVElPTl9FUlJPUhAIEg8KC1NFUlZFUl9CVVNZEAkS",
+            "EQoNTk9fQ09OTkVDVElPThAKEiMKH05PVF9FTk9VR0hfRUZGRUNUSVZFX0NP",
+            "Tk5FQ1RJT04QCxIPCgtPVEhFUl9FUlJPUhAUIjcKDkJsb2NrUmVmZXJlbmNl",
+            "EhEKCWJsb2NrX251bRgBIAEoAxISCgpibG9ja19oYXNoGAIgASgMIjMKC1dp",
+            "dG5lc3NMaXN0EiQKCXdpdG5lc3NlcxgBIAMoCzIRLnByb3RvY29sLldpdG5l",
+            "c3MiNQoMUHJvcG9zYWxMaXN0EiUKCXByb3Bvc2FscxgBIAMoCzISLnByb3Rv",
+            "Y29sLlByb3Bvc2FsIjUKDEV4Y2hhbmdlTGlzdBIlCglleGNoYW5nZXMYASAD",
+            "KAsyEi5wcm90b2NvbC5FeGNoYW5nZSJCCg5Bc3NldElzc3VlTGlzdBIwCgph",
+            "c3NldElzc3VlGAEgAygLMhwucHJvdG9jb2wuQXNzZXRJc3N1ZUNvbnRyYWN0",
+            "IisKCUJsb2NrTGlzdBIeCgVibG9jaxgBIAMoCzIPLnByb3RvY29sLkJsb2Nr",
+            "Ij0KD1RyYW5zYWN0aW9uTGlzdBIqCgt0cmFuc2FjdGlvbhgBIAMoCzIVLnBy",
+            "b3RvY29sLlRyYW5zYWN0aW9uIkIKGERlbGVnYXRlZFJlc291cmNlTWVzc2Fn",
+            "ZRITCgtmcm9tQWRkcmVzcxgBIAEoDBIRCgl0b0FkZHJlc3MYAiABKAwiTwoV",
+            "RGVsZWdhdGVkUmVzb3VyY2VMaXN0EjYKEWRlbGVnYXRlZFJlc291cmNlGAEg",
+            "AygLMhsucHJvdG9jb2wuRGVsZWdhdGVkUmVzb3VyY2UiKQoITm9kZUxpc3QS",
+            "HQoFbm9kZXMYASADKAsyDi5wcm90b2NvbC5Ob2RlIioKBE5vZGUSIgoHYWRk",
+            "cmVzcxgBIAEoCzIRLnByb3RvY29sLkFkZHJlc3MiJQoHQWRkcmVzcxIMCgRo",
+            "b3N0GAEgASgMEgwKBHBvcnQYAiABKAUiDgoMRW1wdHlNZXNzYWdlIhwKDU51",
+            "bWJlck1lc3NhZ2USCwoDbnVtGAEgASgDIh0KDEJ5dGVzTWVzc2FnZRINCgV2",
+            "YWx1ZRgBIAEoDCJFCgtUaW1lTWVzc2FnZRIbChNiZWdpbkluTWlsbGlzZWNv",
+            "bmRzGAEgASgDEhkKEWVuZEluTWlsbGlzZWNvbmRzGAIgASgDIi4KCkJsb2Nr",
+            "TGltaXQSEAoIc3RhcnROdW0YASABKAMSDgoGZW5kTnVtGAIgASgDIjsKEFRy",
+            "YW5zYWN0aW9uTGltaXQSFQoNdHJhbnNhY3Rpb25JZBgBIAEoDBIQCghsaW1p",
+            "dE51bRgCIAEoAyJVChBBY2NvdW50UGFnaW5hdGVkEiIKB2FjY291bnQYASAB",
+            "KAsyES5wcm90b2NvbC5BY2NvdW50Eg4KBm9mZnNldBgCIAEoAxINCgVsaW1p",
+            "dBgDIAEoAyJhChRUaW1lUGFnaW5hdGVkTWVzc2FnZRIqCgt0aW1lTWVzc2Fn",
+            "ZRgBIAEoCzIVLnByb3RvY29sLlRpbWVNZXNzYWdlEg4KBm9mZnNldBgCIAEo",
+            "AxINCgVsaW1pdBgDIAEoAyKHAwoRQWNjb3VudE5ldE1lc3NhZ2USEwoLZnJl",
+            "ZU5ldFVzZWQYASABKAMSFAoMZnJlZU5ldExpbWl0GAIgASgDEg8KB05ldFVz",
+            "ZWQYAyABKAMSEAoITmV0TGltaXQYBCABKAMSQwoMYXNzZXROZXRVc2VkGAUg",
+            "AygLMi0ucHJvdG9jb2wuQWNjb3VudE5ldE1lc3NhZ2UuQXNzZXROZXRVc2Vk",
+            "RW50cnkSRQoNYXNzZXROZXRMaW1pdBgGIAMoCzIuLnByb3RvY29sLkFjY291",
+            "bnROZXRNZXNzYWdlLkFzc2V0TmV0TGltaXRFbnRyeRIVCg1Ub3RhbE5ldExp",
+            "bWl0GAcgASgDEhYKDlRvdGFsTmV0V2VpZ2h0GAggASgDGjMKEUFzc2V0TmV0",
+            "VXNlZEVudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgCIAEoAzoCOAEaNAoS",
+            "QXNzZXROZXRMaW1pdEVudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgCIAEo",
+            "AzoCOAEinwQKFkFjY291bnRSZXNvdXJjZU1lc3NhZ2USEwoLZnJlZU5ldFVz",
+            "ZWQYASABKAMSFAoMZnJlZU5ldExpbWl0GAIgASgDEg8KB05ldFVzZWQYAyAB",
+            "KAMSEAoITmV0TGltaXQYBCABKAMSSAoMYXNzZXROZXRVc2VkGAUgAygLMjIu",
+            "cHJvdG9jb2wuQWNjb3VudFJlc291cmNlTWVzc2FnZS5Bc3NldE5ldFVzZWRF",
+            "bnRyeRJKCg1hc3NldE5ldExpbWl0GAYgAygLMjMucHJvdG9jb2wuQWNjb3Vu",
+            "dFJlc291cmNlTWVzc2FnZS5Bc3NldE5ldExpbWl0RW50cnkSFQoNVG90YWxO",
+            "ZXRMaW1pdBgHIAEoAxIWCg5Ub3RhbE5ldFdlaWdodBgIIAEoAxISCgpFbmVy",
+            "Z3lVc2VkGA0gASgDEhMKC0VuZXJneUxpbWl0GA4gASgDEhgKEFRvdGFsRW5l",
+            "cmd5TGltaXQYDyABKAMSGQoRVG90YWxFbmVyZ3lXZWlnaHQYECABKAMSEwoL",
+            "c3RvcmFnZVVzZWQYFSABKAMSFAoMc3RvcmFnZUxpbWl0GBYgASgDGjMKEUFz",
+            "c2V0TmV0VXNlZEVudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgCIAEoAzoC",
+            "OAEaNAoSQXNzZXROZXRMaW1pdEVudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1",
+            "ZRgCIAEoAzoCOAEiMQoQUGFnaW5hdGVkTWVzc2FnZRIOCgZvZmZzZXQYASAB",
+            "KAMSDQoFbGltaXQYAiABKAMiTAoTRWFzeVRyYW5zZmVyTWVzc2FnZRISCgpw",
+            "YXNzUGhyYXNlGAEgASgMEhEKCXRvQWRkcmVzcxgCIAEoDBIOCgZhbW91bnQY",
+            "AyABKAMiYgoYRWFzeVRyYW5zZmVyQXNzZXRNZXNzYWdlEhIKCnBhc3NQaHJh",
+            "c2UYASABKAwSEQoJdG9BZGRyZXNzGAIgASgMEg8KB2Fzc2V0SWQYAyABKAkS",
+            "DgoGYW1vdW50GAQgASgDIlUKHEVhc3lUcmFuc2ZlckJ5UHJpdmF0ZU1lc3Nh",
+            "Z2USEgoKcHJpdmF0ZUtleRgBIAEoDBIRCgl0b0FkZHJlc3MYAiABKAwSDgoG",
+            "YW1vdW50GAMgASgDImsKIUVhc3lUcmFuc2ZlckFzc2V0QnlQcml2YXRlTWVz",
+            "c2FnZRISCgpwcml2YXRlS2V5GAEgASgMEhEKCXRvQWRkcmVzcxgCIAEoDBIP",
+            "Cgdhc3NldElkGAMgASgJEg4KBmFtb3VudBgEIAEoAyJyChRFYXN5VHJhbnNm",
+            "ZXJSZXNwb25zZRIqCgt0cmFuc2FjdGlvbhgBIAEoCzIVLnByb3RvY29sLlRy",
+            "YW5zYWN0aW9uEiAKBnJlc3VsdBgCIAEoCzIQLnByb3RvY29sLlJldHVybhIM",
+            "CgR0eGlkGAMgASgMIj4KF0FkZHJlc3NQcktleVBhaXJNZXNzYWdlEg8KB2Fk",
+            "ZHJlc3MYASABKAkSEgoKcHJpdmF0ZUtleRgCIAEoCSKLAQoUVHJhbnNhY3Rp",
+            "b25FeHRlbnRpb24SKgoLdHJhbnNhY3Rpb24YASABKAsyFS5wcm90b2NvbC5U",
+            "cmFuc2FjdGlvbhIMCgR0eGlkGAIgASgMEhcKD2NvbnN0YW50X3Jlc3VsdBgD",
+            "IAMoDBIgCgZyZXN1bHQYBCABKAsyEC5wcm90b2NvbC5SZXR1cm4ihAEKDkJs",
+            "b2NrRXh0ZW50aW9uEjQKDHRyYW5zYWN0aW9ucxgBIAMoCzIeLnByb3RvY29s",
+            "LlRyYW5zYWN0aW9uRXh0ZW50aW9uEisKDGJsb2NrX2hlYWRlchgCIAEoCzIV",
+            "LnByb3RvY29sLkJsb2NrSGVhZGVyEg8KB2Jsb2NraWQYAyABKAwiPQoSQmxv",
+            "Y2tMaXN0RXh0ZW50aW9uEicKBWJsb2NrGAEgAygLMhgucHJvdG9jb2wuQmxv",
+            "Y2tFeHRlbnRpb24iTwoYVHJhbnNhY3Rpb25MaXN0RXh0ZW50aW9uEjMKC3Ry",
+            "YW5zYWN0aW9uGAEgAygLMh4ucHJvdG9jb2wuVHJhbnNhY3Rpb25FeHRlbnRp",
+            "b24iYQoaQmxvY2tJbmNyZW1lbnRhbE1lcmtsZVRyZWUSDgoGbnVtYmVyGAEg",
+            "ASgDEjMKCm1lcmtsZVRyZWUYAiABKAsyHy5wcm90b2NvbC5JbmNyZW1lbnRh",
+            "bE1lcmtsZVRyZWUi3wMKFVRyYW5zYWN0aW9uU2lnbldlaWdodBIoCgpwZXJt",
+            "aXNzaW9uGAEgASgLMhQucHJvdG9jb2wuUGVybWlzc2lvbhIVCg1hcHByb3Zl",
+            "ZF9saXN0GAIgAygMEhYKDmN1cnJlbnRfd2VpZ2h0GAMgASgDEjYKBnJlc3Vs",
+            "dBgEIAEoCzImLnByb3RvY29sLlRyYW5zYWN0aW9uU2lnbldlaWdodC5SZXN1",
+            "bHQSMwoLdHJhbnNhY3Rpb24YBSABKAsyHi5wcm90b2NvbC5UcmFuc2FjdGlv",
+            "bkV4dGVudGlvbhr/AQoGUmVzdWx0EkIKBGNvZGUYASABKA4yNC5wcm90b2Nv",
+            "bC5UcmFuc2FjdGlvblNpZ25XZWlnaHQuUmVzdWx0LnJlc3BvbnNlX2NvZGUS",
+            "DwoHbWVzc2FnZRgCIAEoCSKfAQoNcmVzcG9uc2VfY29kZRIVChFFTk9VR0hf",
+            "UEVSTUlTU0lPThAAEhkKFU5PVF9FTk9VR0hfUEVSTUlTU0lPThABEhoKFlNJ",
+            "R05BVFVSRV9GT1JNQVRfRVJST1IQAhIZChVDT01QVVRFX0FERFJFU1NfRVJS",
+            "T1IQAxIUChBQRVJNSVNTSU9OX0VSUk9SEAQSDwoLT1RIRVJfRVJST1IQFCLn",
+            "AgoXVHJhbnNhY3Rpb25BcHByb3ZlZExpc3QSFQoNYXBwcm92ZWRfbGlzdBgC",
+            "IAMoDBI4CgZyZXN1bHQYBCABKAsyKC5wcm90b2NvbC5UcmFuc2FjdGlvbkFw",
+            "cHJvdmVkTGlzdC5SZXN1bHQSMwoLdHJhbnNhY3Rpb24YBSABKAsyHi5wcm90",
+            "b2NvbC5UcmFuc2FjdGlvbkV4dGVudGlvbhrFAQoGUmVzdWx0EkQKBGNvZGUY",
+            "ASABKA4yNi5wcm90b2NvbC5UcmFuc2FjdGlvbkFwcHJvdmVkTGlzdC5SZXN1",
+            "bHQucmVzcG9uc2VfY29kZRIPCgdtZXNzYWdlGAIgASgJImQKDXJlc3BvbnNl",
+            "X2NvZGUSCwoHU1VDQ0VTUxAAEhoKFlNJR05BVFVSRV9GT1JNQVRfRVJST1IQ",
+            "ARIZChVDT01QVVRFX0FERFJFU1NfRVJST1IQAhIPCgtPVEhFUl9FUlJPUhAU",
+            "IlcKFEl2a0RlY3J5cHRQYXJhbWV0ZXJzEhkKEXN0YXJ0X2Jsb2NrX2luZGV4",
+            "GAEgASgDEhcKD2VuZF9ibG9ja19pbmRleBgCIAEoAxILCgNpdmsYAyABKAwi",
+            "dgobSXZrRGVjcnlwdEFuZE1hcmtQYXJhbWV0ZXJzEhkKEXN0YXJ0X2Jsb2Nr",
+            "X2luZGV4GAEgASgDEhcKD2VuZF9ibG9ja19pbmRleBgCIAEoAxILCgNpdmsY",
+            "BSABKAwSCgoCYWsYAyABKAwSCgoCbmsYBCABKAwiVwoUT3ZrRGVjcnlwdFBh",
+            "cmFtZXRlcnMSGQoRc3RhcnRfYmxvY2tfaW5kZXgYASABKAMSFwoPZW5kX2Js",
+            "b2NrX2luZGV4GAIgASgDEgsKA292axgDIAEoDCKDAQoMRGVjcnlwdE5vdGVz",
+            "Ei4KB25vdGVUeHMYASADKAsyHS5wcm90b2NvbC5EZWNyeXB0Tm90ZXMuTm90",
+            "ZVR4GkMKBk5vdGVUeBIcCgRub3RlGAEgASgLMg4ucHJvdG9jb2wuTm90ZRIM",
+            "CgR0eGlkGAIgASgMEg0KBWluZGV4GAMgASgFIqEBChJEZWNyeXB0Tm90ZXNN",
+            "YXJrZWQSNAoHbm90ZVR4cxgBIAMoCzIjLnByb3RvY29sLkRlY3J5cHROb3Rl",
+            "c01hcmtlZC5Ob3RlVHgaVQoGTm90ZVR4EhwKBG5vdGUYASABKAsyDi5wcm90",
+            "b2NvbC5Ob3RlEgwKBHR4aWQYAiABKAwSDQoFaW5kZXgYAyABKAUSEAoIaXNf",
+            "c3BlbmQYBCABKAgiSQoETm90ZRINCgV2YWx1ZRgBIAEoAxIXCg9wYXltZW50",
+            "X2FkZHJlc3MYAiABKAkSCwoDcmNtGAMgASgMEgwKBG1lbW8YBCABKAwiewoJ",
+            "U3BlbmROb3RlEhwKBG5vdGUYAyABKAsyDi5wcm90b2NvbC5Ob3RlEg0KBWFs",
+            "cGhhGAQgASgMEjMKB3ZvdWNoZXIYBSABKAsyIi5wcm90b2NvbC5JbmNyZW1l",
+            "bnRhbE1lcmtsZVZvdWNoZXISDAoEcGF0aBgGIAEoDCIrCgtSZWNlaXZlTm90",
+            "ZRIcCgRub3RlGAEgASgLMg4ucHJvdG9jb2wuTm90ZSKVAgoRUHJpdmF0ZVBh",
+            "cmFtZXRlcnMSIAoYdHJhbnNwYXJlbnRfZnJvbV9hZGRyZXNzGAEgASgMEgsK",
+            "A2FzaxgCIAEoDBILCgNuc2sYAyABKAwSCwoDb3ZrGAQgASgMEhMKC2Zyb21f",
+            "YW1vdW50GAUgASgDEiwKD3NoaWVsZGVkX3NwZW5kcxgGIAMoCzITLnByb3Rv",
+            "Y29sLlNwZW5kTm90ZRIwChFzaGllbGRlZF9yZWNlaXZlcxgHIAMoCzIVLnBy",
+            "b3RvY29sLlJlY2VpdmVOb3RlEh4KFnRyYW5zcGFyZW50X3RvX2FkZHJlc3MY",
+            "CCABKAwSEQoJdG9fYW1vdW50GAkgASgDEg8KB3RpbWVvdXQYCiABKAMingIK",
+            "G1ByaXZhdGVQYXJhbWV0ZXJzV2l0aG91dEFzaxIgChh0cmFuc3BhcmVudF9m",
+            "cm9tX2FkZHJlc3MYASABKAwSCgoCYWsYAiABKAwSCwoDbnNrGAMgASgMEgsK",
+            "A292axgEIAEoDBITCgtmcm9tX2Ftb3VudBgFIAEoAxIsCg9zaGllbGRlZF9z",
+            "cGVuZHMYBiADKAsyEy5wcm90b2NvbC5TcGVuZE5vdGUSMAoRc2hpZWxkZWRf",
+            "cmVjZWl2ZXMYByADKAsyFS5wcm90b2NvbC5SZWNlaXZlTm90ZRIeChZ0cmFu",
+            "c3BhcmVudF90b19hZGRyZXNzGAggASgMEhEKCXRvX2Ftb3VudBgJIAEoAxIP",
+            "Cgd0aW1lb3V0GAogASgDIkUKFlNwZW5kQXV0aFNpZ1BhcmFtZXRlcnMSCwoD",
+            "YXNrGAEgASgMEg8KB3R4X2hhc2gYAiABKAwSDQoFYWxwaGEYAyABKAwieQoM",
+            "TmZQYXJhbWV0ZXJzEhwKBG5vdGUYASABKAsyDi5wcm90b2NvbC5Ob3RlEjMK",
+            "B3ZvdWNoZXIYAiABKAsyIi5wcm90b2NvbC5JbmNyZW1lbnRhbE1lcmtsZVZv",
+            "dWNoZXISCgoCYWsYAyABKAwSCgoCbmsYBCABKAwiQwoaRXhwYW5kZWRTcGVu",
+            "ZGluZ0tleU1lc3NhZ2USCwoDYXNrGAEgASgMEgsKA25zaxgCIAEoDBILCgNv",
+            "dmsYAyABKAwiKwoRVmlld2luZ0tleU1lc3NhZ2USCgoCYWsYASABKAwSCgoC",
+            "bmsYAiABKAwiKAoZSW5jb21pbmdWaWV3aW5nS2V5TWVzc2FnZRILCgNpdmsY",
+            "ASABKAwiHwoSRGl2ZXJzaWZpZXJNZXNzYWdlEgkKAWQYASABKAwigQEKJElu",
+            "Y29taW5nVmlld2luZ0tleURpdmVyc2lmaWVyTWVzc2FnZRIwCgNpdmsYASAB",
+            "KAsyIy5wcm90b2NvbC5JbmNvbWluZ1ZpZXdpbmdLZXlNZXNzYWdlEicKAWQY",
+            "AiABKAsyHC5wcm90b2NvbC5EaXZlcnNpZmllck1lc3NhZ2UiZgoVUGF5bWVu",
+            "dEFkZHJlc3NNZXNzYWdlEicKAWQYASABKAsyHC5wcm90b2NvbC5EaXZlcnNp",
+            "Zmllck1lc3NhZ2USCwoDcGtEGAIgASgMEhcKD3BheW1lbnRfYWRkcmVzcxgD",
+            "IAEoCSKeAQoTU2hpZWxkZWRBZGRyZXNzSW5mbxIKCgJzaxgBIAEoDBILCgNh",
+            "c2sYAiABKAwSCwoDbnNrGAMgASgMEgsKA292axgEIAEoDBIKCgJhaxgFIAEo",
+            "DBIKCgJuaxgGIAEoDBILCgNpdmsYByABKAwSCQoBZBgIIAEoDBILCgNwa0QY",
+            "CSABKAwSFwoPcGF5bWVudF9hZGRyZXNzGAogASgJImMKDk5vdGVQYXJhbWV0",
+            "ZXJzEgoKAmFrGAEgASgMEgoKAm5rGAIgASgMEhwKBG5vdGUYAyABKAsyDi5w",
+            "cm90b2NvbC5Ob3RlEgwKBHR4aWQYBCABKAwSDQoFaW5kZXgYBSABKAUiLgoL",
+            "U3BlbmRSZXN1bHQSDgoGcmVzdWx0GAEgASgIEg8KB21lc3NhZ2UYAiABKAki",
+            "SQoTVHJhbnNhY3Rpb25JbmZvTGlzdBIyCg90cmFuc2FjdGlvbkluZm8YASAD",
+            "KAsyGS5wcm90b2NvbC5UcmFuc2FjdGlvbkluZm8iZgoOU3BlbmROb3RlVFJD",
+            "MjASHAoEbm90ZRgBIAEoCzIOLnByb3RvY29sLk5vdGUSDQoFYWxwaGEYAiAB",
+            "KAwSDAoEcm9vdBgDIAEoDBIMCgRwYXRoGAQgASgMEgsKA3BvcxgFIAEoAyKd",
+            "AgoeUHJpdmF0ZVNoaWVsZGVkVFJDMjBQYXJhbWV0ZXJzEgsKA2FzaxgBIAEo",
+            "DBILCgNuc2sYAiABKAwSCwoDb3ZrGAMgASgMEhMKC2Zyb21fYW1vdW50GAQg",
+            "ASgJEjEKD3NoaWVsZGVkX3NwZW5kcxgFIAMoCzIYLnByb3RvY29sLlNwZW5k",
+            "Tm90ZVRSQzIwEjAKEXNoaWVsZGVkX3JlY2VpdmVzGAYgAygLMhUucHJvdG9j",
+            "b2wuUmVjZWl2ZU5vdGUSHgoWdHJhbnNwYXJlbnRfdG9fYWRkcmVzcxgHIAEo",
+            "DBIRCgl0b19hbW91bnQYCCABKAkSJwofc2hpZWxkZWRfVFJDMjBfY29udHJh",
+            "Y3RfYWRkcmVzcxgJIAEoDCKmAgooUHJpdmF0ZVNoaWVsZGVkVFJDMjBQYXJh",
+            "bWV0ZXJzV2l0aG91dEFzaxIKCgJhaxgBIAEoDBILCgNuc2sYAiABKAwSCwoD",
+            "b3ZrGAMgASgMEhMKC2Zyb21fYW1vdW50GAQgASgJEjEKD3NoaWVsZGVkX3Nw",
+            "ZW5kcxgFIAMoCzIYLnByb3RvY29sLlNwZW5kTm90ZVRSQzIwEjAKEXNoaWVs",
+            "ZGVkX3JlY2VpdmVzGAYgAygLMhUucHJvdG9jb2wuUmVjZWl2ZU5vdGUSHgoW",
+            "dHJhbnNwYXJlbnRfdG9fYWRkcmVzcxgHIAEoDBIRCgl0b19hbW91bnQYCCAB",
+            "KAkSJwofc2hpZWxkZWRfVFJDMjBfY29udHJhY3RfYWRkcmVzcxgJIAEoDCL0",
+            "AQoXU2hpZWxkZWRUUkMyMFBhcmFtZXRlcnMSNQoRc3BlbmRfZGVzY3JpcHRp",
+            "b24YASADKAsyGi5wcm90b2NvbC5TcGVuZERlc2NyaXB0aW9uEjkKE3JlY2Vp",
+            "dmVfZGVzY3JpcHRpb24YAiADKAsyHC5wcm90b2NvbC5SZWNlaXZlRGVzY3Jp",
+            "cHRpb24SGQoRYmluZGluZ19zaWduYXR1cmUYAyABKAwSFAoMbWVzc2FnZV9o",
+            "YXNoGAQgASgMEh4KFnRyaWdnZXJfY29udHJhY3RfaW5wdXQYBSABKAkSFgoO",
+            "cGFyYW1ldGVyX3R5cGUYBiABKAkirQEKGUl2a0RlY3J5cHRUUkMyMFBhcmFt",
+            "ZXRlcnMSGQoRc3RhcnRfYmxvY2tfaW5kZXgYASABKAMSFwoPZW5kX2Jsb2Nr",
+            "X2luZGV4GAIgASgDEicKH3NoaWVsZGVkX1RSQzIwX2NvbnRyYWN0X2FkZHJl",
+            "c3MYAyABKAwSCwoDaXZrGAQgASgMEgoKAmFrGAUgASgMEgoKAm5rGAYgASgM",
+            "Eg4KBmV2ZW50cxgHIAMoCSKVAQoZT3ZrRGVjcnlwdFRSQzIwUGFyYW1ldGVy",
+            "cxIZChFzdGFydF9ibG9ja19pbmRleBgBIAEoAxIXCg9lbmRfYmxvY2tfaW5k",
+            "ZXgYAiABKAMSCwoDb3ZrGAMgASgMEicKH3NoaWVsZGVkX1RSQzIwX2NvbnRy",
+            "YWN0X2FkZHJlc3MYBCABKAwSDgoGZXZlbnRzGAUgAygJIuUBChFEZWNyeXB0",
+            "Tm90ZXNUUkMyMBIzCgdub3RlVHhzGAEgAygLMiIucHJvdG9jb2wuRGVjcnlw",
+            "dE5vdGVzVFJDMjAuTm90ZVR4GpoBCgZOb3RlVHgSHAoEbm90ZRgBIAEoCzIO",
+            "LnByb3RvY29sLk5vdGUSEAoIcG9zaXRpb24YAiABKAMSEAoIaXNfc3BlbnQY",
+            "AyABKAgSDAoEdHhpZBgEIAEoDBINCgVpbmRleBgFIAEoBRIRCgl0b19hbW91",
+            "bnQYBiABKAkSHgoWdHJhbnNwYXJlbnRfdG9fYWRkcmVzcxgHIAEoDCKEAQoR",
+            "TmZUUkMyMFBhcmFtZXRlcnMSHAoEbm90ZRgBIAEoCzIOLnByb3RvY29sLk5v",
+            "dGUSCgoCYWsYAiABKAwSCgoCbmsYAyABKAwSEAoIcG9zaXRpb24YBCABKAMS",
+            "Jwofc2hpZWxkZWRfVFJDMjBfY29udHJhY3RfYWRkcmVzcxgFIAEoDCIjCg9O",
+            "dWxsaWZpZXJSZXN1bHQSEAoIaXNfc3BlbnQYASABKAgi2QEKJlNoaWVsZGVk",
+            "VFJDMjBUcmlnZ2VyQ29udHJhY3RQYXJhbWV0ZXJzEkQKGXNoaWVsZGVkX1RS",
+            "QzIwX1BhcmFtZXRlcnMYASABKAsyIS5wcm90b2NvbC5TaGllbGRlZFRSQzIw",
+            "UGFyYW1ldGVycxI5ChlzcGVuZF9hdXRob3JpdHlfc2lnbmF0dXJlGAIgAygL",
+            "MhYucHJvdG9jb2wuQnl0ZXNNZXNzYWdlEg4KBmFtb3VudBgDIAEoCRIeChZ0",
+            "cmFuc3BhcmVudF90b19hZGRyZXNzGAQgASgMMtlmCgZXYWxsZXQSZwoKR2V0",
             "QWNjb3VudBIRLnByb3RvY29sLkFjY291bnQaES5wcm90b2NvbC5BY2NvdW50",
             "IjOC0+STAi0iEi93YWxsZXQvZ2V0YWNjb3VudDoBKloUEhIvd2FsbGV0L2dl",
             "dGFjY291bnQScwoOR2V0QWNjb3VudEJ5SWQSES5wcm90b2NvbC5BY2NvdW50",
@@ -361,86 +466,157 @@ namespace Tron.Net.Protocol {
             "ZSIAEkUKEEdldEJyb2tlcmFnZUluZm8SFi5wcm90b2NvbC5CeXRlc01lc3Nh",
             "Z2UaFy5wcm90b2NvbC5OdW1iZXJNZXNzYWdlIgASVgoPVXBkYXRlQnJva2Vy",
             "YWdlEiEucHJvdG9jb2wuVXBkYXRlQnJva2VyYWdlQ29udHJhY3QaHi5wcm90",
-            "b2NvbC5UcmFuc2FjdGlvbkV4dGVudGlvbiIAMtcTCg5XYWxsZXRTb2xpZGl0",
-            "eRJ3CgpHZXRBY2NvdW50EhEucHJvdG9jb2wuQWNjb3VudBoRLnByb3RvY29s",
-            "LkFjY291bnQiQ4LT5JMCPSIaL3dhbGxldHNvbGlkaXR5L2dldGFjY291bnQ6",
-            "ASpaHBIaL3dhbGxldHNvbGlkaXR5L2dldGFjY291bnQSgwEKDkdldEFjY291",
-            "bnRCeUlkEhEucHJvdG9jb2wuQWNjb3VudBoRLnByb3RvY29sLkFjY291bnQi",
-            "S4LT5JMCRSIeL3dhbGxldHNvbGlkaXR5L2dldGFjY291bnRieWlkOgEqWiAS",
-            "Hi93YWxsZXRzb2xpZGl0eS9nZXRhY2NvdW50YnlpZBKJAQoNTGlzdFdpdG5l",
-            "c3NlcxIWLnByb3RvY29sLkVtcHR5TWVzc2FnZRoVLnByb3RvY29sLldpdG5l",
-            "c3NMaXN0IkmC0+STAkMiHS93YWxsZXRzb2xpZGl0eS9saXN0d2l0bmVzc2Vz",
-            "OgEqWh8SHS93YWxsZXRzb2xpZGl0eS9saXN0d2l0bmVzc2VzEpgBChFHZXRB",
-            "c3NldElzc3VlTGlzdBIWLnByb3RvY29sLkVtcHR5TWVzc2FnZRoYLnByb3Rv",
-            "Y29sLkFzc2V0SXNzdWVMaXN0IlGC0+STAksiIS93YWxsZXRzb2xpZGl0eS9n",
-            "ZXRhc3NldGlzc3VlbGlzdDoBKlojEiEvd2FsbGV0c29saWRpdHkvZ2V0YXNz",
-            "ZXRpc3N1ZWxpc3QStwEKGkdldFBhZ2luYXRlZEFzc2V0SXNzdWVMaXN0Ehou",
-            "cHJvdG9jb2wuUGFnaW5hdGVkTWVzc2FnZRoYLnByb3RvY29sLkFzc2V0SXNz",
-            "dWVMaXN0ImOC0+STAl0iKi93YWxsZXRzb2xpZGl0eS9nZXRwYWdpbmF0ZWRh",
-            "c3NldGlzc3VlbGlzdDoBKlosEiovd2FsbGV0c29saWRpdHkvZ2V0cGFnaW5h",
-            "dGVkYXNzZXRpc3N1ZWxpc3QSTQoTR2V0QXNzZXRJc3N1ZUJ5TmFtZRIWLnBy",
-            "b3RvY29sLkJ5dGVzTWVzc2FnZRocLnByb3RvY29sLkFzc2V0SXNzdWVDb250",
-            "cmFjdCIAEk0KF0dldEFzc2V0SXNzdWVMaXN0QnlOYW1lEhYucHJvdG9jb2wu",
-            "Qnl0ZXNNZXNzYWdlGhgucHJvdG9jb2wuQXNzZXRJc3N1ZUxpc3QiABJLChFH",
-            "ZXRBc3NldElzc3VlQnlJZBIWLnByb3RvY29sLkJ5dGVzTWVzc2FnZRocLnBy",
-            "b3RvY29sLkFzc2V0SXNzdWVDb250cmFjdCIAEn0KC0dldE5vd0Jsb2NrEhYu",
-            "cHJvdG9jb2wuRW1wdHlNZXNzYWdlGg8ucHJvdG9jb2wuQmxvY2siRYLT5JMC",
-            "PyIbL3dhbGxldHNvbGlkaXR5L2dldG5vd2Jsb2NrOgEqWh0SGy93YWxsZXRz",
-            "b2xpZGl0eS9nZXRub3dibG9jaxJCCgxHZXROb3dCbG9jazISFi5wcm90b2Nv",
-            "bC5FbXB0eU1lc3NhZ2UaGC5wcm90b2NvbC5CbG9ja0V4dGVudGlvbiIAEoQB",
-            "Cg1HZXRCbG9ja0J5TnVtEhcucHJvdG9jb2wuTnVtYmVyTWVzc2FnZRoPLnBy",
-            "b3RvY29sLkJsb2NrIkmC0+STAkMiHS93YWxsZXRzb2xpZGl0eS9nZXRibG9j",
-            "a2J5bnVtOgEqWh8SHS93YWxsZXRzb2xpZGl0eS9nZXRibG9ja2J5bnVtEkUK",
-            "DkdldEJsb2NrQnlOdW0yEhcucHJvdG9jb2wuTnVtYmVyTWVzc2FnZRoYLnBy",
-            "b3RvY29sLkJsb2NrRXh0ZW50aW9uIgASUwodR2V0VHJhbnNhY3Rpb25Db3Vu",
-            "dEJ5QmxvY2tOdW0SFy5wcm90b2NvbC5OdW1iZXJNZXNzYWdlGhcucHJvdG9j",
-            "b2wuTnVtYmVyTWVzc2FnZSIAEl0KFEdldERlbGVnYXRlZFJlc291cmNlEiIu",
-            "cHJvdG9jb2wuRGVsZWdhdGVkUmVzb3VyY2VNZXNzYWdlGh8ucHJvdG9jb2wu",
-            "RGVsZWdhdGVkUmVzb3VyY2VMaXN0IgASZQogR2V0RGVsZWdhdGVkUmVzb3Vy",
-            "Y2VBY2NvdW50SW5kZXgSFi5wcm90b2NvbC5CeXRlc01lc3NhZ2UaJy5wcm90",
-            "b2NvbC5EZWxlZ2F0ZWRSZXNvdXJjZUFjY291bnRJbmRleCIAEj8KD0dldEV4",
-            "Y2hhbmdlQnlJZBIWLnByb3RvY29sLkJ5dGVzTWVzc2FnZRoSLnByb3RvY29s",
-            "LkV4Y2hhbmdlIgASQQoNTGlzdEV4Y2hhbmdlcxIWLnByb3RvY29sLkVtcHR5",
-            "TWVzc2FnZRoWLnByb3RvY29sLkV4Y2hhbmdlTGlzdCIAEpgBChJHZXRUcmFu",
-            "c2FjdGlvbkJ5SWQSFi5wcm90b2NvbC5CeXRlc01lc3NhZ2UaFS5wcm90b2Nv",
-            "bC5UcmFuc2FjdGlvbiJTgtPkkwJNIiIvd2FsbGV0c29saWRpdHkvZ2V0dHJh",
-            "bnNhY3Rpb25ieWlkOgEqWiQSIi93YWxsZXRzb2xpZGl0eS9nZXR0cmFuc2Fj",
-            "dGlvbmJ5aWQSqAEKFkdldFRyYW5zYWN0aW9uSW5mb0J5SWQSFi5wcm90b2Nv",
-            "bC5CeXRlc01lc3NhZ2UaGS5wcm90b2NvbC5UcmFuc2FjdGlvbkluZm8iW4LT",
-            "5JMCVSImL3dhbGxldHNvbGlkaXR5L2dldHRyYW5zYWN0aW9uaW5mb2J5aWQ6",
-            "ASpaKBImL3dhbGxldHNvbGlkaXR5L2dldHRyYW5zYWN0aW9uaW5mb2J5aWQS",
-            "mwEKD0dlbmVyYXRlQWRkcmVzcxIWLnByb3RvY29sLkVtcHR5TWVzc2FnZRoh",
-            "LnByb3RvY29sLkFkZHJlc3NQcktleVBhaXJNZXNzYWdlIk2C0+STAkciHy93",
-            "YWxsZXRzb2xpZGl0eS9nZW5lcmF0ZWFkZHJlc3M6ASpaIRIfL3dhbGxldHNv",
-            "bGlkaXR5L2dlbmVyYXRlYWRkcmVzcxJbChdUcmlnZ2VyQ29uc3RhbnRDb250",
-            "cmFjdBIeLnByb3RvY29sLlRyaWdnZXJTbWFydENvbnRyYWN0Gh4ucHJvdG9j",
-            "b2wuVHJhbnNhY3Rpb25FeHRlbnRpb24iABJCCg1HZXRSZXdhcmRJbmZvEhYu",
-            "cHJvdG9jb2wuQnl0ZXNNZXNzYWdlGhcucHJvdG9jb2wuTnVtYmVyTWVzc2Fn",
-            "ZSIAEkUKEEdldEJyb2tlcmFnZUluZm8SFi5wcm90b2NvbC5CeXRlc01lc3Nh",
-            "Z2UaFy5wcm90b2NvbC5OdW1iZXJNZXNzYWdlIgAyrQQKD1dhbGxldEV4dGVu",
-            "c2lvbhKxAQoXR2V0VHJhbnNhY3Rpb25zRnJvbVRoaXMSGi5wcm90b2NvbC5B",
-            "Y2NvdW50UGFnaW5hdGVkGhkucHJvdG9jb2wuVHJhbnNhY3Rpb25MaXN0Il+C",
-            "0+STAlkiKC93YWxsZXRleHRlbnNpb24vZ2V0dHJhbnNhY3Rpb25zZnJvbXRo",
-            "aXM6ASpaKhIoL3dhbGxldGV4dGVuc2lvbi9nZXR0cmFuc2FjdGlvbnNmcm9t",
-            "dGhpcxJcChhHZXRUcmFuc2FjdGlvbnNGcm9tVGhpczISGi5wcm90b2NvbC5B",
-            "Y2NvdW50UGFnaW5hdGVkGiIucHJvdG9jb2wuVHJhbnNhY3Rpb25MaXN0RXh0",
-            "ZW50aW9uIgASqwEKFUdldFRyYW5zYWN0aW9uc1RvVGhpcxIaLnByb3RvY29s",
-            "LkFjY291bnRQYWdpbmF0ZWQaGS5wcm90b2NvbC5UcmFuc2FjdGlvbkxpc3Qi",
-            "W4LT5JMCVSImL3dhbGxldGV4dGVuc2lvbi9nZXR0cmFuc2FjdGlvbnN0b3Ro",
-            "aXM6ASpaKBImL3dhbGxldGV4dGVuc2lvbi9nZXR0cmFuc2FjdGlvbnN0b3Ro",
-            "aXMSWgoWR2V0VHJhbnNhY3Rpb25zVG9UaGlzMhIaLnByb3RvY29sLkFjY291",
-            "bnRQYWdpbmF0ZWQaIi5wcm90b2NvbC5UcmFuc2FjdGlvbkxpc3RFeHRlbnRp",
-            "b24iADKZAgoIRGF0YWJhc2USRwoRZ2V0QmxvY2tSZWZlcmVuY2USFi5wcm90",
-            "b2NvbC5FbXB0eU1lc3NhZ2UaGC5wcm90b2NvbC5CbG9ja1JlZmVyZW5jZSIA",
-            "Ek0KFEdldER5bmFtaWNQcm9wZXJ0aWVzEhYucHJvdG9jb2wuRW1wdHlNZXNz",
-            "YWdlGhsucHJvdG9jb2wuRHluYW1pY1Byb3BlcnRpZXMiABI4CgtHZXROb3dC",
-            "bG9jaxIWLnByb3RvY29sLkVtcHR5TWVzc2FnZRoPLnByb3RvY29sLkJsb2Nr",
-            "IgASOwoNR2V0QmxvY2tCeU51bRIXLnByb3RvY29sLk51bWJlck1lc3NhZ2Ua",
-            "Dy5wcm90b2NvbC5CbG9jayIAMgkKB05ldHdvcmtCVQoMb3JnLnRyb24uYXBp",
-            "QgdHcnBjQVBJWihnaXRodWIuY29tL3Ryb25wcm90b2NvbC9ncnBjLWdhdGV3",
-            "YXkvYXBpqgIRVHJvbi5OZXQuUHJvdG9jb2xiBnByb3RvMw=="));
+            "b2NvbC5UcmFuc2FjdGlvbkV4dGVudGlvbiIAEloKGUNyZWF0ZVNoaWVsZGVk",
+            "VHJhbnNhY3Rpb24SGy5wcm90b2NvbC5Qcml2YXRlUGFyYW1ldGVycxoeLnBy",
+            "b3RvY29sLlRyYW5zYWN0aW9uRXh0ZW50aW9uIgASXwoYR2V0TWVya2xlVHJl",
+            "ZVZvdWNoZXJJbmZvEhkucHJvdG9jb2wuT3V0cHV0UG9pbnRJbmZvGiYucHJv",
+            "dG9jb2wuSW5jcmVtZW50YWxNZXJrbGVWb3VjaGVySW5mbyIAEkkKDVNjYW5O",
+            "b3RlQnlJdmsSHi5wcm90b2NvbC5JdmtEZWNyeXB0UGFyYW1ldGVycxoWLnBy",
+            "b3RvY29sLkRlY3J5cHROb3RlcyIAEl0KFFNjYW5BbmRNYXJrTm90ZUJ5SXZr",
+            "EiUucHJvdG9jb2wuSXZrRGVjcnlwdEFuZE1hcmtQYXJhbWV0ZXJzGhwucHJv",
+            "dG9jb2wuRGVjcnlwdE5vdGVzTWFya2VkIgASSQoNU2Nhbk5vdGVCeU92axIe",
+            "LnByb3RvY29sLk92a0RlY3J5cHRQYXJhbWV0ZXJzGhYucHJvdG9jb2wuRGVj",
+            "cnlwdE5vdGVzIgASQgoOR2V0U3BlbmRpbmdLZXkSFi5wcm90b2NvbC5FbXB0",
+            "eU1lc3NhZ2UaFi5wcm90b2NvbC5CeXRlc01lc3NhZ2UiABJYChZHZXRFeHBh",
+            "bmRlZFNwZW5kaW5nS2V5EhYucHJvdG9jb2wuQnl0ZXNNZXNzYWdlGiQucHJv",
+            "dG9jb2wuRXhwYW5kZWRTcGVuZGluZ0tleU1lc3NhZ2UiABJACgxHZXRBa0Zy",
+            "b21Bc2sSFi5wcm90b2NvbC5CeXRlc01lc3NhZ2UaFi5wcm90b2NvbC5CeXRl",
+            "c01lc3NhZ2UiABJACgxHZXROa0Zyb21Oc2sSFi5wcm90b2NvbC5CeXRlc01l",
+            "c3NhZ2UaFi5wcm90b2NvbC5CeXRlc01lc3NhZ2UiABJbChVHZXRJbmNvbWlu",
+            "Z1ZpZXdpbmdLZXkSGy5wcm90b2NvbC5WaWV3aW5nS2V5TWVzc2FnZRojLnBy",
+            "b3RvY29sLkluY29taW5nVmlld2luZ0tleU1lc3NhZ2UiABJICg5HZXREaXZl",
+            "cnNpZmllchIWLnByb3RvY29sLkVtcHR5TWVzc2FnZRocLnByb3RvY29sLkRp",
+            "dmVyc2lmaWVyTWVzc2FnZSIAElAKFUdldE5ld1NoaWVsZGVkQWRkcmVzcxIW",
+            "LnByb3RvY29sLkVtcHR5TWVzc2FnZRodLnByb3RvY29sLlNoaWVsZGVkQWRk",
+            "cmVzc0luZm8iABJpChRHZXRaZW5QYXltZW50QWRkcmVzcxIuLnByb3RvY29s",
+            "LkluY29taW5nVmlld2luZ0tleURpdmVyc2lmaWVyTWVzc2FnZRofLnByb3Rv",
+            "Y29sLlBheW1lbnRBZGRyZXNzTWVzc2FnZSIAEjoKBkdldFJjbRIWLnByb3Rv",
+            "Y29sLkVtcHR5TWVzc2FnZRoWLnByb3RvY29sLkJ5dGVzTWVzc2FnZSIAEjwK",
+            "B0lzU3BlbmQSGC5wcm90b2NvbC5Ob3RlUGFyYW1ldGVycxoVLnByb3RvY29s",
+            "LlNwZW5kUmVzdWx0IgASdwosQ3JlYXRlU2hpZWxkZWRUcmFuc2FjdGlvbldp",
+            "dGhvdXRTcGVuZEF1dGhTaWcSJS5wcm90b2NvbC5Qcml2YXRlUGFyYW1ldGVy",
+            "c1dpdGhvdXRBc2saHi5wcm90b2NvbC5UcmFuc2FjdGlvbkV4dGVudGlvbiIA",
+            "EksKGEdldFNoaWVsZFRyYW5zYWN0aW9uSGFzaBIVLnByb3RvY29sLlRyYW5z",
+            "YWN0aW9uGhYucHJvdG9jb2wuQnl0ZXNNZXNzYWdlIgASUAoSQ3JlYXRlU3Bl",
+            "bmRBdXRoU2lnEiAucHJvdG9jb2wuU3BlbmRBdXRoU2lnUGFyYW1ldGVycxoW",
+            "LnByb3RvY29sLkJ5dGVzTWVzc2FnZSIAEkkKFUNyZWF0ZVNoaWVsZE51bGxp",
+            "ZmllchIWLnByb3RvY29sLk5mUGFyYW1ldGVycxoWLnByb3RvY29sLkJ5dGVz",
+            "TWVzc2FnZSIAEnEKIENyZWF0ZVNoaWVsZGVkQ29udHJhY3RQYXJhbWV0ZXJz",
+            "EigucHJvdG9jb2wuUHJpdmF0ZVNoaWVsZGVkVFJDMjBQYXJhbWV0ZXJzGiEu",
+            "cHJvdG9jb2wuU2hpZWxkZWRUUkMyMFBhcmFtZXRlcnMiABKFAQoqQ3JlYXRl",
+            "U2hpZWxkZWRDb250cmFjdFBhcmFtZXRlcnNXaXRob3V0QXNrEjIucHJvdG9j",
+            "b2wuUHJpdmF0ZVNoaWVsZGVkVFJDMjBQYXJhbWV0ZXJzV2l0aG91dEFzaxoh",
+            "LnByb3RvY29sLlNoaWVsZGVkVFJDMjBQYXJhbWV0ZXJzIgASYQobU2NhblNo",
+            "aWVsZGVkVFJDMjBOb3Rlc0J5SXZrEiMucHJvdG9jb2wuSXZrRGVjcnlwdFRS",
+            "QzIwUGFyYW1ldGVycxobLnByb3RvY29sLkRlY3J5cHROb3Rlc1RSQzIwIgAS",
+            "YQobU2NhblNoaWVsZGVkVFJDMjBOb3Rlc0J5T3ZrEiMucHJvdG9jb2wuT3Zr",
+            "RGVjcnlwdFRSQzIwUGFyYW1ldGVycxobLnByb3RvY29sLkRlY3J5cHROb3Rl",
+            "c1RSQzIwIgASXAogSXNTaGllbGRlZFRSQzIwQ29udHJhY3ROb3RlU3BlbnQS",
+            "Gy5wcm90b2NvbC5OZlRSQzIwUGFyYW1ldGVycxoZLnByb3RvY29sLk51bGxp",
+            "ZmllclJlc3VsdCIAEnUKJ0dldFRyaWdnZXJJbnB1dEZvclNoaWVsZGVkVFJD",
+            "MjBDb250cmFjdBIwLnByb3RvY29sLlNoaWVsZGVkVFJDMjBUcmlnZ2VyQ29u",
+            "dHJhY3RQYXJhbWV0ZXJzGhYucHJvdG9jb2wuQnl0ZXNNZXNzYWdlIgASUgoX",
+            "Q3JlYXRlQ29tbW9uVHJhbnNhY3Rpb24SFS5wcm90b2NvbC5UcmFuc2FjdGlv",
+            "bhoeLnByb3RvY29sLlRyYW5zYWN0aW9uRXh0ZW50aW9uIgASWAocR2V0VHJh",
+            "bnNhY3Rpb25JbmZvQnlCbG9ja051bRIXLnByb3RvY29sLk51bWJlck1lc3Nh",
+            "Z2UaHS5wcm90b2NvbC5UcmFuc2FjdGlvbkluZm9MaXN0IgAy6RkKDldhbGxl",
+            "dFNvbGlkaXR5EncKCkdldEFjY291bnQSES5wcm90b2NvbC5BY2NvdW50GhEu",
+            "cHJvdG9jb2wuQWNjb3VudCJDgtPkkwI9Ihovd2FsbGV0c29saWRpdHkvZ2V0",
+            "YWNjb3VudDoBKlocEhovd2FsbGV0c29saWRpdHkvZ2V0YWNjb3VudBKDAQoO",
+            "R2V0QWNjb3VudEJ5SWQSES5wcm90b2NvbC5BY2NvdW50GhEucHJvdG9jb2wu",
+            "QWNjb3VudCJLgtPkkwJFIh4vd2FsbGV0c29saWRpdHkvZ2V0YWNjb3VudGJ5",
+            "aWQ6ASpaIBIeL3dhbGxldHNvbGlkaXR5L2dldGFjY291bnRieWlkEokBCg1M",
+            "aXN0V2l0bmVzc2VzEhYucHJvdG9jb2wuRW1wdHlNZXNzYWdlGhUucHJvdG9j",
+            "b2wuV2l0bmVzc0xpc3QiSYLT5JMCQyIdL3dhbGxldHNvbGlkaXR5L2xpc3R3",
+            "aXRuZXNzZXM6ASpaHxIdL3dhbGxldHNvbGlkaXR5L2xpc3R3aXRuZXNzZXMS",
+            "mAEKEUdldEFzc2V0SXNzdWVMaXN0EhYucHJvdG9jb2wuRW1wdHlNZXNzYWdl",
+            "GhgucHJvdG9jb2wuQXNzZXRJc3N1ZUxpc3QiUYLT5JMCSyIhL3dhbGxldHNv",
+            "bGlkaXR5L2dldGFzc2V0aXNzdWVsaXN0OgEqWiMSIS93YWxsZXRzb2xpZGl0",
+            "eS9nZXRhc3NldGlzc3VlbGlzdBK3AQoaR2V0UGFnaW5hdGVkQXNzZXRJc3N1",
+            "ZUxpc3QSGi5wcm90b2NvbC5QYWdpbmF0ZWRNZXNzYWdlGhgucHJvdG9jb2wu",
+            "QXNzZXRJc3N1ZUxpc3QiY4LT5JMCXSIqL3dhbGxldHNvbGlkaXR5L2dldHBh",
+            "Z2luYXRlZGFzc2V0aXNzdWVsaXN0OgEqWiwSKi93YWxsZXRzb2xpZGl0eS9n",
+            "ZXRwYWdpbmF0ZWRhc3NldGlzc3VlbGlzdBJNChNHZXRBc3NldElzc3VlQnlO",
+            "YW1lEhYucHJvdG9jb2wuQnl0ZXNNZXNzYWdlGhwucHJvdG9jb2wuQXNzZXRJ",
+            "c3N1ZUNvbnRyYWN0IgASTQoXR2V0QXNzZXRJc3N1ZUxpc3RCeU5hbWUSFi5w",
+            "cm90b2NvbC5CeXRlc01lc3NhZ2UaGC5wcm90b2NvbC5Bc3NldElzc3VlTGlz",
+            "dCIAEksKEUdldEFzc2V0SXNzdWVCeUlkEhYucHJvdG9jb2wuQnl0ZXNNZXNz",
+            "YWdlGhwucHJvdG9jb2wuQXNzZXRJc3N1ZUNvbnRyYWN0IgASfQoLR2V0Tm93",
+            "QmxvY2sSFi5wcm90b2NvbC5FbXB0eU1lc3NhZ2UaDy5wcm90b2NvbC5CbG9j",
+            "ayJFgtPkkwI/Ihsvd2FsbGV0c29saWRpdHkvZ2V0bm93YmxvY2s6ASpaHRIb",
+            "L3dhbGxldHNvbGlkaXR5L2dldG5vd2Jsb2NrEkIKDEdldE5vd0Jsb2NrMhIW",
+            "LnByb3RvY29sLkVtcHR5TWVzc2FnZRoYLnByb3RvY29sLkJsb2NrRXh0ZW50",
+            "aW9uIgAShAEKDUdldEJsb2NrQnlOdW0SFy5wcm90b2NvbC5OdW1iZXJNZXNz",
+            "YWdlGg8ucHJvdG9jb2wuQmxvY2siSYLT5JMCQyIdL3dhbGxldHNvbGlkaXR5",
+            "L2dldGJsb2NrYnludW06ASpaHxIdL3dhbGxldHNvbGlkaXR5L2dldGJsb2Nr",
+            "YnludW0SRQoOR2V0QmxvY2tCeU51bTISFy5wcm90b2NvbC5OdW1iZXJNZXNz",
+            "YWdlGhgucHJvdG9jb2wuQmxvY2tFeHRlbnRpb24iABJTCh1HZXRUcmFuc2Fj",
+            "dGlvbkNvdW50QnlCbG9ja051bRIXLnByb3RvY29sLk51bWJlck1lc3NhZ2Ua",
+            "Fy5wcm90b2NvbC5OdW1iZXJNZXNzYWdlIgASXQoUR2V0RGVsZWdhdGVkUmVz",
+            "b3VyY2USIi5wcm90b2NvbC5EZWxlZ2F0ZWRSZXNvdXJjZU1lc3NhZ2UaHy5w",
+            "cm90b2NvbC5EZWxlZ2F0ZWRSZXNvdXJjZUxpc3QiABJlCiBHZXREZWxlZ2F0",
+            "ZWRSZXNvdXJjZUFjY291bnRJbmRleBIWLnByb3RvY29sLkJ5dGVzTWVzc2Fn",
+            "ZRonLnByb3RvY29sLkRlbGVnYXRlZFJlc291cmNlQWNjb3VudEluZGV4IgAS",
+            "PwoPR2V0RXhjaGFuZ2VCeUlkEhYucHJvdG9jb2wuQnl0ZXNNZXNzYWdlGhIu",
+            "cHJvdG9jb2wuRXhjaGFuZ2UiABJBCg1MaXN0RXhjaGFuZ2VzEhYucHJvdG9j",
+            "b2wuRW1wdHlNZXNzYWdlGhYucHJvdG9jb2wuRXhjaGFuZ2VMaXN0IgASmAEK",
+            "EkdldFRyYW5zYWN0aW9uQnlJZBIWLnByb3RvY29sLkJ5dGVzTWVzc2FnZRoV",
+            "LnByb3RvY29sLlRyYW5zYWN0aW9uIlOC0+STAk0iIi93YWxsZXRzb2xpZGl0",
+            "eS9nZXR0cmFuc2FjdGlvbmJ5aWQ6ASpaJBIiL3dhbGxldHNvbGlkaXR5L2dl",
+            "dHRyYW5zYWN0aW9uYnlpZBKoAQoWR2V0VHJhbnNhY3Rpb25JbmZvQnlJZBIW",
+            "LnByb3RvY29sLkJ5dGVzTWVzc2FnZRoZLnByb3RvY29sLlRyYW5zYWN0aW9u",
+            "SW5mbyJbgtPkkwJVIiYvd2FsbGV0c29saWRpdHkvZ2V0dHJhbnNhY3Rpb25p",
+            "bmZvYnlpZDoBKlooEiYvd2FsbGV0c29saWRpdHkvZ2V0dHJhbnNhY3Rpb25p",
+            "bmZvYnlpZBKbAQoPR2VuZXJhdGVBZGRyZXNzEhYucHJvdG9jb2wuRW1wdHlN",
+            "ZXNzYWdlGiEucHJvdG9jb2wuQWRkcmVzc1ByS2V5UGFpck1lc3NhZ2UiTYLT",
+            "5JMCRyIfL3dhbGxldHNvbGlkaXR5L2dlbmVyYXRlYWRkcmVzczoBKlohEh8v",
+            "d2FsbGV0c29saWRpdHkvZ2VuZXJhdGVhZGRyZXNzEl8KGEdldE1lcmtsZVRy",
+            "ZWVWb3VjaGVySW5mbxIZLnByb3RvY29sLk91dHB1dFBvaW50SW5mbxomLnBy",
+            "b3RvY29sLkluY3JlbWVudGFsTWVya2xlVm91Y2hlckluZm8iABJJCg1TY2Fu",
+            "Tm90ZUJ5SXZrEh4ucHJvdG9jb2wuSXZrRGVjcnlwdFBhcmFtZXRlcnMaFi5w",
+            "cm90b2NvbC5EZWNyeXB0Tm90ZXMiABJdChRTY2FuQW5kTWFya05vdGVCeUl2",
+            "axIlLnByb3RvY29sLkl2a0RlY3J5cHRBbmRNYXJrUGFyYW1ldGVycxocLnBy",
+            "b3RvY29sLkRlY3J5cHROb3Rlc01hcmtlZCIAEkkKDVNjYW5Ob3RlQnlPdmsS",
+            "Hi5wcm90b2NvbC5PdmtEZWNyeXB0UGFyYW1ldGVycxoWLnByb3RvY29sLkRl",
+            "Y3J5cHROb3RlcyIAEjwKB0lzU3BlbmQSGC5wcm90b2NvbC5Ob3RlUGFyYW1l",
+            "dGVycxoVLnByb3RvY29sLlNwZW5kUmVzdWx0IgASYQobU2NhblNoaWVsZGVk",
+            "VFJDMjBOb3Rlc0J5SXZrEiMucHJvdG9jb2wuSXZrRGVjcnlwdFRSQzIwUGFy",
+            "YW1ldGVycxobLnByb3RvY29sLkRlY3J5cHROb3Rlc1RSQzIwIgASYQobU2Nh",
+            "blNoaWVsZGVkVFJDMjBOb3Rlc0J5T3ZrEiMucHJvdG9jb2wuT3ZrRGVjcnlw",
+            "dFRSQzIwUGFyYW1ldGVycxobLnByb3RvY29sLkRlY3J5cHROb3Rlc1RSQzIw",
+            "IgASXAogSXNTaGllbGRlZFRSQzIwQ29udHJhY3ROb3RlU3BlbnQSGy5wcm90",
+            "b2NvbC5OZlRSQzIwUGFyYW1ldGVycxoZLnByb3RvY29sLk51bGxpZmllclJl",
+            "c3VsdCIAEkIKDUdldFJld2FyZEluZm8SFi5wcm90b2NvbC5CeXRlc01lc3Nh",
+            "Z2UaFy5wcm90b2NvbC5OdW1iZXJNZXNzYWdlIgASRQoQR2V0QnJva2VyYWdl",
+            "SW5mbxIWLnByb3RvY29sLkJ5dGVzTWVzc2FnZRoXLnByb3RvY29sLk51bWJl",
+            "ck1lc3NhZ2UiABJbChdUcmlnZ2VyQ29uc3RhbnRDb250cmFjdBIeLnByb3Rv",
+            "Y29sLlRyaWdnZXJTbWFydENvbnRyYWN0Gh4ucHJvdG9jb2wuVHJhbnNhY3Rp",
+            "b25FeHRlbnRpb24iABJYChxHZXRUcmFuc2FjdGlvbkluZm9CeUJsb2NrTnVt",
+            "EhcucHJvdG9jb2wuTnVtYmVyTWVzc2FnZRodLnByb3RvY29sLlRyYW5zYWN0",
+            "aW9uSW5mb0xpc3QiADKtBAoPV2FsbGV0RXh0ZW5zaW9uErEBChdHZXRUcmFu",
+            "c2FjdGlvbnNGcm9tVGhpcxIaLnByb3RvY29sLkFjY291bnRQYWdpbmF0ZWQa",
+            "GS5wcm90b2NvbC5UcmFuc2FjdGlvbkxpc3QiX4LT5JMCWSIoL3dhbGxldGV4",
+            "dGVuc2lvbi9nZXR0cmFuc2FjdGlvbnNmcm9tdGhpczoBKloqEigvd2FsbGV0",
+            "ZXh0ZW5zaW9uL2dldHRyYW5zYWN0aW9uc2Zyb210aGlzElwKGEdldFRyYW5z",
+            "YWN0aW9uc0Zyb21UaGlzMhIaLnByb3RvY29sLkFjY291bnRQYWdpbmF0ZWQa",
+            "Ii5wcm90b2NvbC5UcmFuc2FjdGlvbkxpc3RFeHRlbnRpb24iABKrAQoVR2V0",
+            "VHJhbnNhY3Rpb25zVG9UaGlzEhoucHJvdG9jb2wuQWNjb3VudFBhZ2luYXRl",
+            "ZBoZLnByb3RvY29sLlRyYW5zYWN0aW9uTGlzdCJbgtPkkwJVIiYvd2FsbGV0",
+            "ZXh0ZW5zaW9uL2dldHRyYW5zYWN0aW9uc3RvdGhpczoBKlooEiYvd2FsbGV0",
+            "ZXh0ZW5zaW9uL2dldHRyYW5zYWN0aW9uc3RvdGhpcxJaChZHZXRUcmFuc2Fj",
+            "dGlvbnNUb1RoaXMyEhoucHJvdG9jb2wuQWNjb3VudFBhZ2luYXRlZBoiLnBy",
+            "b3RvY29sLlRyYW5zYWN0aW9uTGlzdEV4dGVudGlvbiIAMpkCCghEYXRhYmFz",
+            "ZRJHChFnZXRCbG9ja1JlZmVyZW5jZRIWLnByb3RvY29sLkVtcHR5TWVzc2Fn",
+            "ZRoYLnByb3RvY29sLkJsb2NrUmVmZXJlbmNlIgASTQoUR2V0RHluYW1pY1By",
+            "b3BlcnRpZXMSFi5wcm90b2NvbC5FbXB0eU1lc3NhZ2UaGy5wcm90b2NvbC5E",
+            "eW5hbWljUHJvcGVydGllcyIAEjgKC0dldE5vd0Jsb2NrEhYucHJvdG9jb2wu",
+            "RW1wdHlNZXNzYWdlGg8ucHJvdG9jb2wuQmxvY2siABI7Cg1HZXRCbG9ja0J5",
+            "TnVtEhcucHJvdG9jb2wuTnVtYmVyTWVzc2FnZRoPLnByb3RvY29sLkJsb2Nr",
+            "IgAyCQoHTmV0d29ya0JVCgxvcmcudHJvbi5hcGlCB0dycGNBUElaKGdpdGh1",
+            "Yi5jb20vdHJvbnByb3RvY29sL2dycGMtZ2F0ZXdheS9hcGmqAhFUcm9uLk5l",
+            "dC5Qcm90b2NvbGIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Tron.Net.Protocol.TronReflection.Descriptor, global::Tron.Net.Protocol.ContractReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Tron.Net.Protocol.TronReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, global::Tron.Net.Protocol.AssetIssueContractReflection.Descriptor, global::Tron.Net.Protocol.AccountContractReflection.Descriptor, global::Tron.Net.Protocol.WitnessContractReflection.Descriptor, global::Tron.Net.Protocol.BalanceContractReflection.Descriptor, global::Tron.Net.Protocol.ProposalContractReflection.Descriptor, global::Tron.Net.Protocol.StorageContractReflection.Descriptor, global::Tron.Net.Protocol.ExchangeContractReflection.Descriptor, global::Tron.Net.Protocol.SmartContractReflection.Descriptor, global::Tron.Net.Protocol.ShieldContractReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Tron.Net.Protocol.Return), global::Tron.Net.Protocol.Return.Parser, new[]{ "Result", "Code", "Message" }, null, new[]{ typeof(global::Tron.Net.Protocol.Return.Types.response_code) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Tron.Net.Protocol.BlockReference), global::Tron.Net.Protocol.BlockReference.Parser, new[]{ "BlockNum", "BlockHash" }, null, null, null, null),
@@ -476,8 +652,41 @@ namespace Tron.Net.Protocol {
             new pbr::GeneratedClrTypeInfo(typeof(global::Tron.Net.Protocol.BlockExtention), global::Tron.Net.Protocol.BlockExtention.Parser, new[]{ "Transactions", "BlockHeader", "Blockid" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Tron.Net.Protocol.BlockListExtention), global::Tron.Net.Protocol.BlockListExtention.Parser, new[]{ "Block" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Tron.Net.Protocol.TransactionListExtention), global::Tron.Net.Protocol.TransactionListExtention.Parser, new[]{ "Transaction" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Tron.Net.Protocol.BlockIncrementalMerkleTree), global::Tron.Net.Protocol.BlockIncrementalMerkleTree.Parser, new[]{ "Number", "MerkleTree" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Tron.Net.Protocol.TransactionSignWeight), global::Tron.Net.Protocol.TransactionSignWeight.Parser, new[]{ "Permission", "ApprovedList", "CurrentWeight", "Result", "Transaction" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Tron.Net.Protocol.TransactionSignWeight.Types.Result), global::Tron.Net.Protocol.TransactionSignWeight.Types.Result.Parser, new[]{ "Code", "Message" }, null, new[]{ typeof(global::Tron.Net.Protocol.TransactionSignWeight.Types.Result.Types.response_code) }, null, null)}),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Tron.Net.Protocol.TransactionApprovedList), global::Tron.Net.Protocol.TransactionApprovedList.Parser, new[]{ "ApprovedList", "Result", "Transaction" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Tron.Net.Protocol.TransactionApprovedList.Types.Result), global::Tron.Net.Protocol.TransactionApprovedList.Types.Result.Parser, new[]{ "Code", "Message" }, null, new[]{ typeof(global::Tron.Net.Protocol.TransactionApprovedList.Types.Result.Types.response_code) }, null, null)})
+            new pbr::GeneratedClrTypeInfo(typeof(global::Tron.Net.Protocol.TransactionApprovedList), global::Tron.Net.Protocol.TransactionApprovedList.Parser, new[]{ "ApprovedList", "Result", "Transaction" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Tron.Net.Protocol.TransactionApprovedList.Types.Result), global::Tron.Net.Protocol.TransactionApprovedList.Types.Result.Parser, new[]{ "Code", "Message" }, null, new[]{ typeof(global::Tron.Net.Protocol.TransactionApprovedList.Types.Result.Types.response_code) }, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Tron.Net.Protocol.IvkDecryptParameters), global::Tron.Net.Protocol.IvkDecryptParameters.Parser, new[]{ "StartBlockIndex", "EndBlockIndex", "Ivk" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Tron.Net.Protocol.IvkDecryptAndMarkParameters), global::Tron.Net.Protocol.IvkDecryptAndMarkParameters.Parser, new[]{ "StartBlockIndex", "EndBlockIndex", "Ivk", "Ak", "Nk" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Tron.Net.Protocol.OvkDecryptParameters), global::Tron.Net.Protocol.OvkDecryptParameters.Parser, new[]{ "StartBlockIndex", "EndBlockIndex", "Ovk" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Tron.Net.Protocol.DecryptNotes), global::Tron.Net.Protocol.DecryptNotes.Parser, new[]{ "NoteTxs" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Tron.Net.Protocol.DecryptNotes.Types.NoteTx), global::Tron.Net.Protocol.DecryptNotes.Types.NoteTx.Parser, new[]{ "Note", "Txid", "Index" }, null, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Tron.Net.Protocol.DecryptNotesMarked), global::Tron.Net.Protocol.DecryptNotesMarked.Parser, new[]{ "NoteTxs" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Tron.Net.Protocol.DecryptNotesMarked.Types.NoteTx), global::Tron.Net.Protocol.DecryptNotesMarked.Types.NoteTx.Parser, new[]{ "Note", "Txid", "Index", "IsSpend" }, null, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Tron.Net.Protocol.Note), global::Tron.Net.Protocol.Note.Parser, new[]{ "Value", "PaymentAddress", "Rcm", "Memo" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Tron.Net.Protocol.SpendNote), global::Tron.Net.Protocol.SpendNote.Parser, new[]{ "Note", "Alpha", "Voucher", "Path" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Tron.Net.Protocol.ReceiveNote), global::Tron.Net.Protocol.ReceiveNote.Parser, new[]{ "Note" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Tron.Net.Protocol.PrivateParameters), global::Tron.Net.Protocol.PrivateParameters.Parser, new[]{ "TransparentFromAddress", "Ask", "Nsk", "Ovk", "FromAmount", "ShieldedSpends", "ShieldedReceives", "TransparentToAddress", "ToAmount", "Timeout" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Tron.Net.Protocol.PrivateParametersWithoutAsk), global::Tron.Net.Protocol.PrivateParametersWithoutAsk.Parser, new[]{ "TransparentFromAddress", "Ak", "Nsk", "Ovk", "FromAmount", "ShieldedSpends", "ShieldedReceives", "TransparentToAddress", "ToAmount", "Timeout" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Tron.Net.Protocol.SpendAuthSigParameters), global::Tron.Net.Protocol.SpendAuthSigParameters.Parser, new[]{ "Ask", "TxHash", "Alpha" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Tron.Net.Protocol.NfParameters), global::Tron.Net.Protocol.NfParameters.Parser, new[]{ "Note", "Voucher", "Ak", "Nk" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Tron.Net.Protocol.ExpandedSpendingKeyMessage), global::Tron.Net.Protocol.ExpandedSpendingKeyMessage.Parser, new[]{ "Ask", "Nsk", "Ovk" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Tron.Net.Protocol.ViewingKeyMessage), global::Tron.Net.Protocol.ViewingKeyMessage.Parser, new[]{ "Ak", "Nk" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Tron.Net.Protocol.IncomingViewingKeyMessage), global::Tron.Net.Protocol.IncomingViewingKeyMessage.Parser, new[]{ "Ivk" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Tron.Net.Protocol.DiversifierMessage), global::Tron.Net.Protocol.DiversifierMessage.Parser, new[]{ "D" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Tron.Net.Protocol.IncomingViewingKeyDiversifierMessage), global::Tron.Net.Protocol.IncomingViewingKeyDiversifierMessage.Parser, new[]{ "Ivk", "D" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Tron.Net.Protocol.PaymentAddressMessage), global::Tron.Net.Protocol.PaymentAddressMessage.Parser, new[]{ "D", "PkD", "PaymentAddress" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Tron.Net.Protocol.ShieldedAddressInfo), global::Tron.Net.Protocol.ShieldedAddressInfo.Parser, new[]{ "Sk", "Ask", "Nsk", "Ovk", "Ak", "Nk", "Ivk", "D", "PkD", "PaymentAddress" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Tron.Net.Protocol.NoteParameters), global::Tron.Net.Protocol.NoteParameters.Parser, new[]{ "Ak", "Nk", "Note", "Txid", "Index" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Tron.Net.Protocol.SpendResult), global::Tron.Net.Protocol.SpendResult.Parser, new[]{ "Result", "Message" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Tron.Net.Protocol.TransactionInfoList), global::Tron.Net.Protocol.TransactionInfoList.Parser, new[]{ "TransactionInfo" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Tron.Net.Protocol.SpendNoteTRC20), global::Tron.Net.Protocol.SpendNoteTRC20.Parser, new[]{ "Note", "Alpha", "Root", "Path", "Pos" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Tron.Net.Protocol.PrivateShieldedTRC20Parameters), global::Tron.Net.Protocol.PrivateShieldedTRC20Parameters.Parser, new[]{ "Ask", "Nsk", "Ovk", "FromAmount", "ShieldedSpends", "ShieldedReceives", "TransparentToAddress", "ToAmount", "ShieldedTRC20ContractAddress" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Tron.Net.Protocol.PrivateShieldedTRC20ParametersWithoutAsk), global::Tron.Net.Protocol.PrivateShieldedTRC20ParametersWithoutAsk.Parser, new[]{ "Ak", "Nsk", "Ovk", "FromAmount", "ShieldedSpends", "ShieldedReceives", "TransparentToAddress", "ToAmount", "ShieldedTRC20ContractAddress" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Tron.Net.Protocol.ShieldedTRC20Parameters), global::Tron.Net.Protocol.ShieldedTRC20Parameters.Parser, new[]{ "SpendDescription", "ReceiveDescription", "BindingSignature", "MessageHash", "TriggerContractInput", "ParameterType" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Tron.Net.Protocol.IvkDecryptTRC20Parameters), global::Tron.Net.Protocol.IvkDecryptTRC20Parameters.Parser, new[]{ "StartBlockIndex", "EndBlockIndex", "ShieldedTRC20ContractAddress", "Ivk", "Ak", "Nk", "Events" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Tron.Net.Protocol.OvkDecryptTRC20Parameters), global::Tron.Net.Protocol.OvkDecryptTRC20Parameters.Parser, new[]{ "StartBlockIndex", "EndBlockIndex", "Ovk", "ShieldedTRC20ContractAddress", "Events" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Tron.Net.Protocol.DecryptNotesTRC20), global::Tron.Net.Protocol.DecryptNotesTRC20.Parser, new[]{ "NoteTxs" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Tron.Net.Protocol.DecryptNotesTRC20.Types.NoteTx), global::Tron.Net.Protocol.DecryptNotesTRC20.Types.NoteTx.Parser, new[]{ "Note", "Position", "IsSpent", "Txid", "Index", "ToAmount", "TransparentToAddress" }, null, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Tron.Net.Protocol.NfTRC20Parameters), global::Tron.Net.Protocol.NfTRC20Parameters.Parser, new[]{ "Note", "Ak", "Nk", "Position", "ShieldedTRC20ContractAddress" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Tron.Net.Protocol.NullifierResult), global::Tron.Net.Protocol.NullifierResult.Parser, new[]{ "IsSpent" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Tron.Net.Protocol.ShieldedTRC20TriggerContractParameters), global::Tron.Net.Protocol.ShieldedTRC20TriggerContractParameters.Parser, new[]{ "ShieldedTRC20Parameters", "SpendAuthoritySignature", "Amount", "TransparentToAddress" }, null, null, null, null)
           }));
     }
     #endregion
@@ -5294,7 +5503,7 @@ namespace Tron.Net.Protocol {
     public const int TxidFieldNumber = 3;
     private pb::ByteString txid_ = pb::ByteString.Empty;
     /// <summary>
-    ///transaction id =  sha256(transaction.rowdata)
+    ///transaction id = sha256(transaction.raw_data)
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pb::ByteString Txid {
@@ -5641,7 +5850,7 @@ namespace Tron.Net.Protocol {
     public const int TxidFieldNumber = 2;
     private pb::ByteString txid_ = pb::ByteString.Empty;
     /// <summary>
-    ///transaction id =  sha256(transaction.rowdata)
+    ///transaction id = sha256(transaction.raw_data)
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pb::ByteString Txid {
@@ -6234,6 +6443,169 @@ namespace Tron.Net.Protocol {
 
   }
 
+  public sealed partial class BlockIncrementalMerkleTree : pb::IMessage<BlockIncrementalMerkleTree> {
+    private static readonly pb::MessageParser<BlockIncrementalMerkleTree> _parser = new pb::MessageParser<BlockIncrementalMerkleTree>(() => new BlockIncrementalMerkleTree());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<BlockIncrementalMerkleTree> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Tron.Net.Protocol.ApiReflection.Descriptor.MessageTypes[34]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public BlockIncrementalMerkleTree() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public BlockIncrementalMerkleTree(BlockIncrementalMerkleTree other) : this() {
+      number_ = other.number_;
+      merkleTree_ = other.merkleTree_ != null ? other.merkleTree_.Clone() : null;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public BlockIncrementalMerkleTree Clone() {
+      return new BlockIncrementalMerkleTree(this);
+    }
+
+    /// <summary>Field number for the "number" field.</summary>
+    public const int NumberFieldNumber = 1;
+    private long number_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public long Number {
+      get { return number_; }
+      set {
+        number_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "merkleTree" field.</summary>
+    public const int MerkleTreeFieldNumber = 2;
+    private global::Tron.Net.Protocol.IncrementalMerkleTree merkleTree_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Tron.Net.Protocol.IncrementalMerkleTree MerkleTree {
+      get { return merkleTree_; }
+      set {
+        merkleTree_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as BlockIncrementalMerkleTree);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(BlockIncrementalMerkleTree other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Number != other.Number) return false;
+      if (!object.Equals(MerkleTree, other.MerkleTree)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Number != 0L) hash ^= Number.GetHashCode();
+      if (merkleTree_ != null) hash ^= MerkleTree.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (Number != 0L) {
+        output.WriteRawTag(8);
+        output.WriteInt64(Number);
+      }
+      if (merkleTree_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(MerkleTree);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (Number != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(Number);
+      }
+      if (merkleTree_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(MerkleTree);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(BlockIncrementalMerkleTree other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Number != 0L) {
+        Number = other.Number;
+      }
+      if (other.merkleTree_ != null) {
+        if (merkleTree_ == null) {
+          MerkleTree = new global::Tron.Net.Protocol.IncrementalMerkleTree();
+        }
+        MerkleTree.MergeFrom(other.MerkleTree);
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 8: {
+            Number = input.ReadInt64();
+            break;
+          }
+          case 18: {
+            if (merkleTree_ == null) {
+              MerkleTree = new global::Tron.Net.Protocol.IncrementalMerkleTree();
+            }
+            input.ReadMessage(MerkleTree);
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
   public sealed partial class TransactionSignWeight : pb::IMessage<TransactionSignWeight> {
     private static readonly pb::MessageParser<TransactionSignWeight> _parser = new pb::MessageParser<TransactionSignWeight>(() => new TransactionSignWeight());
     private pb::UnknownFieldSet _unknownFields;
@@ -6242,7 +6614,7 @@ namespace Tron.Net.Protocol {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Tron.Net.Protocol.ApiReflection.Descriptor.MessageTypes[34]; }
+      get { return global::Tron.Net.Protocol.ApiReflection.Descriptor.MessageTypes[35]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -6679,7 +7051,7 @@ namespace Tron.Net.Protocol {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Tron.Net.Protocol.ApiReflection.Descriptor.MessageTypes[35]; }
+      get { return global::Tron.Net.Protocol.ApiReflection.Descriptor.MessageTypes[36]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -7035,6 +7407,7606 @@ namespace Tron.Net.Protocol {
 
     }
     #endregion
+
+  }
+
+  public sealed partial class IvkDecryptParameters : pb::IMessage<IvkDecryptParameters> {
+    private static readonly pb::MessageParser<IvkDecryptParameters> _parser = new pb::MessageParser<IvkDecryptParameters>(() => new IvkDecryptParameters());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<IvkDecryptParameters> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Tron.Net.Protocol.ApiReflection.Descriptor.MessageTypes[37]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public IvkDecryptParameters() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public IvkDecryptParameters(IvkDecryptParameters other) : this() {
+      startBlockIndex_ = other.startBlockIndex_;
+      endBlockIndex_ = other.endBlockIndex_;
+      ivk_ = other.ivk_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public IvkDecryptParameters Clone() {
+      return new IvkDecryptParameters(this);
+    }
+
+    /// <summary>Field number for the "start_block_index" field.</summary>
+    public const int StartBlockIndexFieldNumber = 1;
+    private long startBlockIndex_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public long StartBlockIndex {
+      get { return startBlockIndex_; }
+      set {
+        startBlockIndex_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "end_block_index" field.</summary>
+    public const int EndBlockIndexFieldNumber = 2;
+    private long endBlockIndex_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public long EndBlockIndex {
+      get { return endBlockIndex_; }
+      set {
+        endBlockIndex_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "ivk" field.</summary>
+    public const int IvkFieldNumber = 3;
+    private pb::ByteString ivk_ = pb::ByteString.Empty;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pb::ByteString Ivk {
+      get { return ivk_; }
+      set {
+        ivk_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as IvkDecryptParameters);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(IvkDecryptParameters other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (StartBlockIndex != other.StartBlockIndex) return false;
+      if (EndBlockIndex != other.EndBlockIndex) return false;
+      if (Ivk != other.Ivk) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (StartBlockIndex != 0L) hash ^= StartBlockIndex.GetHashCode();
+      if (EndBlockIndex != 0L) hash ^= EndBlockIndex.GetHashCode();
+      if (Ivk.Length != 0) hash ^= Ivk.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (StartBlockIndex != 0L) {
+        output.WriteRawTag(8);
+        output.WriteInt64(StartBlockIndex);
+      }
+      if (EndBlockIndex != 0L) {
+        output.WriteRawTag(16);
+        output.WriteInt64(EndBlockIndex);
+      }
+      if (Ivk.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteBytes(Ivk);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (StartBlockIndex != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(StartBlockIndex);
+      }
+      if (EndBlockIndex != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(EndBlockIndex);
+      }
+      if (Ivk.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeBytesSize(Ivk);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(IvkDecryptParameters other) {
+      if (other == null) {
+        return;
+      }
+      if (other.StartBlockIndex != 0L) {
+        StartBlockIndex = other.StartBlockIndex;
+      }
+      if (other.EndBlockIndex != 0L) {
+        EndBlockIndex = other.EndBlockIndex;
+      }
+      if (other.Ivk.Length != 0) {
+        Ivk = other.Ivk;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 8: {
+            StartBlockIndex = input.ReadInt64();
+            break;
+          }
+          case 16: {
+            EndBlockIndex = input.ReadInt64();
+            break;
+          }
+          case 26: {
+            Ivk = input.ReadBytes();
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  public sealed partial class IvkDecryptAndMarkParameters : pb::IMessage<IvkDecryptAndMarkParameters> {
+    private static readonly pb::MessageParser<IvkDecryptAndMarkParameters> _parser = new pb::MessageParser<IvkDecryptAndMarkParameters>(() => new IvkDecryptAndMarkParameters());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<IvkDecryptAndMarkParameters> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Tron.Net.Protocol.ApiReflection.Descriptor.MessageTypes[38]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public IvkDecryptAndMarkParameters() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public IvkDecryptAndMarkParameters(IvkDecryptAndMarkParameters other) : this() {
+      startBlockIndex_ = other.startBlockIndex_;
+      endBlockIndex_ = other.endBlockIndex_;
+      ivk_ = other.ivk_;
+      ak_ = other.ak_;
+      nk_ = other.nk_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public IvkDecryptAndMarkParameters Clone() {
+      return new IvkDecryptAndMarkParameters(this);
+    }
+
+    /// <summary>Field number for the "start_block_index" field.</summary>
+    public const int StartBlockIndexFieldNumber = 1;
+    private long startBlockIndex_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public long StartBlockIndex {
+      get { return startBlockIndex_; }
+      set {
+        startBlockIndex_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "end_block_index" field.</summary>
+    public const int EndBlockIndexFieldNumber = 2;
+    private long endBlockIndex_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public long EndBlockIndex {
+      get { return endBlockIndex_; }
+      set {
+        endBlockIndex_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "ivk" field.</summary>
+    public const int IvkFieldNumber = 5;
+    private pb::ByteString ivk_ = pb::ByteString.Empty;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pb::ByteString Ivk {
+      get { return ivk_; }
+      set {
+        ivk_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "ak" field.</summary>
+    public const int AkFieldNumber = 3;
+    private pb::ByteString ak_ = pb::ByteString.Empty;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pb::ByteString Ak {
+      get { return ak_; }
+      set {
+        ak_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "nk" field.</summary>
+    public const int NkFieldNumber = 4;
+    private pb::ByteString nk_ = pb::ByteString.Empty;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pb::ByteString Nk {
+      get { return nk_; }
+      set {
+        nk_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as IvkDecryptAndMarkParameters);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(IvkDecryptAndMarkParameters other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (StartBlockIndex != other.StartBlockIndex) return false;
+      if (EndBlockIndex != other.EndBlockIndex) return false;
+      if (Ivk != other.Ivk) return false;
+      if (Ak != other.Ak) return false;
+      if (Nk != other.Nk) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (StartBlockIndex != 0L) hash ^= StartBlockIndex.GetHashCode();
+      if (EndBlockIndex != 0L) hash ^= EndBlockIndex.GetHashCode();
+      if (Ivk.Length != 0) hash ^= Ivk.GetHashCode();
+      if (Ak.Length != 0) hash ^= Ak.GetHashCode();
+      if (Nk.Length != 0) hash ^= Nk.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (StartBlockIndex != 0L) {
+        output.WriteRawTag(8);
+        output.WriteInt64(StartBlockIndex);
+      }
+      if (EndBlockIndex != 0L) {
+        output.WriteRawTag(16);
+        output.WriteInt64(EndBlockIndex);
+      }
+      if (Ak.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteBytes(Ak);
+      }
+      if (Nk.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteBytes(Nk);
+      }
+      if (Ivk.Length != 0) {
+        output.WriteRawTag(42);
+        output.WriteBytes(Ivk);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (StartBlockIndex != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(StartBlockIndex);
+      }
+      if (EndBlockIndex != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(EndBlockIndex);
+      }
+      if (Ivk.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeBytesSize(Ivk);
+      }
+      if (Ak.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeBytesSize(Ak);
+      }
+      if (Nk.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeBytesSize(Nk);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(IvkDecryptAndMarkParameters other) {
+      if (other == null) {
+        return;
+      }
+      if (other.StartBlockIndex != 0L) {
+        StartBlockIndex = other.StartBlockIndex;
+      }
+      if (other.EndBlockIndex != 0L) {
+        EndBlockIndex = other.EndBlockIndex;
+      }
+      if (other.Ivk.Length != 0) {
+        Ivk = other.Ivk;
+      }
+      if (other.Ak.Length != 0) {
+        Ak = other.Ak;
+      }
+      if (other.Nk.Length != 0) {
+        Nk = other.Nk;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 8: {
+            StartBlockIndex = input.ReadInt64();
+            break;
+          }
+          case 16: {
+            EndBlockIndex = input.ReadInt64();
+            break;
+          }
+          case 26: {
+            Ak = input.ReadBytes();
+            break;
+          }
+          case 34: {
+            Nk = input.ReadBytes();
+            break;
+          }
+          case 42: {
+            Ivk = input.ReadBytes();
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  public sealed partial class OvkDecryptParameters : pb::IMessage<OvkDecryptParameters> {
+    private static readonly pb::MessageParser<OvkDecryptParameters> _parser = new pb::MessageParser<OvkDecryptParameters>(() => new OvkDecryptParameters());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<OvkDecryptParameters> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Tron.Net.Protocol.ApiReflection.Descriptor.MessageTypes[39]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public OvkDecryptParameters() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public OvkDecryptParameters(OvkDecryptParameters other) : this() {
+      startBlockIndex_ = other.startBlockIndex_;
+      endBlockIndex_ = other.endBlockIndex_;
+      ovk_ = other.ovk_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public OvkDecryptParameters Clone() {
+      return new OvkDecryptParameters(this);
+    }
+
+    /// <summary>Field number for the "start_block_index" field.</summary>
+    public const int StartBlockIndexFieldNumber = 1;
+    private long startBlockIndex_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public long StartBlockIndex {
+      get { return startBlockIndex_; }
+      set {
+        startBlockIndex_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "end_block_index" field.</summary>
+    public const int EndBlockIndexFieldNumber = 2;
+    private long endBlockIndex_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public long EndBlockIndex {
+      get { return endBlockIndex_; }
+      set {
+        endBlockIndex_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "ovk" field.</summary>
+    public const int OvkFieldNumber = 3;
+    private pb::ByteString ovk_ = pb::ByteString.Empty;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pb::ByteString Ovk {
+      get { return ovk_; }
+      set {
+        ovk_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as OvkDecryptParameters);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(OvkDecryptParameters other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (StartBlockIndex != other.StartBlockIndex) return false;
+      if (EndBlockIndex != other.EndBlockIndex) return false;
+      if (Ovk != other.Ovk) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (StartBlockIndex != 0L) hash ^= StartBlockIndex.GetHashCode();
+      if (EndBlockIndex != 0L) hash ^= EndBlockIndex.GetHashCode();
+      if (Ovk.Length != 0) hash ^= Ovk.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (StartBlockIndex != 0L) {
+        output.WriteRawTag(8);
+        output.WriteInt64(StartBlockIndex);
+      }
+      if (EndBlockIndex != 0L) {
+        output.WriteRawTag(16);
+        output.WriteInt64(EndBlockIndex);
+      }
+      if (Ovk.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteBytes(Ovk);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (StartBlockIndex != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(StartBlockIndex);
+      }
+      if (EndBlockIndex != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(EndBlockIndex);
+      }
+      if (Ovk.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeBytesSize(Ovk);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(OvkDecryptParameters other) {
+      if (other == null) {
+        return;
+      }
+      if (other.StartBlockIndex != 0L) {
+        StartBlockIndex = other.StartBlockIndex;
+      }
+      if (other.EndBlockIndex != 0L) {
+        EndBlockIndex = other.EndBlockIndex;
+      }
+      if (other.Ovk.Length != 0) {
+        Ovk = other.Ovk;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 8: {
+            StartBlockIndex = input.ReadInt64();
+            break;
+          }
+          case 16: {
+            EndBlockIndex = input.ReadInt64();
+            break;
+          }
+          case 26: {
+            Ovk = input.ReadBytes();
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  public sealed partial class DecryptNotes : pb::IMessage<DecryptNotes> {
+    private static readonly pb::MessageParser<DecryptNotes> _parser = new pb::MessageParser<DecryptNotes>(() => new DecryptNotes());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<DecryptNotes> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Tron.Net.Protocol.ApiReflection.Descriptor.MessageTypes[40]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public DecryptNotes() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public DecryptNotes(DecryptNotes other) : this() {
+      noteTxs_ = other.noteTxs_.Clone();
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public DecryptNotes Clone() {
+      return new DecryptNotes(this);
+    }
+
+    /// <summary>Field number for the "noteTxs" field.</summary>
+    public const int NoteTxsFieldNumber = 1;
+    private static readonly pb::FieldCodec<global::Tron.Net.Protocol.DecryptNotes.Types.NoteTx> _repeated_noteTxs_codec
+        = pb::FieldCodec.ForMessage(10, global::Tron.Net.Protocol.DecryptNotes.Types.NoteTx.Parser);
+    private readonly pbc::RepeatedField<global::Tron.Net.Protocol.DecryptNotes.Types.NoteTx> noteTxs_ = new pbc::RepeatedField<global::Tron.Net.Protocol.DecryptNotes.Types.NoteTx>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::RepeatedField<global::Tron.Net.Protocol.DecryptNotes.Types.NoteTx> NoteTxs {
+      get { return noteTxs_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as DecryptNotes);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(DecryptNotes other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if(!noteTxs_.Equals(other.noteTxs_)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      hash ^= noteTxs_.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      noteTxs_.WriteTo(output, _repeated_noteTxs_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      size += noteTxs_.CalculateSize(_repeated_noteTxs_codec);
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(DecryptNotes other) {
+      if (other == null) {
+        return;
+      }
+      noteTxs_.Add(other.noteTxs_);
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            noteTxs_.AddEntriesFrom(input, _repeated_noteTxs_codec);
+            break;
+          }
+        }
+      }
+    }
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the DecryptNotes message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static partial class Types {
+      public sealed partial class NoteTx : pb::IMessage<NoteTx> {
+        private static readonly pb::MessageParser<NoteTx> _parser = new pb::MessageParser<NoteTx>(() => new NoteTx());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public static pb::MessageParser<NoteTx> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Tron.Net.Protocol.DecryptNotes.Descriptor.NestedTypes[0]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public NoteTx() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public NoteTx(NoteTx other) : this() {
+          note_ = other.note_ != null ? other.note_.Clone() : null;
+          txid_ = other.txid_;
+          index_ = other.index_;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public NoteTx Clone() {
+          return new NoteTx(this);
+        }
+
+        /// <summary>Field number for the "note" field.</summary>
+        public const int NoteFieldNumber = 1;
+        private global::Tron.Net.Protocol.Note note_;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public global::Tron.Net.Protocol.Note Note {
+          get { return note_; }
+          set {
+            note_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "txid" field.</summary>
+        public const int TxidFieldNumber = 2;
+        private pb::ByteString txid_ = pb::ByteString.Empty;
+        /// <summary>
+        ///transaction id = sha256(transaction.raw_data)
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public pb::ByteString Txid {
+          get { return txid_; }
+          set {
+            txid_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        /// <summary>Field number for the "index" field.</summary>
+        public const int IndexFieldNumber = 3;
+        private int index_;
+        /// <summary>
+        ///the index of note in receive
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public int Index {
+          get { return index_; }
+          set {
+            index_ = value;
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public override bool Equals(object other) {
+          return Equals(other as NoteTx);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public bool Equals(NoteTx other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (!object.Equals(Note, other.Note)) return false;
+          if (Txid != other.Txid) return false;
+          if (Index != other.Index) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (note_ != null) hash ^= Note.GetHashCode();
+          if (Txid.Length != 0) hash ^= Txid.GetHashCode();
+          if (Index != 0) hash ^= Index.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public void WriteTo(pb::CodedOutputStream output) {
+          if (note_ != null) {
+            output.WriteRawTag(10);
+            output.WriteMessage(Note);
+          }
+          if (Txid.Length != 0) {
+            output.WriteRawTag(18);
+            output.WriteBytes(Txid);
+          }
+          if (Index != 0) {
+            output.WriteRawTag(24);
+            output.WriteInt32(Index);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public int CalculateSize() {
+          int size = 0;
+          if (note_ != null) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(Note);
+          }
+          if (Txid.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeBytesSize(Txid);
+          }
+          if (Index != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeInt32Size(Index);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public void MergeFrom(NoteTx other) {
+          if (other == null) {
+            return;
+          }
+          if (other.note_ != null) {
+            if (note_ == null) {
+              Note = new global::Tron.Net.Protocol.Note();
+            }
+            Note.MergeFrom(other.Note);
+          }
+          if (other.Txid.Length != 0) {
+            Txid = other.Txid;
+          }
+          if (other.Index != 0) {
+            Index = other.Index;
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public void MergeFrom(pb::CodedInputStream input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 10: {
+                if (note_ == null) {
+                  Note = new global::Tron.Net.Protocol.Note();
+                }
+                input.ReadMessage(Note);
+                break;
+              }
+              case 18: {
+                Txid = input.ReadBytes();
+                break;
+              }
+              case 24: {
+                Index = input.ReadInt32();
+                break;
+              }
+            }
+          }
+        }
+
+      }
+
+    }
+    #endregion
+
+  }
+
+  public sealed partial class DecryptNotesMarked : pb::IMessage<DecryptNotesMarked> {
+    private static readonly pb::MessageParser<DecryptNotesMarked> _parser = new pb::MessageParser<DecryptNotesMarked>(() => new DecryptNotesMarked());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<DecryptNotesMarked> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Tron.Net.Protocol.ApiReflection.Descriptor.MessageTypes[41]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public DecryptNotesMarked() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public DecryptNotesMarked(DecryptNotesMarked other) : this() {
+      noteTxs_ = other.noteTxs_.Clone();
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public DecryptNotesMarked Clone() {
+      return new DecryptNotesMarked(this);
+    }
+
+    /// <summary>Field number for the "noteTxs" field.</summary>
+    public const int NoteTxsFieldNumber = 1;
+    private static readonly pb::FieldCodec<global::Tron.Net.Protocol.DecryptNotesMarked.Types.NoteTx> _repeated_noteTxs_codec
+        = pb::FieldCodec.ForMessage(10, global::Tron.Net.Protocol.DecryptNotesMarked.Types.NoteTx.Parser);
+    private readonly pbc::RepeatedField<global::Tron.Net.Protocol.DecryptNotesMarked.Types.NoteTx> noteTxs_ = new pbc::RepeatedField<global::Tron.Net.Protocol.DecryptNotesMarked.Types.NoteTx>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::RepeatedField<global::Tron.Net.Protocol.DecryptNotesMarked.Types.NoteTx> NoteTxs {
+      get { return noteTxs_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as DecryptNotesMarked);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(DecryptNotesMarked other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if(!noteTxs_.Equals(other.noteTxs_)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      hash ^= noteTxs_.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      noteTxs_.WriteTo(output, _repeated_noteTxs_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      size += noteTxs_.CalculateSize(_repeated_noteTxs_codec);
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(DecryptNotesMarked other) {
+      if (other == null) {
+        return;
+      }
+      noteTxs_.Add(other.noteTxs_);
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            noteTxs_.AddEntriesFrom(input, _repeated_noteTxs_codec);
+            break;
+          }
+        }
+      }
+    }
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the DecryptNotesMarked message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static partial class Types {
+      public sealed partial class NoteTx : pb::IMessage<NoteTx> {
+        private static readonly pb::MessageParser<NoteTx> _parser = new pb::MessageParser<NoteTx>(() => new NoteTx());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public static pb::MessageParser<NoteTx> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Tron.Net.Protocol.DecryptNotesMarked.Descriptor.NestedTypes[0]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public NoteTx() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public NoteTx(NoteTx other) : this() {
+          note_ = other.note_ != null ? other.note_.Clone() : null;
+          txid_ = other.txid_;
+          index_ = other.index_;
+          isSpend_ = other.isSpend_;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public NoteTx Clone() {
+          return new NoteTx(this);
+        }
+
+        /// <summary>Field number for the "note" field.</summary>
+        public const int NoteFieldNumber = 1;
+        private global::Tron.Net.Protocol.Note note_;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public global::Tron.Net.Protocol.Note Note {
+          get { return note_; }
+          set {
+            note_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "txid" field.</summary>
+        public const int TxidFieldNumber = 2;
+        private pb::ByteString txid_ = pb::ByteString.Empty;
+        /// <summary>
+        ///transaction id = sha256(transaction.raw_data)
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public pb::ByteString Txid {
+          get { return txid_; }
+          set {
+            txid_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        /// <summary>Field number for the "index" field.</summary>
+        public const int IndexFieldNumber = 3;
+        private int index_;
+        /// <summary>
+        ///the index of note in receive
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public int Index {
+          get { return index_; }
+          set {
+            index_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "is_spend" field.</summary>
+        public const int IsSpendFieldNumber = 4;
+        private bool isSpend_;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public bool IsSpend {
+          get { return isSpend_; }
+          set {
+            isSpend_ = value;
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public override bool Equals(object other) {
+          return Equals(other as NoteTx);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public bool Equals(NoteTx other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (!object.Equals(Note, other.Note)) return false;
+          if (Txid != other.Txid) return false;
+          if (Index != other.Index) return false;
+          if (IsSpend != other.IsSpend) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (note_ != null) hash ^= Note.GetHashCode();
+          if (Txid.Length != 0) hash ^= Txid.GetHashCode();
+          if (Index != 0) hash ^= Index.GetHashCode();
+          if (IsSpend != false) hash ^= IsSpend.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public void WriteTo(pb::CodedOutputStream output) {
+          if (note_ != null) {
+            output.WriteRawTag(10);
+            output.WriteMessage(Note);
+          }
+          if (Txid.Length != 0) {
+            output.WriteRawTag(18);
+            output.WriteBytes(Txid);
+          }
+          if (Index != 0) {
+            output.WriteRawTag(24);
+            output.WriteInt32(Index);
+          }
+          if (IsSpend != false) {
+            output.WriteRawTag(32);
+            output.WriteBool(IsSpend);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public int CalculateSize() {
+          int size = 0;
+          if (note_ != null) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(Note);
+          }
+          if (Txid.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeBytesSize(Txid);
+          }
+          if (Index != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeInt32Size(Index);
+          }
+          if (IsSpend != false) {
+            size += 1 + 1;
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public void MergeFrom(NoteTx other) {
+          if (other == null) {
+            return;
+          }
+          if (other.note_ != null) {
+            if (note_ == null) {
+              Note = new global::Tron.Net.Protocol.Note();
+            }
+            Note.MergeFrom(other.Note);
+          }
+          if (other.Txid.Length != 0) {
+            Txid = other.Txid;
+          }
+          if (other.Index != 0) {
+            Index = other.Index;
+          }
+          if (other.IsSpend != false) {
+            IsSpend = other.IsSpend;
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public void MergeFrom(pb::CodedInputStream input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 10: {
+                if (note_ == null) {
+                  Note = new global::Tron.Net.Protocol.Note();
+                }
+                input.ReadMessage(Note);
+                break;
+              }
+              case 18: {
+                Txid = input.ReadBytes();
+                break;
+              }
+              case 24: {
+                Index = input.ReadInt32();
+                break;
+              }
+              case 32: {
+                IsSpend = input.ReadBool();
+                break;
+              }
+            }
+          }
+        }
+
+      }
+
+    }
+    #endregion
+
+  }
+
+  public sealed partial class Note : pb::IMessage<Note> {
+    private static readonly pb::MessageParser<Note> _parser = new pb::MessageParser<Note>(() => new Note());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<Note> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Tron.Net.Protocol.ApiReflection.Descriptor.MessageTypes[42]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public Note() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public Note(Note other) : this() {
+      value_ = other.value_;
+      paymentAddress_ = other.paymentAddress_;
+      rcm_ = other.rcm_;
+      memo_ = other.memo_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public Note Clone() {
+      return new Note(this);
+    }
+
+    /// <summary>Field number for the "value" field.</summary>
+    public const int ValueFieldNumber = 1;
+    private long value_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public long Value {
+      get { return value_; }
+      set {
+        value_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "payment_address" field.</summary>
+    public const int PaymentAddressFieldNumber = 2;
+    private string paymentAddress_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string PaymentAddress {
+      get { return paymentAddress_; }
+      set {
+        paymentAddress_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "rcm" field.</summary>
+    public const int RcmFieldNumber = 3;
+    private pb::ByteString rcm_ = pb::ByteString.Empty;
+    /// <summary>
+    /// random 32
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pb::ByteString Rcm {
+      get { return rcm_; }
+      set {
+        rcm_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "memo" field.</summary>
+    public const int MemoFieldNumber = 4;
+    private pb::ByteString memo_ = pb::ByteString.Empty;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pb::ByteString Memo {
+      get { return memo_; }
+      set {
+        memo_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as Note);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(Note other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Value != other.Value) return false;
+      if (PaymentAddress != other.PaymentAddress) return false;
+      if (Rcm != other.Rcm) return false;
+      if (Memo != other.Memo) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Value != 0L) hash ^= Value.GetHashCode();
+      if (PaymentAddress.Length != 0) hash ^= PaymentAddress.GetHashCode();
+      if (Rcm.Length != 0) hash ^= Rcm.GetHashCode();
+      if (Memo.Length != 0) hash ^= Memo.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (Value != 0L) {
+        output.WriteRawTag(8);
+        output.WriteInt64(Value);
+      }
+      if (PaymentAddress.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(PaymentAddress);
+      }
+      if (Rcm.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteBytes(Rcm);
+      }
+      if (Memo.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteBytes(Memo);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (Value != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(Value);
+      }
+      if (PaymentAddress.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(PaymentAddress);
+      }
+      if (Rcm.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeBytesSize(Rcm);
+      }
+      if (Memo.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeBytesSize(Memo);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(Note other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Value != 0L) {
+        Value = other.Value;
+      }
+      if (other.PaymentAddress.Length != 0) {
+        PaymentAddress = other.PaymentAddress;
+      }
+      if (other.Rcm.Length != 0) {
+        Rcm = other.Rcm;
+      }
+      if (other.Memo.Length != 0) {
+        Memo = other.Memo;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 8: {
+            Value = input.ReadInt64();
+            break;
+          }
+          case 18: {
+            PaymentAddress = input.ReadString();
+            break;
+          }
+          case 26: {
+            Rcm = input.ReadBytes();
+            break;
+          }
+          case 34: {
+            Memo = input.ReadBytes();
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  public sealed partial class SpendNote : pb::IMessage<SpendNote> {
+    private static readonly pb::MessageParser<SpendNote> _parser = new pb::MessageParser<SpendNote>(() => new SpendNote());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<SpendNote> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Tron.Net.Protocol.ApiReflection.Descriptor.MessageTypes[43]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public SpendNote() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public SpendNote(SpendNote other) : this() {
+      note_ = other.note_ != null ? other.note_.Clone() : null;
+      alpha_ = other.alpha_;
+      voucher_ = other.voucher_ != null ? other.voucher_.Clone() : null;
+      path_ = other.path_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public SpendNote Clone() {
+      return new SpendNote(this);
+    }
+
+    /// <summary>Field number for the "note" field.</summary>
+    public const int NoteFieldNumber = 3;
+    private global::Tron.Net.Protocol.Note note_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Tron.Net.Protocol.Note Note {
+      get { return note_; }
+      set {
+        note_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "alpha" field.</summary>
+    public const int AlphaFieldNumber = 4;
+    private pb::ByteString alpha_ = pb::ByteString.Empty;
+    /// <summary>
+    /// random number for spend authority signature
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pb::ByteString Alpha {
+      get { return alpha_; }
+      set {
+        alpha_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "voucher" field.</summary>
+    public const int VoucherFieldNumber = 5;
+    private global::Tron.Net.Protocol.IncrementalMerkleVoucher voucher_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Tron.Net.Protocol.IncrementalMerkleVoucher Voucher {
+      get { return voucher_; }
+      set {
+        voucher_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "path" field.</summary>
+    public const int PathFieldNumber = 6;
+    private pb::ByteString path_ = pb::ByteString.Empty;
+    /// <summary>
+    /// path for cm from leaf to root in merkle tree
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pb::ByteString Path {
+      get { return path_; }
+      set {
+        path_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as SpendNote);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(SpendNote other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(Note, other.Note)) return false;
+      if (Alpha != other.Alpha) return false;
+      if (!object.Equals(Voucher, other.Voucher)) return false;
+      if (Path != other.Path) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (note_ != null) hash ^= Note.GetHashCode();
+      if (Alpha.Length != 0) hash ^= Alpha.GetHashCode();
+      if (voucher_ != null) hash ^= Voucher.GetHashCode();
+      if (Path.Length != 0) hash ^= Path.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (note_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(Note);
+      }
+      if (Alpha.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteBytes(Alpha);
+      }
+      if (voucher_ != null) {
+        output.WriteRawTag(42);
+        output.WriteMessage(Voucher);
+      }
+      if (Path.Length != 0) {
+        output.WriteRawTag(50);
+        output.WriteBytes(Path);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (note_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Note);
+      }
+      if (Alpha.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeBytesSize(Alpha);
+      }
+      if (voucher_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Voucher);
+      }
+      if (Path.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeBytesSize(Path);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(SpendNote other) {
+      if (other == null) {
+        return;
+      }
+      if (other.note_ != null) {
+        if (note_ == null) {
+          Note = new global::Tron.Net.Protocol.Note();
+        }
+        Note.MergeFrom(other.Note);
+      }
+      if (other.Alpha.Length != 0) {
+        Alpha = other.Alpha;
+      }
+      if (other.voucher_ != null) {
+        if (voucher_ == null) {
+          Voucher = new global::Tron.Net.Protocol.IncrementalMerkleVoucher();
+        }
+        Voucher.MergeFrom(other.Voucher);
+      }
+      if (other.Path.Length != 0) {
+        Path = other.Path;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 26: {
+            if (note_ == null) {
+              Note = new global::Tron.Net.Protocol.Note();
+            }
+            input.ReadMessage(Note);
+            break;
+          }
+          case 34: {
+            Alpha = input.ReadBytes();
+            break;
+          }
+          case 42: {
+            if (voucher_ == null) {
+              Voucher = new global::Tron.Net.Protocol.IncrementalMerkleVoucher();
+            }
+            input.ReadMessage(Voucher);
+            break;
+          }
+          case 50: {
+            Path = input.ReadBytes();
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  public sealed partial class ReceiveNote : pb::IMessage<ReceiveNote> {
+    private static readonly pb::MessageParser<ReceiveNote> _parser = new pb::MessageParser<ReceiveNote>(() => new ReceiveNote());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<ReceiveNote> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Tron.Net.Protocol.ApiReflection.Descriptor.MessageTypes[44]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ReceiveNote() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ReceiveNote(ReceiveNote other) : this() {
+      note_ = other.note_ != null ? other.note_.Clone() : null;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ReceiveNote Clone() {
+      return new ReceiveNote(this);
+    }
+
+    /// <summary>Field number for the "note" field.</summary>
+    public const int NoteFieldNumber = 1;
+    private global::Tron.Net.Protocol.Note note_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Tron.Net.Protocol.Note Note {
+      get { return note_; }
+      set {
+        note_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as ReceiveNote);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(ReceiveNote other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(Note, other.Note)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (note_ != null) hash ^= Note.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (note_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(Note);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (note_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Note);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(ReceiveNote other) {
+      if (other == null) {
+        return;
+      }
+      if (other.note_ != null) {
+        if (note_ == null) {
+          Note = new global::Tron.Net.Protocol.Note();
+        }
+        Note.MergeFrom(other.Note);
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            if (note_ == null) {
+              Note = new global::Tron.Net.Protocol.Note();
+            }
+            input.ReadMessage(Note);
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  public sealed partial class PrivateParameters : pb::IMessage<PrivateParameters> {
+    private static readonly pb::MessageParser<PrivateParameters> _parser = new pb::MessageParser<PrivateParameters>(() => new PrivateParameters());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<PrivateParameters> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Tron.Net.Protocol.ApiReflection.Descriptor.MessageTypes[45]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public PrivateParameters() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public PrivateParameters(PrivateParameters other) : this() {
+      transparentFromAddress_ = other.transparentFromAddress_;
+      ask_ = other.ask_;
+      nsk_ = other.nsk_;
+      ovk_ = other.ovk_;
+      fromAmount_ = other.fromAmount_;
+      shieldedSpends_ = other.shieldedSpends_.Clone();
+      shieldedReceives_ = other.shieldedReceives_.Clone();
+      transparentToAddress_ = other.transparentToAddress_;
+      toAmount_ = other.toAmount_;
+      timeout_ = other.timeout_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public PrivateParameters Clone() {
+      return new PrivateParameters(this);
+    }
+
+    /// <summary>Field number for the "transparent_from_address" field.</summary>
+    public const int TransparentFromAddressFieldNumber = 1;
+    private pb::ByteString transparentFromAddress_ = pb::ByteString.Empty;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pb::ByteString TransparentFromAddress {
+      get { return transparentFromAddress_; }
+      set {
+        transparentFromAddress_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "ask" field.</summary>
+    public const int AskFieldNumber = 2;
+    private pb::ByteString ask_ = pb::ByteString.Empty;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pb::ByteString Ask {
+      get { return ask_; }
+      set {
+        ask_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "nsk" field.</summary>
+    public const int NskFieldNumber = 3;
+    private pb::ByteString nsk_ = pb::ByteString.Empty;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pb::ByteString Nsk {
+      get { return nsk_; }
+      set {
+        nsk_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "ovk" field.</summary>
+    public const int OvkFieldNumber = 4;
+    private pb::ByteString ovk_ = pb::ByteString.Empty;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pb::ByteString Ovk {
+      get { return ovk_; }
+      set {
+        ovk_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "from_amount" field.</summary>
+    public const int FromAmountFieldNumber = 5;
+    private long fromAmount_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public long FromAmount {
+      get { return fromAmount_; }
+      set {
+        fromAmount_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "shielded_spends" field.</summary>
+    public const int ShieldedSpendsFieldNumber = 6;
+    private static readonly pb::FieldCodec<global::Tron.Net.Protocol.SpendNote> _repeated_shieldedSpends_codec
+        = pb::FieldCodec.ForMessage(50, global::Tron.Net.Protocol.SpendNote.Parser);
+    private readonly pbc::RepeatedField<global::Tron.Net.Protocol.SpendNote> shieldedSpends_ = new pbc::RepeatedField<global::Tron.Net.Protocol.SpendNote>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::RepeatedField<global::Tron.Net.Protocol.SpendNote> ShieldedSpends {
+      get { return shieldedSpends_; }
+    }
+
+    /// <summary>Field number for the "shielded_receives" field.</summary>
+    public const int ShieldedReceivesFieldNumber = 7;
+    private static readonly pb::FieldCodec<global::Tron.Net.Protocol.ReceiveNote> _repeated_shieldedReceives_codec
+        = pb::FieldCodec.ForMessage(58, global::Tron.Net.Protocol.ReceiveNote.Parser);
+    private readonly pbc::RepeatedField<global::Tron.Net.Protocol.ReceiveNote> shieldedReceives_ = new pbc::RepeatedField<global::Tron.Net.Protocol.ReceiveNote>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::RepeatedField<global::Tron.Net.Protocol.ReceiveNote> ShieldedReceives {
+      get { return shieldedReceives_; }
+    }
+
+    /// <summary>Field number for the "transparent_to_address" field.</summary>
+    public const int TransparentToAddressFieldNumber = 8;
+    private pb::ByteString transparentToAddress_ = pb::ByteString.Empty;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pb::ByteString TransparentToAddress {
+      get { return transparentToAddress_; }
+      set {
+        transparentToAddress_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "to_amount" field.</summary>
+    public const int ToAmountFieldNumber = 9;
+    private long toAmount_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public long ToAmount {
+      get { return toAmount_; }
+      set {
+        toAmount_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "timeout" field.</summary>
+    public const int TimeoutFieldNumber = 10;
+    private long timeout_;
+    /// <summary>
+    /// timeout in seconds, it works only when it bigger than 0
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public long Timeout {
+      get { return timeout_; }
+      set {
+        timeout_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as PrivateParameters);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(PrivateParameters other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (TransparentFromAddress != other.TransparentFromAddress) return false;
+      if (Ask != other.Ask) return false;
+      if (Nsk != other.Nsk) return false;
+      if (Ovk != other.Ovk) return false;
+      if (FromAmount != other.FromAmount) return false;
+      if(!shieldedSpends_.Equals(other.shieldedSpends_)) return false;
+      if(!shieldedReceives_.Equals(other.shieldedReceives_)) return false;
+      if (TransparentToAddress != other.TransparentToAddress) return false;
+      if (ToAmount != other.ToAmount) return false;
+      if (Timeout != other.Timeout) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (TransparentFromAddress.Length != 0) hash ^= TransparentFromAddress.GetHashCode();
+      if (Ask.Length != 0) hash ^= Ask.GetHashCode();
+      if (Nsk.Length != 0) hash ^= Nsk.GetHashCode();
+      if (Ovk.Length != 0) hash ^= Ovk.GetHashCode();
+      if (FromAmount != 0L) hash ^= FromAmount.GetHashCode();
+      hash ^= shieldedSpends_.GetHashCode();
+      hash ^= shieldedReceives_.GetHashCode();
+      if (TransparentToAddress.Length != 0) hash ^= TransparentToAddress.GetHashCode();
+      if (ToAmount != 0L) hash ^= ToAmount.GetHashCode();
+      if (Timeout != 0L) hash ^= Timeout.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (TransparentFromAddress.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteBytes(TransparentFromAddress);
+      }
+      if (Ask.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteBytes(Ask);
+      }
+      if (Nsk.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteBytes(Nsk);
+      }
+      if (Ovk.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteBytes(Ovk);
+      }
+      if (FromAmount != 0L) {
+        output.WriteRawTag(40);
+        output.WriteInt64(FromAmount);
+      }
+      shieldedSpends_.WriteTo(output, _repeated_shieldedSpends_codec);
+      shieldedReceives_.WriteTo(output, _repeated_shieldedReceives_codec);
+      if (TransparentToAddress.Length != 0) {
+        output.WriteRawTag(66);
+        output.WriteBytes(TransparentToAddress);
+      }
+      if (ToAmount != 0L) {
+        output.WriteRawTag(72);
+        output.WriteInt64(ToAmount);
+      }
+      if (Timeout != 0L) {
+        output.WriteRawTag(80);
+        output.WriteInt64(Timeout);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (TransparentFromAddress.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeBytesSize(TransparentFromAddress);
+      }
+      if (Ask.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeBytesSize(Ask);
+      }
+      if (Nsk.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeBytesSize(Nsk);
+      }
+      if (Ovk.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeBytesSize(Ovk);
+      }
+      if (FromAmount != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(FromAmount);
+      }
+      size += shieldedSpends_.CalculateSize(_repeated_shieldedSpends_codec);
+      size += shieldedReceives_.CalculateSize(_repeated_shieldedReceives_codec);
+      if (TransparentToAddress.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeBytesSize(TransparentToAddress);
+      }
+      if (ToAmount != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(ToAmount);
+      }
+      if (Timeout != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(Timeout);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(PrivateParameters other) {
+      if (other == null) {
+        return;
+      }
+      if (other.TransparentFromAddress.Length != 0) {
+        TransparentFromAddress = other.TransparentFromAddress;
+      }
+      if (other.Ask.Length != 0) {
+        Ask = other.Ask;
+      }
+      if (other.Nsk.Length != 0) {
+        Nsk = other.Nsk;
+      }
+      if (other.Ovk.Length != 0) {
+        Ovk = other.Ovk;
+      }
+      if (other.FromAmount != 0L) {
+        FromAmount = other.FromAmount;
+      }
+      shieldedSpends_.Add(other.shieldedSpends_);
+      shieldedReceives_.Add(other.shieldedReceives_);
+      if (other.TransparentToAddress.Length != 0) {
+        TransparentToAddress = other.TransparentToAddress;
+      }
+      if (other.ToAmount != 0L) {
+        ToAmount = other.ToAmount;
+      }
+      if (other.Timeout != 0L) {
+        Timeout = other.Timeout;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            TransparentFromAddress = input.ReadBytes();
+            break;
+          }
+          case 18: {
+            Ask = input.ReadBytes();
+            break;
+          }
+          case 26: {
+            Nsk = input.ReadBytes();
+            break;
+          }
+          case 34: {
+            Ovk = input.ReadBytes();
+            break;
+          }
+          case 40: {
+            FromAmount = input.ReadInt64();
+            break;
+          }
+          case 50: {
+            shieldedSpends_.AddEntriesFrom(input, _repeated_shieldedSpends_codec);
+            break;
+          }
+          case 58: {
+            shieldedReceives_.AddEntriesFrom(input, _repeated_shieldedReceives_codec);
+            break;
+          }
+          case 66: {
+            TransparentToAddress = input.ReadBytes();
+            break;
+          }
+          case 72: {
+            ToAmount = input.ReadInt64();
+            break;
+          }
+          case 80: {
+            Timeout = input.ReadInt64();
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  public sealed partial class PrivateParametersWithoutAsk : pb::IMessage<PrivateParametersWithoutAsk> {
+    private static readonly pb::MessageParser<PrivateParametersWithoutAsk> _parser = new pb::MessageParser<PrivateParametersWithoutAsk>(() => new PrivateParametersWithoutAsk());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<PrivateParametersWithoutAsk> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Tron.Net.Protocol.ApiReflection.Descriptor.MessageTypes[46]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public PrivateParametersWithoutAsk() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public PrivateParametersWithoutAsk(PrivateParametersWithoutAsk other) : this() {
+      transparentFromAddress_ = other.transparentFromAddress_;
+      ak_ = other.ak_;
+      nsk_ = other.nsk_;
+      ovk_ = other.ovk_;
+      fromAmount_ = other.fromAmount_;
+      shieldedSpends_ = other.shieldedSpends_.Clone();
+      shieldedReceives_ = other.shieldedReceives_.Clone();
+      transparentToAddress_ = other.transparentToAddress_;
+      toAmount_ = other.toAmount_;
+      timeout_ = other.timeout_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public PrivateParametersWithoutAsk Clone() {
+      return new PrivateParametersWithoutAsk(this);
+    }
+
+    /// <summary>Field number for the "transparent_from_address" field.</summary>
+    public const int TransparentFromAddressFieldNumber = 1;
+    private pb::ByteString transparentFromAddress_ = pb::ByteString.Empty;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pb::ByteString TransparentFromAddress {
+      get { return transparentFromAddress_; }
+      set {
+        transparentFromAddress_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "ak" field.</summary>
+    public const int AkFieldNumber = 2;
+    private pb::ByteString ak_ = pb::ByteString.Empty;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pb::ByteString Ak {
+      get { return ak_; }
+      set {
+        ak_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "nsk" field.</summary>
+    public const int NskFieldNumber = 3;
+    private pb::ByteString nsk_ = pb::ByteString.Empty;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pb::ByteString Nsk {
+      get { return nsk_; }
+      set {
+        nsk_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "ovk" field.</summary>
+    public const int OvkFieldNumber = 4;
+    private pb::ByteString ovk_ = pb::ByteString.Empty;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pb::ByteString Ovk {
+      get { return ovk_; }
+      set {
+        ovk_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "from_amount" field.</summary>
+    public const int FromAmountFieldNumber = 5;
+    private long fromAmount_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public long FromAmount {
+      get { return fromAmount_; }
+      set {
+        fromAmount_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "shielded_spends" field.</summary>
+    public const int ShieldedSpendsFieldNumber = 6;
+    private static readonly pb::FieldCodec<global::Tron.Net.Protocol.SpendNote> _repeated_shieldedSpends_codec
+        = pb::FieldCodec.ForMessage(50, global::Tron.Net.Protocol.SpendNote.Parser);
+    private readonly pbc::RepeatedField<global::Tron.Net.Protocol.SpendNote> shieldedSpends_ = new pbc::RepeatedField<global::Tron.Net.Protocol.SpendNote>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::RepeatedField<global::Tron.Net.Protocol.SpendNote> ShieldedSpends {
+      get { return shieldedSpends_; }
+    }
+
+    /// <summary>Field number for the "shielded_receives" field.</summary>
+    public const int ShieldedReceivesFieldNumber = 7;
+    private static readonly pb::FieldCodec<global::Tron.Net.Protocol.ReceiveNote> _repeated_shieldedReceives_codec
+        = pb::FieldCodec.ForMessage(58, global::Tron.Net.Protocol.ReceiveNote.Parser);
+    private readonly pbc::RepeatedField<global::Tron.Net.Protocol.ReceiveNote> shieldedReceives_ = new pbc::RepeatedField<global::Tron.Net.Protocol.ReceiveNote>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::RepeatedField<global::Tron.Net.Protocol.ReceiveNote> ShieldedReceives {
+      get { return shieldedReceives_; }
+    }
+
+    /// <summary>Field number for the "transparent_to_address" field.</summary>
+    public const int TransparentToAddressFieldNumber = 8;
+    private pb::ByteString transparentToAddress_ = pb::ByteString.Empty;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pb::ByteString TransparentToAddress {
+      get { return transparentToAddress_; }
+      set {
+        transparentToAddress_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "to_amount" field.</summary>
+    public const int ToAmountFieldNumber = 9;
+    private long toAmount_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public long ToAmount {
+      get { return toAmount_; }
+      set {
+        toAmount_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "timeout" field.</summary>
+    public const int TimeoutFieldNumber = 10;
+    private long timeout_;
+    /// <summary>
+    /// timeout in seconds, it works only when it bigger than 0
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public long Timeout {
+      get { return timeout_; }
+      set {
+        timeout_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as PrivateParametersWithoutAsk);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(PrivateParametersWithoutAsk other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (TransparentFromAddress != other.TransparentFromAddress) return false;
+      if (Ak != other.Ak) return false;
+      if (Nsk != other.Nsk) return false;
+      if (Ovk != other.Ovk) return false;
+      if (FromAmount != other.FromAmount) return false;
+      if(!shieldedSpends_.Equals(other.shieldedSpends_)) return false;
+      if(!shieldedReceives_.Equals(other.shieldedReceives_)) return false;
+      if (TransparentToAddress != other.TransparentToAddress) return false;
+      if (ToAmount != other.ToAmount) return false;
+      if (Timeout != other.Timeout) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (TransparentFromAddress.Length != 0) hash ^= TransparentFromAddress.GetHashCode();
+      if (Ak.Length != 0) hash ^= Ak.GetHashCode();
+      if (Nsk.Length != 0) hash ^= Nsk.GetHashCode();
+      if (Ovk.Length != 0) hash ^= Ovk.GetHashCode();
+      if (FromAmount != 0L) hash ^= FromAmount.GetHashCode();
+      hash ^= shieldedSpends_.GetHashCode();
+      hash ^= shieldedReceives_.GetHashCode();
+      if (TransparentToAddress.Length != 0) hash ^= TransparentToAddress.GetHashCode();
+      if (ToAmount != 0L) hash ^= ToAmount.GetHashCode();
+      if (Timeout != 0L) hash ^= Timeout.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (TransparentFromAddress.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteBytes(TransparentFromAddress);
+      }
+      if (Ak.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteBytes(Ak);
+      }
+      if (Nsk.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteBytes(Nsk);
+      }
+      if (Ovk.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteBytes(Ovk);
+      }
+      if (FromAmount != 0L) {
+        output.WriteRawTag(40);
+        output.WriteInt64(FromAmount);
+      }
+      shieldedSpends_.WriteTo(output, _repeated_shieldedSpends_codec);
+      shieldedReceives_.WriteTo(output, _repeated_shieldedReceives_codec);
+      if (TransparentToAddress.Length != 0) {
+        output.WriteRawTag(66);
+        output.WriteBytes(TransparentToAddress);
+      }
+      if (ToAmount != 0L) {
+        output.WriteRawTag(72);
+        output.WriteInt64(ToAmount);
+      }
+      if (Timeout != 0L) {
+        output.WriteRawTag(80);
+        output.WriteInt64(Timeout);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (TransparentFromAddress.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeBytesSize(TransparentFromAddress);
+      }
+      if (Ak.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeBytesSize(Ak);
+      }
+      if (Nsk.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeBytesSize(Nsk);
+      }
+      if (Ovk.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeBytesSize(Ovk);
+      }
+      if (FromAmount != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(FromAmount);
+      }
+      size += shieldedSpends_.CalculateSize(_repeated_shieldedSpends_codec);
+      size += shieldedReceives_.CalculateSize(_repeated_shieldedReceives_codec);
+      if (TransparentToAddress.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeBytesSize(TransparentToAddress);
+      }
+      if (ToAmount != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(ToAmount);
+      }
+      if (Timeout != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(Timeout);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(PrivateParametersWithoutAsk other) {
+      if (other == null) {
+        return;
+      }
+      if (other.TransparentFromAddress.Length != 0) {
+        TransparentFromAddress = other.TransparentFromAddress;
+      }
+      if (other.Ak.Length != 0) {
+        Ak = other.Ak;
+      }
+      if (other.Nsk.Length != 0) {
+        Nsk = other.Nsk;
+      }
+      if (other.Ovk.Length != 0) {
+        Ovk = other.Ovk;
+      }
+      if (other.FromAmount != 0L) {
+        FromAmount = other.FromAmount;
+      }
+      shieldedSpends_.Add(other.shieldedSpends_);
+      shieldedReceives_.Add(other.shieldedReceives_);
+      if (other.TransparentToAddress.Length != 0) {
+        TransparentToAddress = other.TransparentToAddress;
+      }
+      if (other.ToAmount != 0L) {
+        ToAmount = other.ToAmount;
+      }
+      if (other.Timeout != 0L) {
+        Timeout = other.Timeout;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            TransparentFromAddress = input.ReadBytes();
+            break;
+          }
+          case 18: {
+            Ak = input.ReadBytes();
+            break;
+          }
+          case 26: {
+            Nsk = input.ReadBytes();
+            break;
+          }
+          case 34: {
+            Ovk = input.ReadBytes();
+            break;
+          }
+          case 40: {
+            FromAmount = input.ReadInt64();
+            break;
+          }
+          case 50: {
+            shieldedSpends_.AddEntriesFrom(input, _repeated_shieldedSpends_codec);
+            break;
+          }
+          case 58: {
+            shieldedReceives_.AddEntriesFrom(input, _repeated_shieldedReceives_codec);
+            break;
+          }
+          case 66: {
+            TransparentToAddress = input.ReadBytes();
+            break;
+          }
+          case 72: {
+            ToAmount = input.ReadInt64();
+            break;
+          }
+          case 80: {
+            Timeout = input.ReadInt64();
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  public sealed partial class SpendAuthSigParameters : pb::IMessage<SpendAuthSigParameters> {
+    private static readonly pb::MessageParser<SpendAuthSigParameters> _parser = new pb::MessageParser<SpendAuthSigParameters>(() => new SpendAuthSigParameters());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<SpendAuthSigParameters> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Tron.Net.Protocol.ApiReflection.Descriptor.MessageTypes[47]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public SpendAuthSigParameters() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public SpendAuthSigParameters(SpendAuthSigParameters other) : this() {
+      ask_ = other.ask_;
+      txHash_ = other.txHash_;
+      alpha_ = other.alpha_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public SpendAuthSigParameters Clone() {
+      return new SpendAuthSigParameters(this);
+    }
+
+    /// <summary>Field number for the "ask" field.</summary>
+    public const int AskFieldNumber = 1;
+    private pb::ByteString ask_ = pb::ByteString.Empty;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pb::ByteString Ask {
+      get { return ask_; }
+      set {
+        ask_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "tx_hash" field.</summary>
+    public const int TxHashFieldNumber = 2;
+    private pb::ByteString txHash_ = pb::ByteString.Empty;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pb::ByteString TxHash {
+      get { return txHash_; }
+      set {
+        txHash_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "alpha" field.</summary>
+    public const int AlphaFieldNumber = 3;
+    private pb::ByteString alpha_ = pb::ByteString.Empty;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pb::ByteString Alpha {
+      get { return alpha_; }
+      set {
+        alpha_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as SpendAuthSigParameters);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(SpendAuthSigParameters other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Ask != other.Ask) return false;
+      if (TxHash != other.TxHash) return false;
+      if (Alpha != other.Alpha) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Ask.Length != 0) hash ^= Ask.GetHashCode();
+      if (TxHash.Length != 0) hash ^= TxHash.GetHashCode();
+      if (Alpha.Length != 0) hash ^= Alpha.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (Ask.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteBytes(Ask);
+      }
+      if (TxHash.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteBytes(TxHash);
+      }
+      if (Alpha.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteBytes(Alpha);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (Ask.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeBytesSize(Ask);
+      }
+      if (TxHash.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeBytesSize(TxHash);
+      }
+      if (Alpha.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeBytesSize(Alpha);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(SpendAuthSigParameters other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Ask.Length != 0) {
+        Ask = other.Ask;
+      }
+      if (other.TxHash.Length != 0) {
+        TxHash = other.TxHash;
+      }
+      if (other.Alpha.Length != 0) {
+        Alpha = other.Alpha;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Ask = input.ReadBytes();
+            break;
+          }
+          case 18: {
+            TxHash = input.ReadBytes();
+            break;
+          }
+          case 26: {
+            Alpha = input.ReadBytes();
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  public sealed partial class NfParameters : pb::IMessage<NfParameters> {
+    private static readonly pb::MessageParser<NfParameters> _parser = new pb::MessageParser<NfParameters>(() => new NfParameters());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<NfParameters> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Tron.Net.Protocol.ApiReflection.Descriptor.MessageTypes[48]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public NfParameters() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public NfParameters(NfParameters other) : this() {
+      note_ = other.note_ != null ? other.note_.Clone() : null;
+      voucher_ = other.voucher_ != null ? other.voucher_.Clone() : null;
+      ak_ = other.ak_;
+      nk_ = other.nk_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public NfParameters Clone() {
+      return new NfParameters(this);
+    }
+
+    /// <summary>Field number for the "note" field.</summary>
+    public const int NoteFieldNumber = 1;
+    private global::Tron.Net.Protocol.Note note_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Tron.Net.Protocol.Note Note {
+      get { return note_; }
+      set {
+        note_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "voucher" field.</summary>
+    public const int VoucherFieldNumber = 2;
+    private global::Tron.Net.Protocol.IncrementalMerkleVoucher voucher_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Tron.Net.Protocol.IncrementalMerkleVoucher Voucher {
+      get { return voucher_; }
+      set {
+        voucher_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "ak" field.</summary>
+    public const int AkFieldNumber = 3;
+    private pb::ByteString ak_ = pb::ByteString.Empty;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pb::ByteString Ak {
+      get { return ak_; }
+      set {
+        ak_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "nk" field.</summary>
+    public const int NkFieldNumber = 4;
+    private pb::ByteString nk_ = pb::ByteString.Empty;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pb::ByteString Nk {
+      get { return nk_; }
+      set {
+        nk_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as NfParameters);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(NfParameters other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(Note, other.Note)) return false;
+      if (!object.Equals(Voucher, other.Voucher)) return false;
+      if (Ak != other.Ak) return false;
+      if (Nk != other.Nk) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (note_ != null) hash ^= Note.GetHashCode();
+      if (voucher_ != null) hash ^= Voucher.GetHashCode();
+      if (Ak.Length != 0) hash ^= Ak.GetHashCode();
+      if (Nk.Length != 0) hash ^= Nk.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (note_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(Note);
+      }
+      if (voucher_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(Voucher);
+      }
+      if (Ak.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteBytes(Ak);
+      }
+      if (Nk.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteBytes(Nk);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (note_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Note);
+      }
+      if (voucher_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Voucher);
+      }
+      if (Ak.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeBytesSize(Ak);
+      }
+      if (Nk.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeBytesSize(Nk);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(NfParameters other) {
+      if (other == null) {
+        return;
+      }
+      if (other.note_ != null) {
+        if (note_ == null) {
+          Note = new global::Tron.Net.Protocol.Note();
+        }
+        Note.MergeFrom(other.Note);
+      }
+      if (other.voucher_ != null) {
+        if (voucher_ == null) {
+          Voucher = new global::Tron.Net.Protocol.IncrementalMerkleVoucher();
+        }
+        Voucher.MergeFrom(other.Voucher);
+      }
+      if (other.Ak.Length != 0) {
+        Ak = other.Ak;
+      }
+      if (other.Nk.Length != 0) {
+        Nk = other.Nk;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            if (note_ == null) {
+              Note = new global::Tron.Net.Protocol.Note();
+            }
+            input.ReadMessage(Note);
+            break;
+          }
+          case 18: {
+            if (voucher_ == null) {
+              Voucher = new global::Tron.Net.Protocol.IncrementalMerkleVoucher();
+            }
+            input.ReadMessage(Voucher);
+            break;
+          }
+          case 26: {
+            Ak = input.ReadBytes();
+            break;
+          }
+          case 34: {
+            Nk = input.ReadBytes();
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  public sealed partial class ExpandedSpendingKeyMessage : pb::IMessage<ExpandedSpendingKeyMessage> {
+    private static readonly pb::MessageParser<ExpandedSpendingKeyMessage> _parser = new pb::MessageParser<ExpandedSpendingKeyMessage>(() => new ExpandedSpendingKeyMessage());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<ExpandedSpendingKeyMessage> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Tron.Net.Protocol.ApiReflection.Descriptor.MessageTypes[49]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ExpandedSpendingKeyMessage() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ExpandedSpendingKeyMessage(ExpandedSpendingKeyMessage other) : this() {
+      ask_ = other.ask_;
+      nsk_ = other.nsk_;
+      ovk_ = other.ovk_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ExpandedSpendingKeyMessage Clone() {
+      return new ExpandedSpendingKeyMessage(this);
+    }
+
+    /// <summary>Field number for the "ask" field.</summary>
+    public const int AskFieldNumber = 1;
+    private pb::ByteString ask_ = pb::ByteString.Empty;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pb::ByteString Ask {
+      get { return ask_; }
+      set {
+        ask_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "nsk" field.</summary>
+    public const int NskFieldNumber = 2;
+    private pb::ByteString nsk_ = pb::ByteString.Empty;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pb::ByteString Nsk {
+      get { return nsk_; }
+      set {
+        nsk_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "ovk" field.</summary>
+    public const int OvkFieldNumber = 3;
+    private pb::ByteString ovk_ = pb::ByteString.Empty;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pb::ByteString Ovk {
+      get { return ovk_; }
+      set {
+        ovk_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as ExpandedSpendingKeyMessage);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(ExpandedSpendingKeyMessage other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Ask != other.Ask) return false;
+      if (Nsk != other.Nsk) return false;
+      if (Ovk != other.Ovk) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Ask.Length != 0) hash ^= Ask.GetHashCode();
+      if (Nsk.Length != 0) hash ^= Nsk.GetHashCode();
+      if (Ovk.Length != 0) hash ^= Ovk.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (Ask.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteBytes(Ask);
+      }
+      if (Nsk.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteBytes(Nsk);
+      }
+      if (Ovk.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteBytes(Ovk);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (Ask.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeBytesSize(Ask);
+      }
+      if (Nsk.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeBytesSize(Nsk);
+      }
+      if (Ovk.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeBytesSize(Ovk);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(ExpandedSpendingKeyMessage other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Ask.Length != 0) {
+        Ask = other.Ask;
+      }
+      if (other.Nsk.Length != 0) {
+        Nsk = other.Nsk;
+      }
+      if (other.Ovk.Length != 0) {
+        Ovk = other.Ovk;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Ask = input.ReadBytes();
+            break;
+          }
+          case 18: {
+            Nsk = input.ReadBytes();
+            break;
+          }
+          case 26: {
+            Ovk = input.ReadBytes();
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  public sealed partial class ViewingKeyMessage : pb::IMessage<ViewingKeyMessage> {
+    private static readonly pb::MessageParser<ViewingKeyMessage> _parser = new pb::MessageParser<ViewingKeyMessage>(() => new ViewingKeyMessage());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<ViewingKeyMessage> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Tron.Net.Protocol.ApiReflection.Descriptor.MessageTypes[50]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ViewingKeyMessage() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ViewingKeyMessage(ViewingKeyMessage other) : this() {
+      ak_ = other.ak_;
+      nk_ = other.nk_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ViewingKeyMessage Clone() {
+      return new ViewingKeyMessage(this);
+    }
+
+    /// <summary>Field number for the "ak" field.</summary>
+    public const int AkFieldNumber = 1;
+    private pb::ByteString ak_ = pb::ByteString.Empty;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pb::ByteString Ak {
+      get { return ak_; }
+      set {
+        ak_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "nk" field.</summary>
+    public const int NkFieldNumber = 2;
+    private pb::ByteString nk_ = pb::ByteString.Empty;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pb::ByteString Nk {
+      get { return nk_; }
+      set {
+        nk_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as ViewingKeyMessage);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(ViewingKeyMessage other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Ak != other.Ak) return false;
+      if (Nk != other.Nk) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Ak.Length != 0) hash ^= Ak.GetHashCode();
+      if (Nk.Length != 0) hash ^= Nk.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (Ak.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteBytes(Ak);
+      }
+      if (Nk.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteBytes(Nk);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (Ak.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeBytesSize(Ak);
+      }
+      if (Nk.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeBytesSize(Nk);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(ViewingKeyMessage other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Ak.Length != 0) {
+        Ak = other.Ak;
+      }
+      if (other.Nk.Length != 0) {
+        Nk = other.Nk;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Ak = input.ReadBytes();
+            break;
+          }
+          case 18: {
+            Nk = input.ReadBytes();
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  public sealed partial class IncomingViewingKeyMessage : pb::IMessage<IncomingViewingKeyMessage> {
+    private static readonly pb::MessageParser<IncomingViewingKeyMessage> _parser = new pb::MessageParser<IncomingViewingKeyMessage>(() => new IncomingViewingKeyMessage());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<IncomingViewingKeyMessage> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Tron.Net.Protocol.ApiReflection.Descriptor.MessageTypes[51]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public IncomingViewingKeyMessage() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public IncomingViewingKeyMessage(IncomingViewingKeyMessage other) : this() {
+      ivk_ = other.ivk_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public IncomingViewingKeyMessage Clone() {
+      return new IncomingViewingKeyMessage(this);
+    }
+
+    /// <summary>Field number for the "ivk" field.</summary>
+    public const int IvkFieldNumber = 1;
+    private pb::ByteString ivk_ = pb::ByteString.Empty;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pb::ByteString Ivk {
+      get { return ivk_; }
+      set {
+        ivk_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as IncomingViewingKeyMessage);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(IncomingViewingKeyMessage other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Ivk != other.Ivk) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Ivk.Length != 0) hash ^= Ivk.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (Ivk.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteBytes(Ivk);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (Ivk.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeBytesSize(Ivk);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(IncomingViewingKeyMessage other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Ivk.Length != 0) {
+        Ivk = other.Ivk;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Ivk = input.ReadBytes();
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  public sealed partial class DiversifierMessage : pb::IMessage<DiversifierMessage> {
+    private static readonly pb::MessageParser<DiversifierMessage> _parser = new pb::MessageParser<DiversifierMessage>(() => new DiversifierMessage());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<DiversifierMessage> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Tron.Net.Protocol.ApiReflection.Descriptor.MessageTypes[52]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public DiversifierMessage() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public DiversifierMessage(DiversifierMessage other) : this() {
+      d_ = other.d_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public DiversifierMessage Clone() {
+      return new DiversifierMessage(this);
+    }
+
+    /// <summary>Field number for the "d" field.</summary>
+    public const int DFieldNumber = 1;
+    private pb::ByteString d_ = pb::ByteString.Empty;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pb::ByteString D {
+      get { return d_; }
+      set {
+        d_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as DiversifierMessage);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(DiversifierMessage other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (D != other.D) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (D.Length != 0) hash ^= D.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (D.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteBytes(D);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (D.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeBytesSize(D);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(DiversifierMessage other) {
+      if (other == null) {
+        return;
+      }
+      if (other.D.Length != 0) {
+        D = other.D;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            D = input.ReadBytes();
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  public sealed partial class IncomingViewingKeyDiversifierMessage : pb::IMessage<IncomingViewingKeyDiversifierMessage> {
+    private static readonly pb::MessageParser<IncomingViewingKeyDiversifierMessage> _parser = new pb::MessageParser<IncomingViewingKeyDiversifierMessage>(() => new IncomingViewingKeyDiversifierMessage());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<IncomingViewingKeyDiversifierMessage> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Tron.Net.Protocol.ApiReflection.Descriptor.MessageTypes[53]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public IncomingViewingKeyDiversifierMessage() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public IncomingViewingKeyDiversifierMessage(IncomingViewingKeyDiversifierMessage other) : this() {
+      ivk_ = other.ivk_ != null ? other.ivk_.Clone() : null;
+      d_ = other.d_ != null ? other.d_.Clone() : null;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public IncomingViewingKeyDiversifierMessage Clone() {
+      return new IncomingViewingKeyDiversifierMessage(this);
+    }
+
+    /// <summary>Field number for the "ivk" field.</summary>
+    public const int IvkFieldNumber = 1;
+    private global::Tron.Net.Protocol.IncomingViewingKeyMessage ivk_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Tron.Net.Protocol.IncomingViewingKeyMessage Ivk {
+      get { return ivk_; }
+      set {
+        ivk_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "d" field.</summary>
+    public const int DFieldNumber = 2;
+    private global::Tron.Net.Protocol.DiversifierMessage d_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Tron.Net.Protocol.DiversifierMessage D {
+      get { return d_; }
+      set {
+        d_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as IncomingViewingKeyDiversifierMessage);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(IncomingViewingKeyDiversifierMessage other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(Ivk, other.Ivk)) return false;
+      if (!object.Equals(D, other.D)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (ivk_ != null) hash ^= Ivk.GetHashCode();
+      if (d_ != null) hash ^= D.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (ivk_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(Ivk);
+      }
+      if (d_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(D);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (ivk_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Ivk);
+      }
+      if (d_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(D);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(IncomingViewingKeyDiversifierMessage other) {
+      if (other == null) {
+        return;
+      }
+      if (other.ivk_ != null) {
+        if (ivk_ == null) {
+          Ivk = new global::Tron.Net.Protocol.IncomingViewingKeyMessage();
+        }
+        Ivk.MergeFrom(other.Ivk);
+      }
+      if (other.d_ != null) {
+        if (d_ == null) {
+          D = new global::Tron.Net.Protocol.DiversifierMessage();
+        }
+        D.MergeFrom(other.D);
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            if (ivk_ == null) {
+              Ivk = new global::Tron.Net.Protocol.IncomingViewingKeyMessage();
+            }
+            input.ReadMessage(Ivk);
+            break;
+          }
+          case 18: {
+            if (d_ == null) {
+              D = new global::Tron.Net.Protocol.DiversifierMessage();
+            }
+            input.ReadMessage(D);
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  public sealed partial class PaymentAddressMessage : pb::IMessage<PaymentAddressMessage> {
+    private static readonly pb::MessageParser<PaymentAddressMessage> _parser = new pb::MessageParser<PaymentAddressMessage>(() => new PaymentAddressMessage());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<PaymentAddressMessage> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Tron.Net.Protocol.ApiReflection.Descriptor.MessageTypes[54]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public PaymentAddressMessage() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public PaymentAddressMessage(PaymentAddressMessage other) : this() {
+      d_ = other.d_ != null ? other.d_.Clone() : null;
+      pkD_ = other.pkD_;
+      paymentAddress_ = other.paymentAddress_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public PaymentAddressMessage Clone() {
+      return new PaymentAddressMessage(this);
+    }
+
+    /// <summary>Field number for the "d" field.</summary>
+    public const int DFieldNumber = 1;
+    private global::Tron.Net.Protocol.DiversifierMessage d_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Tron.Net.Protocol.DiversifierMessage D {
+      get { return d_; }
+      set {
+        d_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "pkD" field.</summary>
+    public const int PkDFieldNumber = 2;
+    private pb::ByteString pkD_ = pb::ByteString.Empty;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pb::ByteString PkD {
+      get { return pkD_; }
+      set {
+        pkD_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "payment_address" field.</summary>
+    public const int PaymentAddressFieldNumber = 3;
+    private string paymentAddress_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string PaymentAddress {
+      get { return paymentAddress_; }
+      set {
+        paymentAddress_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as PaymentAddressMessage);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(PaymentAddressMessage other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(D, other.D)) return false;
+      if (PkD != other.PkD) return false;
+      if (PaymentAddress != other.PaymentAddress) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (d_ != null) hash ^= D.GetHashCode();
+      if (PkD.Length != 0) hash ^= PkD.GetHashCode();
+      if (PaymentAddress.Length != 0) hash ^= PaymentAddress.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (d_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(D);
+      }
+      if (PkD.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteBytes(PkD);
+      }
+      if (PaymentAddress.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(PaymentAddress);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (d_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(D);
+      }
+      if (PkD.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeBytesSize(PkD);
+      }
+      if (PaymentAddress.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(PaymentAddress);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(PaymentAddressMessage other) {
+      if (other == null) {
+        return;
+      }
+      if (other.d_ != null) {
+        if (d_ == null) {
+          D = new global::Tron.Net.Protocol.DiversifierMessage();
+        }
+        D.MergeFrom(other.D);
+      }
+      if (other.PkD.Length != 0) {
+        PkD = other.PkD;
+      }
+      if (other.PaymentAddress.Length != 0) {
+        PaymentAddress = other.PaymentAddress;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            if (d_ == null) {
+              D = new global::Tron.Net.Protocol.DiversifierMessage();
+            }
+            input.ReadMessage(D);
+            break;
+          }
+          case 18: {
+            PkD = input.ReadBytes();
+            break;
+          }
+          case 26: {
+            PaymentAddress = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  public sealed partial class ShieldedAddressInfo : pb::IMessage<ShieldedAddressInfo> {
+    private static readonly pb::MessageParser<ShieldedAddressInfo> _parser = new pb::MessageParser<ShieldedAddressInfo>(() => new ShieldedAddressInfo());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<ShieldedAddressInfo> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Tron.Net.Protocol.ApiReflection.Descriptor.MessageTypes[55]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ShieldedAddressInfo() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ShieldedAddressInfo(ShieldedAddressInfo other) : this() {
+      sk_ = other.sk_;
+      ask_ = other.ask_;
+      nsk_ = other.nsk_;
+      ovk_ = other.ovk_;
+      ak_ = other.ak_;
+      nk_ = other.nk_;
+      ivk_ = other.ivk_;
+      d_ = other.d_;
+      pkD_ = other.pkD_;
+      paymentAddress_ = other.paymentAddress_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ShieldedAddressInfo Clone() {
+      return new ShieldedAddressInfo(this);
+    }
+
+    /// <summary>Field number for the "sk" field.</summary>
+    public const int SkFieldNumber = 1;
+    private pb::ByteString sk_ = pb::ByteString.Empty;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pb::ByteString Sk {
+      get { return sk_; }
+      set {
+        sk_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "ask" field.</summary>
+    public const int AskFieldNumber = 2;
+    private pb::ByteString ask_ = pb::ByteString.Empty;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pb::ByteString Ask {
+      get { return ask_; }
+      set {
+        ask_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "nsk" field.</summary>
+    public const int NskFieldNumber = 3;
+    private pb::ByteString nsk_ = pb::ByteString.Empty;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pb::ByteString Nsk {
+      get { return nsk_; }
+      set {
+        nsk_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "ovk" field.</summary>
+    public const int OvkFieldNumber = 4;
+    private pb::ByteString ovk_ = pb::ByteString.Empty;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pb::ByteString Ovk {
+      get { return ovk_; }
+      set {
+        ovk_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "ak" field.</summary>
+    public const int AkFieldNumber = 5;
+    private pb::ByteString ak_ = pb::ByteString.Empty;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pb::ByteString Ak {
+      get { return ak_; }
+      set {
+        ak_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "nk" field.</summary>
+    public const int NkFieldNumber = 6;
+    private pb::ByteString nk_ = pb::ByteString.Empty;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pb::ByteString Nk {
+      get { return nk_; }
+      set {
+        nk_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "ivk" field.</summary>
+    public const int IvkFieldNumber = 7;
+    private pb::ByteString ivk_ = pb::ByteString.Empty;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pb::ByteString Ivk {
+      get { return ivk_; }
+      set {
+        ivk_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "d" field.</summary>
+    public const int DFieldNumber = 8;
+    private pb::ByteString d_ = pb::ByteString.Empty;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pb::ByteString D {
+      get { return d_; }
+      set {
+        d_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "pkD" field.</summary>
+    public const int PkDFieldNumber = 9;
+    private pb::ByteString pkD_ = pb::ByteString.Empty;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pb::ByteString PkD {
+      get { return pkD_; }
+      set {
+        pkD_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "payment_address" field.</summary>
+    public const int PaymentAddressFieldNumber = 10;
+    private string paymentAddress_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string PaymentAddress {
+      get { return paymentAddress_; }
+      set {
+        paymentAddress_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as ShieldedAddressInfo);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(ShieldedAddressInfo other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Sk != other.Sk) return false;
+      if (Ask != other.Ask) return false;
+      if (Nsk != other.Nsk) return false;
+      if (Ovk != other.Ovk) return false;
+      if (Ak != other.Ak) return false;
+      if (Nk != other.Nk) return false;
+      if (Ivk != other.Ivk) return false;
+      if (D != other.D) return false;
+      if (PkD != other.PkD) return false;
+      if (PaymentAddress != other.PaymentAddress) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Sk.Length != 0) hash ^= Sk.GetHashCode();
+      if (Ask.Length != 0) hash ^= Ask.GetHashCode();
+      if (Nsk.Length != 0) hash ^= Nsk.GetHashCode();
+      if (Ovk.Length != 0) hash ^= Ovk.GetHashCode();
+      if (Ak.Length != 0) hash ^= Ak.GetHashCode();
+      if (Nk.Length != 0) hash ^= Nk.GetHashCode();
+      if (Ivk.Length != 0) hash ^= Ivk.GetHashCode();
+      if (D.Length != 0) hash ^= D.GetHashCode();
+      if (PkD.Length != 0) hash ^= PkD.GetHashCode();
+      if (PaymentAddress.Length != 0) hash ^= PaymentAddress.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (Sk.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteBytes(Sk);
+      }
+      if (Ask.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteBytes(Ask);
+      }
+      if (Nsk.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteBytes(Nsk);
+      }
+      if (Ovk.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteBytes(Ovk);
+      }
+      if (Ak.Length != 0) {
+        output.WriteRawTag(42);
+        output.WriteBytes(Ak);
+      }
+      if (Nk.Length != 0) {
+        output.WriteRawTag(50);
+        output.WriteBytes(Nk);
+      }
+      if (Ivk.Length != 0) {
+        output.WriteRawTag(58);
+        output.WriteBytes(Ivk);
+      }
+      if (D.Length != 0) {
+        output.WriteRawTag(66);
+        output.WriteBytes(D);
+      }
+      if (PkD.Length != 0) {
+        output.WriteRawTag(74);
+        output.WriteBytes(PkD);
+      }
+      if (PaymentAddress.Length != 0) {
+        output.WriteRawTag(82);
+        output.WriteString(PaymentAddress);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (Sk.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeBytesSize(Sk);
+      }
+      if (Ask.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeBytesSize(Ask);
+      }
+      if (Nsk.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeBytesSize(Nsk);
+      }
+      if (Ovk.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeBytesSize(Ovk);
+      }
+      if (Ak.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeBytesSize(Ak);
+      }
+      if (Nk.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeBytesSize(Nk);
+      }
+      if (Ivk.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeBytesSize(Ivk);
+      }
+      if (D.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeBytesSize(D);
+      }
+      if (PkD.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeBytesSize(PkD);
+      }
+      if (PaymentAddress.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(PaymentAddress);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(ShieldedAddressInfo other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Sk.Length != 0) {
+        Sk = other.Sk;
+      }
+      if (other.Ask.Length != 0) {
+        Ask = other.Ask;
+      }
+      if (other.Nsk.Length != 0) {
+        Nsk = other.Nsk;
+      }
+      if (other.Ovk.Length != 0) {
+        Ovk = other.Ovk;
+      }
+      if (other.Ak.Length != 0) {
+        Ak = other.Ak;
+      }
+      if (other.Nk.Length != 0) {
+        Nk = other.Nk;
+      }
+      if (other.Ivk.Length != 0) {
+        Ivk = other.Ivk;
+      }
+      if (other.D.Length != 0) {
+        D = other.D;
+      }
+      if (other.PkD.Length != 0) {
+        PkD = other.PkD;
+      }
+      if (other.PaymentAddress.Length != 0) {
+        PaymentAddress = other.PaymentAddress;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Sk = input.ReadBytes();
+            break;
+          }
+          case 18: {
+            Ask = input.ReadBytes();
+            break;
+          }
+          case 26: {
+            Nsk = input.ReadBytes();
+            break;
+          }
+          case 34: {
+            Ovk = input.ReadBytes();
+            break;
+          }
+          case 42: {
+            Ak = input.ReadBytes();
+            break;
+          }
+          case 50: {
+            Nk = input.ReadBytes();
+            break;
+          }
+          case 58: {
+            Ivk = input.ReadBytes();
+            break;
+          }
+          case 66: {
+            D = input.ReadBytes();
+            break;
+          }
+          case 74: {
+            PkD = input.ReadBytes();
+            break;
+          }
+          case 82: {
+            PaymentAddress = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  public sealed partial class NoteParameters : pb::IMessage<NoteParameters> {
+    private static readonly pb::MessageParser<NoteParameters> _parser = new pb::MessageParser<NoteParameters>(() => new NoteParameters());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<NoteParameters> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Tron.Net.Protocol.ApiReflection.Descriptor.MessageTypes[56]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public NoteParameters() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public NoteParameters(NoteParameters other) : this() {
+      ak_ = other.ak_;
+      nk_ = other.nk_;
+      note_ = other.note_ != null ? other.note_.Clone() : null;
+      txid_ = other.txid_;
+      index_ = other.index_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public NoteParameters Clone() {
+      return new NoteParameters(this);
+    }
+
+    /// <summary>Field number for the "ak" field.</summary>
+    public const int AkFieldNumber = 1;
+    private pb::ByteString ak_ = pb::ByteString.Empty;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pb::ByteString Ak {
+      get { return ak_; }
+      set {
+        ak_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "nk" field.</summary>
+    public const int NkFieldNumber = 2;
+    private pb::ByteString nk_ = pb::ByteString.Empty;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pb::ByteString Nk {
+      get { return nk_; }
+      set {
+        nk_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "note" field.</summary>
+    public const int NoteFieldNumber = 3;
+    private global::Tron.Net.Protocol.Note note_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Tron.Net.Protocol.Note Note {
+      get { return note_; }
+      set {
+        note_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "txid" field.</summary>
+    public const int TxidFieldNumber = 4;
+    private pb::ByteString txid_ = pb::ByteString.Empty;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pb::ByteString Txid {
+      get { return txid_; }
+      set {
+        txid_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "index" field.</summary>
+    public const int IndexFieldNumber = 5;
+    private int index_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int Index {
+      get { return index_; }
+      set {
+        index_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as NoteParameters);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(NoteParameters other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Ak != other.Ak) return false;
+      if (Nk != other.Nk) return false;
+      if (!object.Equals(Note, other.Note)) return false;
+      if (Txid != other.Txid) return false;
+      if (Index != other.Index) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Ak.Length != 0) hash ^= Ak.GetHashCode();
+      if (Nk.Length != 0) hash ^= Nk.GetHashCode();
+      if (note_ != null) hash ^= Note.GetHashCode();
+      if (Txid.Length != 0) hash ^= Txid.GetHashCode();
+      if (Index != 0) hash ^= Index.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (Ak.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteBytes(Ak);
+      }
+      if (Nk.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteBytes(Nk);
+      }
+      if (note_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(Note);
+      }
+      if (Txid.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteBytes(Txid);
+      }
+      if (Index != 0) {
+        output.WriteRawTag(40);
+        output.WriteInt32(Index);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (Ak.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeBytesSize(Ak);
+      }
+      if (Nk.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeBytesSize(Nk);
+      }
+      if (note_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Note);
+      }
+      if (Txid.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeBytesSize(Txid);
+      }
+      if (Index != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(Index);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(NoteParameters other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Ak.Length != 0) {
+        Ak = other.Ak;
+      }
+      if (other.Nk.Length != 0) {
+        Nk = other.Nk;
+      }
+      if (other.note_ != null) {
+        if (note_ == null) {
+          Note = new global::Tron.Net.Protocol.Note();
+        }
+        Note.MergeFrom(other.Note);
+      }
+      if (other.Txid.Length != 0) {
+        Txid = other.Txid;
+      }
+      if (other.Index != 0) {
+        Index = other.Index;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Ak = input.ReadBytes();
+            break;
+          }
+          case 18: {
+            Nk = input.ReadBytes();
+            break;
+          }
+          case 26: {
+            if (note_ == null) {
+              Note = new global::Tron.Net.Protocol.Note();
+            }
+            input.ReadMessage(Note);
+            break;
+          }
+          case 34: {
+            Txid = input.ReadBytes();
+            break;
+          }
+          case 40: {
+            Index = input.ReadInt32();
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  public sealed partial class SpendResult : pb::IMessage<SpendResult> {
+    private static readonly pb::MessageParser<SpendResult> _parser = new pb::MessageParser<SpendResult>(() => new SpendResult());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<SpendResult> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Tron.Net.Protocol.ApiReflection.Descriptor.MessageTypes[57]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public SpendResult() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public SpendResult(SpendResult other) : this() {
+      result_ = other.result_;
+      message_ = other.message_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public SpendResult Clone() {
+      return new SpendResult(this);
+    }
+
+    /// <summary>Field number for the "result" field.</summary>
+    public const int ResultFieldNumber = 1;
+    private bool result_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Result {
+      get { return result_; }
+      set {
+        result_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "message" field.</summary>
+    public const int MessageFieldNumber = 2;
+    private string message_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Message {
+      get { return message_; }
+      set {
+        message_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as SpendResult);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(SpendResult other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Result != other.Result) return false;
+      if (Message != other.Message) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Result != false) hash ^= Result.GetHashCode();
+      if (Message.Length != 0) hash ^= Message.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (Result != false) {
+        output.WriteRawTag(8);
+        output.WriteBool(Result);
+      }
+      if (Message.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Message);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (Result != false) {
+        size += 1 + 1;
+      }
+      if (Message.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Message);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(SpendResult other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Result != false) {
+        Result = other.Result;
+      }
+      if (other.Message.Length != 0) {
+        Message = other.Message;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 8: {
+            Result = input.ReadBool();
+            break;
+          }
+          case 18: {
+            Message = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  public sealed partial class TransactionInfoList : pb::IMessage<TransactionInfoList> {
+    private static readonly pb::MessageParser<TransactionInfoList> _parser = new pb::MessageParser<TransactionInfoList>(() => new TransactionInfoList());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<TransactionInfoList> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Tron.Net.Protocol.ApiReflection.Descriptor.MessageTypes[58]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public TransactionInfoList() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public TransactionInfoList(TransactionInfoList other) : this() {
+      transactionInfo_ = other.transactionInfo_.Clone();
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public TransactionInfoList Clone() {
+      return new TransactionInfoList(this);
+    }
+
+    /// <summary>Field number for the "transactionInfo" field.</summary>
+    public const int TransactionInfoFieldNumber = 1;
+    private static readonly pb::FieldCodec<global::Tron.Net.Protocol.TransactionInfo> _repeated_transactionInfo_codec
+        = pb::FieldCodec.ForMessage(10, global::Tron.Net.Protocol.TransactionInfo.Parser);
+    private readonly pbc::RepeatedField<global::Tron.Net.Protocol.TransactionInfo> transactionInfo_ = new pbc::RepeatedField<global::Tron.Net.Protocol.TransactionInfo>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::RepeatedField<global::Tron.Net.Protocol.TransactionInfo> TransactionInfo {
+      get { return transactionInfo_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as TransactionInfoList);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(TransactionInfoList other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if(!transactionInfo_.Equals(other.transactionInfo_)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      hash ^= transactionInfo_.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      transactionInfo_.WriteTo(output, _repeated_transactionInfo_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      size += transactionInfo_.CalculateSize(_repeated_transactionInfo_codec);
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(TransactionInfoList other) {
+      if (other == null) {
+        return;
+      }
+      transactionInfo_.Add(other.transactionInfo_);
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            transactionInfo_.AddEntriesFrom(input, _repeated_transactionInfo_codec);
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  public sealed partial class SpendNoteTRC20 : pb::IMessage<SpendNoteTRC20> {
+    private static readonly pb::MessageParser<SpendNoteTRC20> _parser = new pb::MessageParser<SpendNoteTRC20>(() => new SpendNoteTRC20());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<SpendNoteTRC20> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Tron.Net.Protocol.ApiReflection.Descriptor.MessageTypes[59]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public SpendNoteTRC20() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public SpendNoteTRC20(SpendNoteTRC20 other) : this() {
+      note_ = other.note_ != null ? other.note_.Clone() : null;
+      alpha_ = other.alpha_;
+      root_ = other.root_;
+      path_ = other.path_;
+      pos_ = other.pos_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public SpendNoteTRC20 Clone() {
+      return new SpendNoteTRC20(this);
+    }
+
+    /// <summary>Field number for the "note" field.</summary>
+    public const int NoteFieldNumber = 1;
+    private global::Tron.Net.Protocol.Note note_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Tron.Net.Protocol.Note Note {
+      get { return note_; }
+      set {
+        note_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "alpha" field.</summary>
+    public const int AlphaFieldNumber = 2;
+    private pb::ByteString alpha_ = pb::ByteString.Empty;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pb::ByteString Alpha {
+      get { return alpha_; }
+      set {
+        alpha_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "root" field.</summary>
+    public const int RootFieldNumber = 3;
+    private pb::ByteString root_ = pb::ByteString.Empty;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pb::ByteString Root {
+      get { return root_; }
+      set {
+        root_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "path" field.</summary>
+    public const int PathFieldNumber = 4;
+    private pb::ByteString path_ = pb::ByteString.Empty;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pb::ByteString Path {
+      get { return path_; }
+      set {
+        path_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "pos" field.</summary>
+    public const int PosFieldNumber = 5;
+    private long pos_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public long Pos {
+      get { return pos_; }
+      set {
+        pos_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as SpendNoteTRC20);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(SpendNoteTRC20 other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(Note, other.Note)) return false;
+      if (Alpha != other.Alpha) return false;
+      if (Root != other.Root) return false;
+      if (Path != other.Path) return false;
+      if (Pos != other.Pos) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (note_ != null) hash ^= Note.GetHashCode();
+      if (Alpha.Length != 0) hash ^= Alpha.GetHashCode();
+      if (Root.Length != 0) hash ^= Root.GetHashCode();
+      if (Path.Length != 0) hash ^= Path.GetHashCode();
+      if (Pos != 0L) hash ^= Pos.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (note_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(Note);
+      }
+      if (Alpha.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteBytes(Alpha);
+      }
+      if (Root.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteBytes(Root);
+      }
+      if (Path.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteBytes(Path);
+      }
+      if (Pos != 0L) {
+        output.WriteRawTag(40);
+        output.WriteInt64(Pos);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (note_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Note);
+      }
+      if (Alpha.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeBytesSize(Alpha);
+      }
+      if (Root.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeBytesSize(Root);
+      }
+      if (Path.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeBytesSize(Path);
+      }
+      if (Pos != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(Pos);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(SpendNoteTRC20 other) {
+      if (other == null) {
+        return;
+      }
+      if (other.note_ != null) {
+        if (note_ == null) {
+          Note = new global::Tron.Net.Protocol.Note();
+        }
+        Note.MergeFrom(other.Note);
+      }
+      if (other.Alpha.Length != 0) {
+        Alpha = other.Alpha;
+      }
+      if (other.Root.Length != 0) {
+        Root = other.Root;
+      }
+      if (other.Path.Length != 0) {
+        Path = other.Path;
+      }
+      if (other.Pos != 0L) {
+        Pos = other.Pos;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            if (note_ == null) {
+              Note = new global::Tron.Net.Protocol.Note();
+            }
+            input.ReadMessage(Note);
+            break;
+          }
+          case 18: {
+            Alpha = input.ReadBytes();
+            break;
+          }
+          case 26: {
+            Root = input.ReadBytes();
+            break;
+          }
+          case 34: {
+            Path = input.ReadBytes();
+            break;
+          }
+          case 40: {
+            Pos = input.ReadInt64();
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  public sealed partial class PrivateShieldedTRC20Parameters : pb::IMessage<PrivateShieldedTRC20Parameters> {
+    private static readonly pb::MessageParser<PrivateShieldedTRC20Parameters> _parser = new pb::MessageParser<PrivateShieldedTRC20Parameters>(() => new PrivateShieldedTRC20Parameters());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<PrivateShieldedTRC20Parameters> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Tron.Net.Protocol.ApiReflection.Descriptor.MessageTypes[60]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public PrivateShieldedTRC20Parameters() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public PrivateShieldedTRC20Parameters(PrivateShieldedTRC20Parameters other) : this() {
+      ask_ = other.ask_;
+      nsk_ = other.nsk_;
+      ovk_ = other.ovk_;
+      fromAmount_ = other.fromAmount_;
+      shieldedSpends_ = other.shieldedSpends_.Clone();
+      shieldedReceives_ = other.shieldedReceives_.Clone();
+      transparentToAddress_ = other.transparentToAddress_;
+      toAmount_ = other.toAmount_;
+      shieldedTRC20ContractAddress_ = other.shieldedTRC20ContractAddress_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public PrivateShieldedTRC20Parameters Clone() {
+      return new PrivateShieldedTRC20Parameters(this);
+    }
+
+    /// <summary>Field number for the "ask" field.</summary>
+    public const int AskFieldNumber = 1;
+    private pb::ByteString ask_ = pb::ByteString.Empty;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pb::ByteString Ask {
+      get { return ask_; }
+      set {
+        ask_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "nsk" field.</summary>
+    public const int NskFieldNumber = 2;
+    private pb::ByteString nsk_ = pb::ByteString.Empty;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pb::ByteString Nsk {
+      get { return nsk_; }
+      set {
+        nsk_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "ovk" field.</summary>
+    public const int OvkFieldNumber = 3;
+    private pb::ByteString ovk_ = pb::ByteString.Empty;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pb::ByteString Ovk {
+      get { return ovk_; }
+      set {
+        ovk_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "from_amount" field.</summary>
+    public const int FromAmountFieldNumber = 4;
+    private string fromAmount_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string FromAmount {
+      get { return fromAmount_; }
+      set {
+        fromAmount_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "shielded_spends" field.</summary>
+    public const int ShieldedSpendsFieldNumber = 5;
+    private static readonly pb::FieldCodec<global::Tron.Net.Protocol.SpendNoteTRC20> _repeated_shieldedSpends_codec
+        = pb::FieldCodec.ForMessage(42, global::Tron.Net.Protocol.SpendNoteTRC20.Parser);
+    private readonly pbc::RepeatedField<global::Tron.Net.Protocol.SpendNoteTRC20> shieldedSpends_ = new pbc::RepeatedField<global::Tron.Net.Protocol.SpendNoteTRC20>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::RepeatedField<global::Tron.Net.Protocol.SpendNoteTRC20> ShieldedSpends {
+      get { return shieldedSpends_; }
+    }
+
+    /// <summary>Field number for the "shielded_receives" field.</summary>
+    public const int ShieldedReceivesFieldNumber = 6;
+    private static readonly pb::FieldCodec<global::Tron.Net.Protocol.ReceiveNote> _repeated_shieldedReceives_codec
+        = pb::FieldCodec.ForMessage(50, global::Tron.Net.Protocol.ReceiveNote.Parser);
+    private readonly pbc::RepeatedField<global::Tron.Net.Protocol.ReceiveNote> shieldedReceives_ = new pbc::RepeatedField<global::Tron.Net.Protocol.ReceiveNote>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::RepeatedField<global::Tron.Net.Protocol.ReceiveNote> ShieldedReceives {
+      get { return shieldedReceives_; }
+    }
+
+    /// <summary>Field number for the "transparent_to_address" field.</summary>
+    public const int TransparentToAddressFieldNumber = 7;
+    private pb::ByteString transparentToAddress_ = pb::ByteString.Empty;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pb::ByteString TransparentToAddress {
+      get { return transparentToAddress_; }
+      set {
+        transparentToAddress_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "to_amount" field.</summary>
+    public const int ToAmountFieldNumber = 8;
+    private string toAmount_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string ToAmount {
+      get { return toAmount_; }
+      set {
+        toAmount_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "shielded_TRC20_contract_address" field.</summary>
+    public const int ShieldedTRC20ContractAddressFieldNumber = 9;
+    private pb::ByteString shieldedTRC20ContractAddress_ = pb::ByteString.Empty;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pb::ByteString ShieldedTRC20ContractAddress {
+      get { return shieldedTRC20ContractAddress_; }
+      set {
+        shieldedTRC20ContractAddress_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as PrivateShieldedTRC20Parameters);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(PrivateShieldedTRC20Parameters other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Ask != other.Ask) return false;
+      if (Nsk != other.Nsk) return false;
+      if (Ovk != other.Ovk) return false;
+      if (FromAmount != other.FromAmount) return false;
+      if(!shieldedSpends_.Equals(other.shieldedSpends_)) return false;
+      if(!shieldedReceives_.Equals(other.shieldedReceives_)) return false;
+      if (TransparentToAddress != other.TransparentToAddress) return false;
+      if (ToAmount != other.ToAmount) return false;
+      if (ShieldedTRC20ContractAddress != other.ShieldedTRC20ContractAddress) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Ask.Length != 0) hash ^= Ask.GetHashCode();
+      if (Nsk.Length != 0) hash ^= Nsk.GetHashCode();
+      if (Ovk.Length != 0) hash ^= Ovk.GetHashCode();
+      if (FromAmount.Length != 0) hash ^= FromAmount.GetHashCode();
+      hash ^= shieldedSpends_.GetHashCode();
+      hash ^= shieldedReceives_.GetHashCode();
+      if (TransparentToAddress.Length != 0) hash ^= TransparentToAddress.GetHashCode();
+      if (ToAmount.Length != 0) hash ^= ToAmount.GetHashCode();
+      if (ShieldedTRC20ContractAddress.Length != 0) hash ^= ShieldedTRC20ContractAddress.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (Ask.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteBytes(Ask);
+      }
+      if (Nsk.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteBytes(Nsk);
+      }
+      if (Ovk.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteBytes(Ovk);
+      }
+      if (FromAmount.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(FromAmount);
+      }
+      shieldedSpends_.WriteTo(output, _repeated_shieldedSpends_codec);
+      shieldedReceives_.WriteTo(output, _repeated_shieldedReceives_codec);
+      if (TransparentToAddress.Length != 0) {
+        output.WriteRawTag(58);
+        output.WriteBytes(TransparentToAddress);
+      }
+      if (ToAmount.Length != 0) {
+        output.WriteRawTag(66);
+        output.WriteString(ToAmount);
+      }
+      if (ShieldedTRC20ContractAddress.Length != 0) {
+        output.WriteRawTag(74);
+        output.WriteBytes(ShieldedTRC20ContractAddress);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (Ask.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeBytesSize(Ask);
+      }
+      if (Nsk.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeBytesSize(Nsk);
+      }
+      if (Ovk.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeBytesSize(Ovk);
+      }
+      if (FromAmount.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(FromAmount);
+      }
+      size += shieldedSpends_.CalculateSize(_repeated_shieldedSpends_codec);
+      size += shieldedReceives_.CalculateSize(_repeated_shieldedReceives_codec);
+      if (TransparentToAddress.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeBytesSize(TransparentToAddress);
+      }
+      if (ToAmount.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(ToAmount);
+      }
+      if (ShieldedTRC20ContractAddress.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeBytesSize(ShieldedTRC20ContractAddress);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(PrivateShieldedTRC20Parameters other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Ask.Length != 0) {
+        Ask = other.Ask;
+      }
+      if (other.Nsk.Length != 0) {
+        Nsk = other.Nsk;
+      }
+      if (other.Ovk.Length != 0) {
+        Ovk = other.Ovk;
+      }
+      if (other.FromAmount.Length != 0) {
+        FromAmount = other.FromAmount;
+      }
+      shieldedSpends_.Add(other.shieldedSpends_);
+      shieldedReceives_.Add(other.shieldedReceives_);
+      if (other.TransparentToAddress.Length != 0) {
+        TransparentToAddress = other.TransparentToAddress;
+      }
+      if (other.ToAmount.Length != 0) {
+        ToAmount = other.ToAmount;
+      }
+      if (other.ShieldedTRC20ContractAddress.Length != 0) {
+        ShieldedTRC20ContractAddress = other.ShieldedTRC20ContractAddress;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Ask = input.ReadBytes();
+            break;
+          }
+          case 18: {
+            Nsk = input.ReadBytes();
+            break;
+          }
+          case 26: {
+            Ovk = input.ReadBytes();
+            break;
+          }
+          case 34: {
+            FromAmount = input.ReadString();
+            break;
+          }
+          case 42: {
+            shieldedSpends_.AddEntriesFrom(input, _repeated_shieldedSpends_codec);
+            break;
+          }
+          case 50: {
+            shieldedReceives_.AddEntriesFrom(input, _repeated_shieldedReceives_codec);
+            break;
+          }
+          case 58: {
+            TransparentToAddress = input.ReadBytes();
+            break;
+          }
+          case 66: {
+            ToAmount = input.ReadString();
+            break;
+          }
+          case 74: {
+            ShieldedTRC20ContractAddress = input.ReadBytes();
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  public sealed partial class PrivateShieldedTRC20ParametersWithoutAsk : pb::IMessage<PrivateShieldedTRC20ParametersWithoutAsk> {
+    private static readonly pb::MessageParser<PrivateShieldedTRC20ParametersWithoutAsk> _parser = new pb::MessageParser<PrivateShieldedTRC20ParametersWithoutAsk>(() => new PrivateShieldedTRC20ParametersWithoutAsk());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<PrivateShieldedTRC20ParametersWithoutAsk> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Tron.Net.Protocol.ApiReflection.Descriptor.MessageTypes[61]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public PrivateShieldedTRC20ParametersWithoutAsk() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public PrivateShieldedTRC20ParametersWithoutAsk(PrivateShieldedTRC20ParametersWithoutAsk other) : this() {
+      ak_ = other.ak_;
+      nsk_ = other.nsk_;
+      ovk_ = other.ovk_;
+      fromAmount_ = other.fromAmount_;
+      shieldedSpends_ = other.shieldedSpends_.Clone();
+      shieldedReceives_ = other.shieldedReceives_.Clone();
+      transparentToAddress_ = other.transparentToAddress_;
+      toAmount_ = other.toAmount_;
+      shieldedTRC20ContractAddress_ = other.shieldedTRC20ContractAddress_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public PrivateShieldedTRC20ParametersWithoutAsk Clone() {
+      return new PrivateShieldedTRC20ParametersWithoutAsk(this);
+    }
+
+    /// <summary>Field number for the "ak" field.</summary>
+    public const int AkFieldNumber = 1;
+    private pb::ByteString ak_ = pb::ByteString.Empty;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pb::ByteString Ak {
+      get { return ak_; }
+      set {
+        ak_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "nsk" field.</summary>
+    public const int NskFieldNumber = 2;
+    private pb::ByteString nsk_ = pb::ByteString.Empty;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pb::ByteString Nsk {
+      get { return nsk_; }
+      set {
+        nsk_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "ovk" field.</summary>
+    public const int OvkFieldNumber = 3;
+    private pb::ByteString ovk_ = pb::ByteString.Empty;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pb::ByteString Ovk {
+      get { return ovk_; }
+      set {
+        ovk_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "from_amount" field.</summary>
+    public const int FromAmountFieldNumber = 4;
+    private string fromAmount_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string FromAmount {
+      get { return fromAmount_; }
+      set {
+        fromAmount_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "shielded_spends" field.</summary>
+    public const int ShieldedSpendsFieldNumber = 5;
+    private static readonly pb::FieldCodec<global::Tron.Net.Protocol.SpendNoteTRC20> _repeated_shieldedSpends_codec
+        = pb::FieldCodec.ForMessage(42, global::Tron.Net.Protocol.SpendNoteTRC20.Parser);
+    private readonly pbc::RepeatedField<global::Tron.Net.Protocol.SpendNoteTRC20> shieldedSpends_ = new pbc::RepeatedField<global::Tron.Net.Protocol.SpendNoteTRC20>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::RepeatedField<global::Tron.Net.Protocol.SpendNoteTRC20> ShieldedSpends {
+      get { return shieldedSpends_; }
+    }
+
+    /// <summary>Field number for the "shielded_receives" field.</summary>
+    public const int ShieldedReceivesFieldNumber = 6;
+    private static readonly pb::FieldCodec<global::Tron.Net.Protocol.ReceiveNote> _repeated_shieldedReceives_codec
+        = pb::FieldCodec.ForMessage(50, global::Tron.Net.Protocol.ReceiveNote.Parser);
+    private readonly pbc::RepeatedField<global::Tron.Net.Protocol.ReceiveNote> shieldedReceives_ = new pbc::RepeatedField<global::Tron.Net.Protocol.ReceiveNote>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::RepeatedField<global::Tron.Net.Protocol.ReceiveNote> ShieldedReceives {
+      get { return shieldedReceives_; }
+    }
+
+    /// <summary>Field number for the "transparent_to_address" field.</summary>
+    public const int TransparentToAddressFieldNumber = 7;
+    private pb::ByteString transparentToAddress_ = pb::ByteString.Empty;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pb::ByteString TransparentToAddress {
+      get { return transparentToAddress_; }
+      set {
+        transparentToAddress_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "to_amount" field.</summary>
+    public const int ToAmountFieldNumber = 8;
+    private string toAmount_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string ToAmount {
+      get { return toAmount_; }
+      set {
+        toAmount_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "shielded_TRC20_contract_address" field.</summary>
+    public const int ShieldedTRC20ContractAddressFieldNumber = 9;
+    private pb::ByteString shieldedTRC20ContractAddress_ = pb::ByteString.Empty;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pb::ByteString ShieldedTRC20ContractAddress {
+      get { return shieldedTRC20ContractAddress_; }
+      set {
+        shieldedTRC20ContractAddress_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as PrivateShieldedTRC20ParametersWithoutAsk);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(PrivateShieldedTRC20ParametersWithoutAsk other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Ak != other.Ak) return false;
+      if (Nsk != other.Nsk) return false;
+      if (Ovk != other.Ovk) return false;
+      if (FromAmount != other.FromAmount) return false;
+      if(!shieldedSpends_.Equals(other.shieldedSpends_)) return false;
+      if(!shieldedReceives_.Equals(other.shieldedReceives_)) return false;
+      if (TransparentToAddress != other.TransparentToAddress) return false;
+      if (ToAmount != other.ToAmount) return false;
+      if (ShieldedTRC20ContractAddress != other.ShieldedTRC20ContractAddress) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Ak.Length != 0) hash ^= Ak.GetHashCode();
+      if (Nsk.Length != 0) hash ^= Nsk.GetHashCode();
+      if (Ovk.Length != 0) hash ^= Ovk.GetHashCode();
+      if (FromAmount.Length != 0) hash ^= FromAmount.GetHashCode();
+      hash ^= shieldedSpends_.GetHashCode();
+      hash ^= shieldedReceives_.GetHashCode();
+      if (TransparentToAddress.Length != 0) hash ^= TransparentToAddress.GetHashCode();
+      if (ToAmount.Length != 0) hash ^= ToAmount.GetHashCode();
+      if (ShieldedTRC20ContractAddress.Length != 0) hash ^= ShieldedTRC20ContractAddress.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (Ak.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteBytes(Ak);
+      }
+      if (Nsk.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteBytes(Nsk);
+      }
+      if (Ovk.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteBytes(Ovk);
+      }
+      if (FromAmount.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(FromAmount);
+      }
+      shieldedSpends_.WriteTo(output, _repeated_shieldedSpends_codec);
+      shieldedReceives_.WriteTo(output, _repeated_shieldedReceives_codec);
+      if (TransparentToAddress.Length != 0) {
+        output.WriteRawTag(58);
+        output.WriteBytes(TransparentToAddress);
+      }
+      if (ToAmount.Length != 0) {
+        output.WriteRawTag(66);
+        output.WriteString(ToAmount);
+      }
+      if (ShieldedTRC20ContractAddress.Length != 0) {
+        output.WriteRawTag(74);
+        output.WriteBytes(ShieldedTRC20ContractAddress);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (Ak.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeBytesSize(Ak);
+      }
+      if (Nsk.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeBytesSize(Nsk);
+      }
+      if (Ovk.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeBytesSize(Ovk);
+      }
+      if (FromAmount.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(FromAmount);
+      }
+      size += shieldedSpends_.CalculateSize(_repeated_shieldedSpends_codec);
+      size += shieldedReceives_.CalculateSize(_repeated_shieldedReceives_codec);
+      if (TransparentToAddress.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeBytesSize(TransparentToAddress);
+      }
+      if (ToAmount.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(ToAmount);
+      }
+      if (ShieldedTRC20ContractAddress.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeBytesSize(ShieldedTRC20ContractAddress);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(PrivateShieldedTRC20ParametersWithoutAsk other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Ak.Length != 0) {
+        Ak = other.Ak;
+      }
+      if (other.Nsk.Length != 0) {
+        Nsk = other.Nsk;
+      }
+      if (other.Ovk.Length != 0) {
+        Ovk = other.Ovk;
+      }
+      if (other.FromAmount.Length != 0) {
+        FromAmount = other.FromAmount;
+      }
+      shieldedSpends_.Add(other.shieldedSpends_);
+      shieldedReceives_.Add(other.shieldedReceives_);
+      if (other.TransparentToAddress.Length != 0) {
+        TransparentToAddress = other.TransparentToAddress;
+      }
+      if (other.ToAmount.Length != 0) {
+        ToAmount = other.ToAmount;
+      }
+      if (other.ShieldedTRC20ContractAddress.Length != 0) {
+        ShieldedTRC20ContractAddress = other.ShieldedTRC20ContractAddress;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Ak = input.ReadBytes();
+            break;
+          }
+          case 18: {
+            Nsk = input.ReadBytes();
+            break;
+          }
+          case 26: {
+            Ovk = input.ReadBytes();
+            break;
+          }
+          case 34: {
+            FromAmount = input.ReadString();
+            break;
+          }
+          case 42: {
+            shieldedSpends_.AddEntriesFrom(input, _repeated_shieldedSpends_codec);
+            break;
+          }
+          case 50: {
+            shieldedReceives_.AddEntriesFrom(input, _repeated_shieldedReceives_codec);
+            break;
+          }
+          case 58: {
+            TransparentToAddress = input.ReadBytes();
+            break;
+          }
+          case 66: {
+            ToAmount = input.ReadString();
+            break;
+          }
+          case 74: {
+            ShieldedTRC20ContractAddress = input.ReadBytes();
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  public sealed partial class ShieldedTRC20Parameters : pb::IMessage<ShieldedTRC20Parameters> {
+    private static readonly pb::MessageParser<ShieldedTRC20Parameters> _parser = new pb::MessageParser<ShieldedTRC20Parameters>(() => new ShieldedTRC20Parameters());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<ShieldedTRC20Parameters> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Tron.Net.Protocol.ApiReflection.Descriptor.MessageTypes[62]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ShieldedTRC20Parameters() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ShieldedTRC20Parameters(ShieldedTRC20Parameters other) : this() {
+      spendDescription_ = other.spendDescription_.Clone();
+      receiveDescription_ = other.receiveDescription_.Clone();
+      bindingSignature_ = other.bindingSignature_;
+      messageHash_ = other.messageHash_;
+      triggerContractInput_ = other.triggerContractInput_;
+      parameterType_ = other.parameterType_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ShieldedTRC20Parameters Clone() {
+      return new ShieldedTRC20Parameters(this);
+    }
+
+    /// <summary>Field number for the "spend_description" field.</summary>
+    public const int SpendDescriptionFieldNumber = 1;
+    private static readonly pb::FieldCodec<global::Tron.Net.Protocol.SpendDescription> _repeated_spendDescription_codec
+        = pb::FieldCodec.ForMessage(10, global::Tron.Net.Protocol.SpendDescription.Parser);
+    private readonly pbc::RepeatedField<global::Tron.Net.Protocol.SpendDescription> spendDescription_ = new pbc::RepeatedField<global::Tron.Net.Protocol.SpendDescription>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::RepeatedField<global::Tron.Net.Protocol.SpendDescription> SpendDescription {
+      get { return spendDescription_; }
+    }
+
+    /// <summary>Field number for the "receive_description" field.</summary>
+    public const int ReceiveDescriptionFieldNumber = 2;
+    private static readonly pb::FieldCodec<global::Tron.Net.Protocol.ReceiveDescription> _repeated_receiveDescription_codec
+        = pb::FieldCodec.ForMessage(18, global::Tron.Net.Protocol.ReceiveDescription.Parser);
+    private readonly pbc::RepeatedField<global::Tron.Net.Protocol.ReceiveDescription> receiveDescription_ = new pbc::RepeatedField<global::Tron.Net.Protocol.ReceiveDescription>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::RepeatedField<global::Tron.Net.Protocol.ReceiveDescription> ReceiveDescription {
+      get { return receiveDescription_; }
+    }
+
+    /// <summary>Field number for the "binding_signature" field.</summary>
+    public const int BindingSignatureFieldNumber = 3;
+    private pb::ByteString bindingSignature_ = pb::ByteString.Empty;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pb::ByteString BindingSignature {
+      get { return bindingSignature_; }
+      set {
+        bindingSignature_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "message_hash" field.</summary>
+    public const int MessageHashFieldNumber = 4;
+    private pb::ByteString messageHash_ = pb::ByteString.Empty;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pb::ByteString MessageHash {
+      get { return messageHash_; }
+      set {
+        messageHash_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "trigger_contract_input" field.</summary>
+    public const int TriggerContractInputFieldNumber = 5;
+    private string triggerContractInput_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string TriggerContractInput {
+      get { return triggerContractInput_; }
+      set {
+        triggerContractInput_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "parameter_type" field.</summary>
+    public const int ParameterTypeFieldNumber = 6;
+    private string parameterType_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string ParameterType {
+      get { return parameterType_; }
+      set {
+        parameterType_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as ShieldedTRC20Parameters);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(ShieldedTRC20Parameters other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if(!spendDescription_.Equals(other.spendDescription_)) return false;
+      if(!receiveDescription_.Equals(other.receiveDescription_)) return false;
+      if (BindingSignature != other.BindingSignature) return false;
+      if (MessageHash != other.MessageHash) return false;
+      if (TriggerContractInput != other.TriggerContractInput) return false;
+      if (ParameterType != other.ParameterType) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      hash ^= spendDescription_.GetHashCode();
+      hash ^= receiveDescription_.GetHashCode();
+      if (BindingSignature.Length != 0) hash ^= BindingSignature.GetHashCode();
+      if (MessageHash.Length != 0) hash ^= MessageHash.GetHashCode();
+      if (TriggerContractInput.Length != 0) hash ^= TriggerContractInput.GetHashCode();
+      if (ParameterType.Length != 0) hash ^= ParameterType.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      spendDescription_.WriteTo(output, _repeated_spendDescription_codec);
+      receiveDescription_.WriteTo(output, _repeated_receiveDescription_codec);
+      if (BindingSignature.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteBytes(BindingSignature);
+      }
+      if (MessageHash.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteBytes(MessageHash);
+      }
+      if (TriggerContractInput.Length != 0) {
+        output.WriteRawTag(42);
+        output.WriteString(TriggerContractInput);
+      }
+      if (ParameterType.Length != 0) {
+        output.WriteRawTag(50);
+        output.WriteString(ParameterType);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      size += spendDescription_.CalculateSize(_repeated_spendDescription_codec);
+      size += receiveDescription_.CalculateSize(_repeated_receiveDescription_codec);
+      if (BindingSignature.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeBytesSize(BindingSignature);
+      }
+      if (MessageHash.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeBytesSize(MessageHash);
+      }
+      if (TriggerContractInput.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(TriggerContractInput);
+      }
+      if (ParameterType.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(ParameterType);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(ShieldedTRC20Parameters other) {
+      if (other == null) {
+        return;
+      }
+      spendDescription_.Add(other.spendDescription_);
+      receiveDescription_.Add(other.receiveDescription_);
+      if (other.BindingSignature.Length != 0) {
+        BindingSignature = other.BindingSignature;
+      }
+      if (other.MessageHash.Length != 0) {
+        MessageHash = other.MessageHash;
+      }
+      if (other.TriggerContractInput.Length != 0) {
+        TriggerContractInput = other.TriggerContractInput;
+      }
+      if (other.ParameterType.Length != 0) {
+        ParameterType = other.ParameterType;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            spendDescription_.AddEntriesFrom(input, _repeated_spendDescription_codec);
+            break;
+          }
+          case 18: {
+            receiveDescription_.AddEntriesFrom(input, _repeated_receiveDescription_codec);
+            break;
+          }
+          case 26: {
+            BindingSignature = input.ReadBytes();
+            break;
+          }
+          case 34: {
+            MessageHash = input.ReadBytes();
+            break;
+          }
+          case 42: {
+            TriggerContractInput = input.ReadString();
+            break;
+          }
+          case 50: {
+            ParameterType = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  public sealed partial class IvkDecryptTRC20Parameters : pb::IMessage<IvkDecryptTRC20Parameters> {
+    private static readonly pb::MessageParser<IvkDecryptTRC20Parameters> _parser = new pb::MessageParser<IvkDecryptTRC20Parameters>(() => new IvkDecryptTRC20Parameters());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<IvkDecryptTRC20Parameters> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Tron.Net.Protocol.ApiReflection.Descriptor.MessageTypes[63]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public IvkDecryptTRC20Parameters() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public IvkDecryptTRC20Parameters(IvkDecryptTRC20Parameters other) : this() {
+      startBlockIndex_ = other.startBlockIndex_;
+      endBlockIndex_ = other.endBlockIndex_;
+      shieldedTRC20ContractAddress_ = other.shieldedTRC20ContractAddress_;
+      ivk_ = other.ivk_;
+      ak_ = other.ak_;
+      nk_ = other.nk_;
+      events_ = other.events_.Clone();
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public IvkDecryptTRC20Parameters Clone() {
+      return new IvkDecryptTRC20Parameters(this);
+    }
+
+    /// <summary>Field number for the "start_block_index" field.</summary>
+    public const int StartBlockIndexFieldNumber = 1;
+    private long startBlockIndex_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public long StartBlockIndex {
+      get { return startBlockIndex_; }
+      set {
+        startBlockIndex_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "end_block_index" field.</summary>
+    public const int EndBlockIndexFieldNumber = 2;
+    private long endBlockIndex_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public long EndBlockIndex {
+      get { return endBlockIndex_; }
+      set {
+        endBlockIndex_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "shielded_TRC20_contract_address" field.</summary>
+    public const int ShieldedTRC20ContractAddressFieldNumber = 3;
+    private pb::ByteString shieldedTRC20ContractAddress_ = pb::ByteString.Empty;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pb::ByteString ShieldedTRC20ContractAddress {
+      get { return shieldedTRC20ContractAddress_; }
+      set {
+        shieldedTRC20ContractAddress_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "ivk" field.</summary>
+    public const int IvkFieldNumber = 4;
+    private pb::ByteString ivk_ = pb::ByteString.Empty;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pb::ByteString Ivk {
+      get { return ivk_; }
+      set {
+        ivk_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "ak" field.</summary>
+    public const int AkFieldNumber = 5;
+    private pb::ByteString ak_ = pb::ByteString.Empty;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pb::ByteString Ak {
+      get { return ak_; }
+      set {
+        ak_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "nk" field.</summary>
+    public const int NkFieldNumber = 6;
+    private pb::ByteString nk_ = pb::ByteString.Empty;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pb::ByteString Nk {
+      get { return nk_; }
+      set {
+        nk_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "events" field.</summary>
+    public const int EventsFieldNumber = 7;
+    private static readonly pb::FieldCodec<string> _repeated_events_codec
+        = pb::FieldCodec.ForString(58);
+    private readonly pbc::RepeatedField<string> events_ = new pbc::RepeatedField<string>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::RepeatedField<string> Events {
+      get { return events_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as IvkDecryptTRC20Parameters);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(IvkDecryptTRC20Parameters other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (StartBlockIndex != other.StartBlockIndex) return false;
+      if (EndBlockIndex != other.EndBlockIndex) return false;
+      if (ShieldedTRC20ContractAddress != other.ShieldedTRC20ContractAddress) return false;
+      if (Ivk != other.Ivk) return false;
+      if (Ak != other.Ak) return false;
+      if (Nk != other.Nk) return false;
+      if(!events_.Equals(other.events_)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (StartBlockIndex != 0L) hash ^= StartBlockIndex.GetHashCode();
+      if (EndBlockIndex != 0L) hash ^= EndBlockIndex.GetHashCode();
+      if (ShieldedTRC20ContractAddress.Length != 0) hash ^= ShieldedTRC20ContractAddress.GetHashCode();
+      if (Ivk.Length != 0) hash ^= Ivk.GetHashCode();
+      if (Ak.Length != 0) hash ^= Ak.GetHashCode();
+      if (Nk.Length != 0) hash ^= Nk.GetHashCode();
+      hash ^= events_.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (StartBlockIndex != 0L) {
+        output.WriteRawTag(8);
+        output.WriteInt64(StartBlockIndex);
+      }
+      if (EndBlockIndex != 0L) {
+        output.WriteRawTag(16);
+        output.WriteInt64(EndBlockIndex);
+      }
+      if (ShieldedTRC20ContractAddress.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteBytes(ShieldedTRC20ContractAddress);
+      }
+      if (Ivk.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteBytes(Ivk);
+      }
+      if (Ak.Length != 0) {
+        output.WriteRawTag(42);
+        output.WriteBytes(Ak);
+      }
+      if (Nk.Length != 0) {
+        output.WriteRawTag(50);
+        output.WriteBytes(Nk);
+      }
+      events_.WriteTo(output, _repeated_events_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (StartBlockIndex != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(StartBlockIndex);
+      }
+      if (EndBlockIndex != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(EndBlockIndex);
+      }
+      if (ShieldedTRC20ContractAddress.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeBytesSize(ShieldedTRC20ContractAddress);
+      }
+      if (Ivk.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeBytesSize(Ivk);
+      }
+      if (Ak.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeBytesSize(Ak);
+      }
+      if (Nk.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeBytesSize(Nk);
+      }
+      size += events_.CalculateSize(_repeated_events_codec);
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(IvkDecryptTRC20Parameters other) {
+      if (other == null) {
+        return;
+      }
+      if (other.StartBlockIndex != 0L) {
+        StartBlockIndex = other.StartBlockIndex;
+      }
+      if (other.EndBlockIndex != 0L) {
+        EndBlockIndex = other.EndBlockIndex;
+      }
+      if (other.ShieldedTRC20ContractAddress.Length != 0) {
+        ShieldedTRC20ContractAddress = other.ShieldedTRC20ContractAddress;
+      }
+      if (other.Ivk.Length != 0) {
+        Ivk = other.Ivk;
+      }
+      if (other.Ak.Length != 0) {
+        Ak = other.Ak;
+      }
+      if (other.Nk.Length != 0) {
+        Nk = other.Nk;
+      }
+      events_.Add(other.events_);
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 8: {
+            StartBlockIndex = input.ReadInt64();
+            break;
+          }
+          case 16: {
+            EndBlockIndex = input.ReadInt64();
+            break;
+          }
+          case 26: {
+            ShieldedTRC20ContractAddress = input.ReadBytes();
+            break;
+          }
+          case 34: {
+            Ivk = input.ReadBytes();
+            break;
+          }
+          case 42: {
+            Ak = input.ReadBytes();
+            break;
+          }
+          case 50: {
+            Nk = input.ReadBytes();
+            break;
+          }
+          case 58: {
+            events_.AddEntriesFrom(input, _repeated_events_codec);
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  public sealed partial class OvkDecryptTRC20Parameters : pb::IMessage<OvkDecryptTRC20Parameters> {
+    private static readonly pb::MessageParser<OvkDecryptTRC20Parameters> _parser = new pb::MessageParser<OvkDecryptTRC20Parameters>(() => new OvkDecryptTRC20Parameters());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<OvkDecryptTRC20Parameters> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Tron.Net.Protocol.ApiReflection.Descriptor.MessageTypes[64]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public OvkDecryptTRC20Parameters() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public OvkDecryptTRC20Parameters(OvkDecryptTRC20Parameters other) : this() {
+      startBlockIndex_ = other.startBlockIndex_;
+      endBlockIndex_ = other.endBlockIndex_;
+      ovk_ = other.ovk_;
+      shieldedTRC20ContractAddress_ = other.shieldedTRC20ContractAddress_;
+      events_ = other.events_.Clone();
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public OvkDecryptTRC20Parameters Clone() {
+      return new OvkDecryptTRC20Parameters(this);
+    }
+
+    /// <summary>Field number for the "start_block_index" field.</summary>
+    public const int StartBlockIndexFieldNumber = 1;
+    private long startBlockIndex_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public long StartBlockIndex {
+      get { return startBlockIndex_; }
+      set {
+        startBlockIndex_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "end_block_index" field.</summary>
+    public const int EndBlockIndexFieldNumber = 2;
+    private long endBlockIndex_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public long EndBlockIndex {
+      get { return endBlockIndex_; }
+      set {
+        endBlockIndex_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "ovk" field.</summary>
+    public const int OvkFieldNumber = 3;
+    private pb::ByteString ovk_ = pb::ByteString.Empty;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pb::ByteString Ovk {
+      get { return ovk_; }
+      set {
+        ovk_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "shielded_TRC20_contract_address" field.</summary>
+    public const int ShieldedTRC20ContractAddressFieldNumber = 4;
+    private pb::ByteString shieldedTRC20ContractAddress_ = pb::ByteString.Empty;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pb::ByteString ShieldedTRC20ContractAddress {
+      get { return shieldedTRC20ContractAddress_; }
+      set {
+        shieldedTRC20ContractAddress_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "events" field.</summary>
+    public const int EventsFieldNumber = 5;
+    private static readonly pb::FieldCodec<string> _repeated_events_codec
+        = pb::FieldCodec.ForString(42);
+    private readonly pbc::RepeatedField<string> events_ = new pbc::RepeatedField<string>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::RepeatedField<string> Events {
+      get { return events_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as OvkDecryptTRC20Parameters);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(OvkDecryptTRC20Parameters other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (StartBlockIndex != other.StartBlockIndex) return false;
+      if (EndBlockIndex != other.EndBlockIndex) return false;
+      if (Ovk != other.Ovk) return false;
+      if (ShieldedTRC20ContractAddress != other.ShieldedTRC20ContractAddress) return false;
+      if(!events_.Equals(other.events_)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (StartBlockIndex != 0L) hash ^= StartBlockIndex.GetHashCode();
+      if (EndBlockIndex != 0L) hash ^= EndBlockIndex.GetHashCode();
+      if (Ovk.Length != 0) hash ^= Ovk.GetHashCode();
+      if (ShieldedTRC20ContractAddress.Length != 0) hash ^= ShieldedTRC20ContractAddress.GetHashCode();
+      hash ^= events_.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (StartBlockIndex != 0L) {
+        output.WriteRawTag(8);
+        output.WriteInt64(StartBlockIndex);
+      }
+      if (EndBlockIndex != 0L) {
+        output.WriteRawTag(16);
+        output.WriteInt64(EndBlockIndex);
+      }
+      if (Ovk.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteBytes(Ovk);
+      }
+      if (ShieldedTRC20ContractAddress.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteBytes(ShieldedTRC20ContractAddress);
+      }
+      events_.WriteTo(output, _repeated_events_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (StartBlockIndex != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(StartBlockIndex);
+      }
+      if (EndBlockIndex != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(EndBlockIndex);
+      }
+      if (Ovk.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeBytesSize(Ovk);
+      }
+      if (ShieldedTRC20ContractAddress.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeBytesSize(ShieldedTRC20ContractAddress);
+      }
+      size += events_.CalculateSize(_repeated_events_codec);
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(OvkDecryptTRC20Parameters other) {
+      if (other == null) {
+        return;
+      }
+      if (other.StartBlockIndex != 0L) {
+        StartBlockIndex = other.StartBlockIndex;
+      }
+      if (other.EndBlockIndex != 0L) {
+        EndBlockIndex = other.EndBlockIndex;
+      }
+      if (other.Ovk.Length != 0) {
+        Ovk = other.Ovk;
+      }
+      if (other.ShieldedTRC20ContractAddress.Length != 0) {
+        ShieldedTRC20ContractAddress = other.ShieldedTRC20ContractAddress;
+      }
+      events_.Add(other.events_);
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 8: {
+            StartBlockIndex = input.ReadInt64();
+            break;
+          }
+          case 16: {
+            EndBlockIndex = input.ReadInt64();
+            break;
+          }
+          case 26: {
+            Ovk = input.ReadBytes();
+            break;
+          }
+          case 34: {
+            ShieldedTRC20ContractAddress = input.ReadBytes();
+            break;
+          }
+          case 42: {
+            events_.AddEntriesFrom(input, _repeated_events_codec);
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  public sealed partial class DecryptNotesTRC20 : pb::IMessage<DecryptNotesTRC20> {
+    private static readonly pb::MessageParser<DecryptNotesTRC20> _parser = new pb::MessageParser<DecryptNotesTRC20>(() => new DecryptNotesTRC20());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<DecryptNotesTRC20> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Tron.Net.Protocol.ApiReflection.Descriptor.MessageTypes[65]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public DecryptNotesTRC20() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public DecryptNotesTRC20(DecryptNotesTRC20 other) : this() {
+      noteTxs_ = other.noteTxs_.Clone();
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public DecryptNotesTRC20 Clone() {
+      return new DecryptNotesTRC20(this);
+    }
+
+    /// <summary>Field number for the "noteTxs" field.</summary>
+    public const int NoteTxsFieldNumber = 1;
+    private static readonly pb::FieldCodec<global::Tron.Net.Protocol.DecryptNotesTRC20.Types.NoteTx> _repeated_noteTxs_codec
+        = pb::FieldCodec.ForMessage(10, global::Tron.Net.Protocol.DecryptNotesTRC20.Types.NoteTx.Parser);
+    private readonly pbc::RepeatedField<global::Tron.Net.Protocol.DecryptNotesTRC20.Types.NoteTx> noteTxs_ = new pbc::RepeatedField<global::Tron.Net.Protocol.DecryptNotesTRC20.Types.NoteTx>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::RepeatedField<global::Tron.Net.Protocol.DecryptNotesTRC20.Types.NoteTx> NoteTxs {
+      get { return noteTxs_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as DecryptNotesTRC20);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(DecryptNotesTRC20 other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if(!noteTxs_.Equals(other.noteTxs_)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      hash ^= noteTxs_.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      noteTxs_.WriteTo(output, _repeated_noteTxs_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      size += noteTxs_.CalculateSize(_repeated_noteTxs_codec);
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(DecryptNotesTRC20 other) {
+      if (other == null) {
+        return;
+      }
+      noteTxs_.Add(other.noteTxs_);
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            noteTxs_.AddEntriesFrom(input, _repeated_noteTxs_codec);
+            break;
+          }
+        }
+      }
+    }
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the DecryptNotesTRC20 message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static partial class Types {
+      public sealed partial class NoteTx : pb::IMessage<NoteTx> {
+        private static readonly pb::MessageParser<NoteTx> _parser = new pb::MessageParser<NoteTx>(() => new NoteTx());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public static pb::MessageParser<NoteTx> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Tron.Net.Protocol.DecryptNotesTRC20.Descriptor.NestedTypes[0]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public NoteTx() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public NoteTx(NoteTx other) : this() {
+          note_ = other.note_ != null ? other.note_.Clone() : null;
+          position_ = other.position_;
+          isSpent_ = other.isSpent_;
+          txid_ = other.txid_;
+          index_ = other.index_;
+          toAmount_ = other.toAmount_;
+          transparentToAddress_ = other.transparentToAddress_;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public NoteTx Clone() {
+          return new NoteTx(this);
+        }
+
+        /// <summary>Field number for the "note" field.</summary>
+        public const int NoteFieldNumber = 1;
+        private global::Tron.Net.Protocol.Note note_;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public global::Tron.Net.Protocol.Note Note {
+          get { return note_; }
+          set {
+            note_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "position" field.</summary>
+        public const int PositionFieldNumber = 2;
+        private long position_;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public long Position {
+          get { return position_; }
+          set {
+            position_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "is_spent" field.</summary>
+        public const int IsSpentFieldNumber = 3;
+        private bool isSpent_;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public bool IsSpent {
+          get { return isSpent_; }
+          set {
+            isSpent_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "txid" field.</summary>
+        public const int TxidFieldNumber = 4;
+        private pb::ByteString txid_ = pb::ByteString.Empty;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public pb::ByteString Txid {
+          get { return txid_; }
+          set {
+            txid_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        /// <summary>Field number for the "index" field.</summary>
+        public const int IndexFieldNumber = 5;
+        private int index_;
+        /// <summary>
+        ///the index of note in txid
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public int Index {
+          get { return index_; }
+          set {
+            index_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "to_amount" field.</summary>
+        public const int ToAmountFieldNumber = 6;
+        private string toAmount_ = "";
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public string ToAmount {
+          get { return toAmount_; }
+          set {
+            toAmount_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        /// <summary>Field number for the "transparent_to_address" field.</summary>
+        public const int TransparentToAddressFieldNumber = 7;
+        private pb::ByteString transparentToAddress_ = pb::ByteString.Empty;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public pb::ByteString TransparentToAddress {
+          get { return transparentToAddress_; }
+          set {
+            transparentToAddress_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public override bool Equals(object other) {
+          return Equals(other as NoteTx);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public bool Equals(NoteTx other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (!object.Equals(Note, other.Note)) return false;
+          if (Position != other.Position) return false;
+          if (IsSpent != other.IsSpent) return false;
+          if (Txid != other.Txid) return false;
+          if (Index != other.Index) return false;
+          if (ToAmount != other.ToAmount) return false;
+          if (TransparentToAddress != other.TransparentToAddress) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (note_ != null) hash ^= Note.GetHashCode();
+          if (Position != 0L) hash ^= Position.GetHashCode();
+          if (IsSpent != false) hash ^= IsSpent.GetHashCode();
+          if (Txid.Length != 0) hash ^= Txid.GetHashCode();
+          if (Index != 0) hash ^= Index.GetHashCode();
+          if (ToAmount.Length != 0) hash ^= ToAmount.GetHashCode();
+          if (TransparentToAddress.Length != 0) hash ^= TransparentToAddress.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public void WriteTo(pb::CodedOutputStream output) {
+          if (note_ != null) {
+            output.WriteRawTag(10);
+            output.WriteMessage(Note);
+          }
+          if (Position != 0L) {
+            output.WriteRawTag(16);
+            output.WriteInt64(Position);
+          }
+          if (IsSpent != false) {
+            output.WriteRawTag(24);
+            output.WriteBool(IsSpent);
+          }
+          if (Txid.Length != 0) {
+            output.WriteRawTag(34);
+            output.WriteBytes(Txid);
+          }
+          if (Index != 0) {
+            output.WriteRawTag(40);
+            output.WriteInt32(Index);
+          }
+          if (ToAmount.Length != 0) {
+            output.WriteRawTag(50);
+            output.WriteString(ToAmount);
+          }
+          if (TransparentToAddress.Length != 0) {
+            output.WriteRawTag(58);
+            output.WriteBytes(TransparentToAddress);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public int CalculateSize() {
+          int size = 0;
+          if (note_ != null) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(Note);
+          }
+          if (Position != 0L) {
+            size += 1 + pb::CodedOutputStream.ComputeInt64Size(Position);
+          }
+          if (IsSpent != false) {
+            size += 1 + 1;
+          }
+          if (Txid.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeBytesSize(Txid);
+          }
+          if (Index != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeInt32Size(Index);
+          }
+          if (ToAmount.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(ToAmount);
+          }
+          if (TransparentToAddress.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeBytesSize(TransparentToAddress);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public void MergeFrom(NoteTx other) {
+          if (other == null) {
+            return;
+          }
+          if (other.note_ != null) {
+            if (note_ == null) {
+              Note = new global::Tron.Net.Protocol.Note();
+            }
+            Note.MergeFrom(other.Note);
+          }
+          if (other.Position != 0L) {
+            Position = other.Position;
+          }
+          if (other.IsSpent != false) {
+            IsSpent = other.IsSpent;
+          }
+          if (other.Txid.Length != 0) {
+            Txid = other.Txid;
+          }
+          if (other.Index != 0) {
+            Index = other.Index;
+          }
+          if (other.ToAmount.Length != 0) {
+            ToAmount = other.ToAmount;
+          }
+          if (other.TransparentToAddress.Length != 0) {
+            TransparentToAddress = other.TransparentToAddress;
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public void MergeFrom(pb::CodedInputStream input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 10: {
+                if (note_ == null) {
+                  Note = new global::Tron.Net.Protocol.Note();
+                }
+                input.ReadMessage(Note);
+                break;
+              }
+              case 16: {
+                Position = input.ReadInt64();
+                break;
+              }
+              case 24: {
+                IsSpent = input.ReadBool();
+                break;
+              }
+              case 34: {
+                Txid = input.ReadBytes();
+                break;
+              }
+              case 40: {
+                Index = input.ReadInt32();
+                break;
+              }
+              case 50: {
+                ToAmount = input.ReadString();
+                break;
+              }
+              case 58: {
+                TransparentToAddress = input.ReadBytes();
+                break;
+              }
+            }
+          }
+        }
+
+      }
+
+    }
+    #endregion
+
+  }
+
+  public sealed partial class NfTRC20Parameters : pb::IMessage<NfTRC20Parameters> {
+    private static readonly pb::MessageParser<NfTRC20Parameters> _parser = new pb::MessageParser<NfTRC20Parameters>(() => new NfTRC20Parameters());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<NfTRC20Parameters> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Tron.Net.Protocol.ApiReflection.Descriptor.MessageTypes[66]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public NfTRC20Parameters() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public NfTRC20Parameters(NfTRC20Parameters other) : this() {
+      note_ = other.note_ != null ? other.note_.Clone() : null;
+      ak_ = other.ak_;
+      nk_ = other.nk_;
+      position_ = other.position_;
+      shieldedTRC20ContractAddress_ = other.shieldedTRC20ContractAddress_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public NfTRC20Parameters Clone() {
+      return new NfTRC20Parameters(this);
+    }
+
+    /// <summary>Field number for the "note" field.</summary>
+    public const int NoteFieldNumber = 1;
+    private global::Tron.Net.Protocol.Note note_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Tron.Net.Protocol.Note Note {
+      get { return note_; }
+      set {
+        note_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "ak" field.</summary>
+    public const int AkFieldNumber = 2;
+    private pb::ByteString ak_ = pb::ByteString.Empty;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pb::ByteString Ak {
+      get { return ak_; }
+      set {
+        ak_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "nk" field.</summary>
+    public const int NkFieldNumber = 3;
+    private pb::ByteString nk_ = pb::ByteString.Empty;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pb::ByteString Nk {
+      get { return nk_; }
+      set {
+        nk_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "position" field.</summary>
+    public const int PositionFieldNumber = 4;
+    private long position_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public long Position {
+      get { return position_; }
+      set {
+        position_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "shielded_TRC20_contract_address" field.</summary>
+    public const int ShieldedTRC20ContractAddressFieldNumber = 5;
+    private pb::ByteString shieldedTRC20ContractAddress_ = pb::ByteString.Empty;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pb::ByteString ShieldedTRC20ContractAddress {
+      get { return shieldedTRC20ContractAddress_; }
+      set {
+        shieldedTRC20ContractAddress_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as NfTRC20Parameters);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(NfTRC20Parameters other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(Note, other.Note)) return false;
+      if (Ak != other.Ak) return false;
+      if (Nk != other.Nk) return false;
+      if (Position != other.Position) return false;
+      if (ShieldedTRC20ContractAddress != other.ShieldedTRC20ContractAddress) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (note_ != null) hash ^= Note.GetHashCode();
+      if (Ak.Length != 0) hash ^= Ak.GetHashCode();
+      if (Nk.Length != 0) hash ^= Nk.GetHashCode();
+      if (Position != 0L) hash ^= Position.GetHashCode();
+      if (ShieldedTRC20ContractAddress.Length != 0) hash ^= ShieldedTRC20ContractAddress.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (note_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(Note);
+      }
+      if (Ak.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteBytes(Ak);
+      }
+      if (Nk.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteBytes(Nk);
+      }
+      if (Position != 0L) {
+        output.WriteRawTag(32);
+        output.WriteInt64(Position);
+      }
+      if (ShieldedTRC20ContractAddress.Length != 0) {
+        output.WriteRawTag(42);
+        output.WriteBytes(ShieldedTRC20ContractAddress);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (note_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Note);
+      }
+      if (Ak.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeBytesSize(Ak);
+      }
+      if (Nk.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeBytesSize(Nk);
+      }
+      if (Position != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(Position);
+      }
+      if (ShieldedTRC20ContractAddress.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeBytesSize(ShieldedTRC20ContractAddress);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(NfTRC20Parameters other) {
+      if (other == null) {
+        return;
+      }
+      if (other.note_ != null) {
+        if (note_ == null) {
+          Note = new global::Tron.Net.Protocol.Note();
+        }
+        Note.MergeFrom(other.Note);
+      }
+      if (other.Ak.Length != 0) {
+        Ak = other.Ak;
+      }
+      if (other.Nk.Length != 0) {
+        Nk = other.Nk;
+      }
+      if (other.Position != 0L) {
+        Position = other.Position;
+      }
+      if (other.ShieldedTRC20ContractAddress.Length != 0) {
+        ShieldedTRC20ContractAddress = other.ShieldedTRC20ContractAddress;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            if (note_ == null) {
+              Note = new global::Tron.Net.Protocol.Note();
+            }
+            input.ReadMessage(Note);
+            break;
+          }
+          case 18: {
+            Ak = input.ReadBytes();
+            break;
+          }
+          case 26: {
+            Nk = input.ReadBytes();
+            break;
+          }
+          case 32: {
+            Position = input.ReadInt64();
+            break;
+          }
+          case 42: {
+            ShieldedTRC20ContractAddress = input.ReadBytes();
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  public sealed partial class NullifierResult : pb::IMessage<NullifierResult> {
+    private static readonly pb::MessageParser<NullifierResult> _parser = new pb::MessageParser<NullifierResult>(() => new NullifierResult());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<NullifierResult> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Tron.Net.Protocol.ApiReflection.Descriptor.MessageTypes[67]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public NullifierResult() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public NullifierResult(NullifierResult other) : this() {
+      isSpent_ = other.isSpent_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public NullifierResult Clone() {
+      return new NullifierResult(this);
+    }
+
+    /// <summary>Field number for the "is_spent" field.</summary>
+    public const int IsSpentFieldNumber = 1;
+    private bool isSpent_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool IsSpent {
+      get { return isSpent_; }
+      set {
+        isSpent_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as NullifierResult);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(NullifierResult other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (IsSpent != other.IsSpent) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (IsSpent != false) hash ^= IsSpent.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (IsSpent != false) {
+        output.WriteRawTag(8);
+        output.WriteBool(IsSpent);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (IsSpent != false) {
+        size += 1 + 1;
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(NullifierResult other) {
+      if (other == null) {
+        return;
+      }
+      if (other.IsSpent != false) {
+        IsSpent = other.IsSpent;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 8: {
+            IsSpent = input.ReadBool();
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  public sealed partial class ShieldedTRC20TriggerContractParameters : pb::IMessage<ShieldedTRC20TriggerContractParameters> {
+    private static readonly pb::MessageParser<ShieldedTRC20TriggerContractParameters> _parser = new pb::MessageParser<ShieldedTRC20TriggerContractParameters>(() => new ShieldedTRC20TriggerContractParameters());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<ShieldedTRC20TriggerContractParameters> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Tron.Net.Protocol.ApiReflection.Descriptor.MessageTypes[68]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ShieldedTRC20TriggerContractParameters() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ShieldedTRC20TriggerContractParameters(ShieldedTRC20TriggerContractParameters other) : this() {
+      shieldedTRC20Parameters_ = other.shieldedTRC20Parameters_ != null ? other.shieldedTRC20Parameters_.Clone() : null;
+      spendAuthoritySignature_ = other.spendAuthoritySignature_.Clone();
+      amount_ = other.amount_;
+      transparentToAddress_ = other.transparentToAddress_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ShieldedTRC20TriggerContractParameters Clone() {
+      return new ShieldedTRC20TriggerContractParameters(this);
+    }
+
+    /// <summary>Field number for the "shielded_TRC20_Parameters" field.</summary>
+    public const int ShieldedTRC20ParametersFieldNumber = 1;
+    private global::Tron.Net.Protocol.ShieldedTRC20Parameters shieldedTRC20Parameters_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Tron.Net.Protocol.ShieldedTRC20Parameters ShieldedTRC20Parameters {
+      get { return shieldedTRC20Parameters_; }
+      set {
+        shieldedTRC20Parameters_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "spend_authority_signature" field.</summary>
+    public const int SpendAuthoritySignatureFieldNumber = 2;
+    private static readonly pb::FieldCodec<global::Tron.Net.Protocol.BytesMessage> _repeated_spendAuthoritySignature_codec
+        = pb::FieldCodec.ForMessage(18, global::Tron.Net.Protocol.BytesMessage.Parser);
+    private readonly pbc::RepeatedField<global::Tron.Net.Protocol.BytesMessage> spendAuthoritySignature_ = new pbc::RepeatedField<global::Tron.Net.Protocol.BytesMessage>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::RepeatedField<global::Tron.Net.Protocol.BytesMessage> SpendAuthoritySignature {
+      get { return spendAuthoritySignature_; }
+    }
+
+    /// <summary>Field number for the "amount" field.</summary>
+    public const int AmountFieldNumber = 3;
+    private string amount_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Amount {
+      get { return amount_; }
+      set {
+        amount_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "transparent_to_address" field.</summary>
+    public const int TransparentToAddressFieldNumber = 4;
+    private pb::ByteString transparentToAddress_ = pb::ByteString.Empty;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pb::ByteString TransparentToAddress {
+      get { return transparentToAddress_; }
+      set {
+        transparentToAddress_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as ShieldedTRC20TriggerContractParameters);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(ShieldedTRC20TriggerContractParameters other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(ShieldedTRC20Parameters, other.ShieldedTRC20Parameters)) return false;
+      if(!spendAuthoritySignature_.Equals(other.spendAuthoritySignature_)) return false;
+      if (Amount != other.Amount) return false;
+      if (TransparentToAddress != other.TransparentToAddress) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (shieldedTRC20Parameters_ != null) hash ^= ShieldedTRC20Parameters.GetHashCode();
+      hash ^= spendAuthoritySignature_.GetHashCode();
+      if (Amount.Length != 0) hash ^= Amount.GetHashCode();
+      if (TransparentToAddress.Length != 0) hash ^= TransparentToAddress.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (shieldedTRC20Parameters_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(ShieldedTRC20Parameters);
+      }
+      spendAuthoritySignature_.WriteTo(output, _repeated_spendAuthoritySignature_codec);
+      if (Amount.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(Amount);
+      }
+      if (TransparentToAddress.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteBytes(TransparentToAddress);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (shieldedTRC20Parameters_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(ShieldedTRC20Parameters);
+      }
+      size += spendAuthoritySignature_.CalculateSize(_repeated_spendAuthoritySignature_codec);
+      if (Amount.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Amount);
+      }
+      if (TransparentToAddress.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeBytesSize(TransparentToAddress);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(ShieldedTRC20TriggerContractParameters other) {
+      if (other == null) {
+        return;
+      }
+      if (other.shieldedTRC20Parameters_ != null) {
+        if (shieldedTRC20Parameters_ == null) {
+          ShieldedTRC20Parameters = new global::Tron.Net.Protocol.ShieldedTRC20Parameters();
+        }
+        ShieldedTRC20Parameters.MergeFrom(other.ShieldedTRC20Parameters);
+      }
+      spendAuthoritySignature_.Add(other.spendAuthoritySignature_);
+      if (other.Amount.Length != 0) {
+        Amount = other.Amount;
+      }
+      if (other.TransparentToAddress.Length != 0) {
+        TransparentToAddress = other.TransparentToAddress;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            if (shieldedTRC20Parameters_ == null) {
+              ShieldedTRC20Parameters = new global::Tron.Net.Protocol.ShieldedTRC20Parameters();
+            }
+            input.ReadMessage(ShieldedTRC20Parameters);
+            break;
+          }
+          case 18: {
+            spendAuthoritySignature_.AddEntriesFrom(input, _repeated_spendAuthoritySignature_codec);
+            break;
+          }
+          case 26: {
+            Amount = input.ReadString();
+            break;
+          }
+          case 34: {
+            TransparentToAddress = input.ReadBytes();
+            break;
+          }
+        }
+      }
+    }
 
   }
 

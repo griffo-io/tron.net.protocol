@@ -82,6 +82,36 @@ namespace Tron.Net.Protocol {
     static readonly grpc::Marshaller<global::Tron.Net.Protocol.TransactionApprovedList> __Marshaller_protocol_TransactionApprovedList = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Tron.Net.Protocol.TransactionApprovedList.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Tron.Net.Protocol.NodeInfo> __Marshaller_protocol_NodeInfo = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Tron.Net.Protocol.NodeInfo.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Tron.Net.Protocol.UpdateBrokerageContract> __Marshaller_protocol_UpdateBrokerageContract = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Tron.Net.Protocol.UpdateBrokerageContract.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Tron.Net.Protocol.PrivateParameters> __Marshaller_protocol_PrivateParameters = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Tron.Net.Protocol.PrivateParameters.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Tron.Net.Protocol.OutputPointInfo> __Marshaller_protocol_OutputPointInfo = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Tron.Net.Protocol.OutputPointInfo.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Tron.Net.Protocol.IncrementalMerkleVoucherInfo> __Marshaller_protocol_IncrementalMerkleVoucherInfo = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Tron.Net.Protocol.IncrementalMerkleVoucherInfo.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Tron.Net.Protocol.IvkDecryptParameters> __Marshaller_protocol_IvkDecryptParameters = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Tron.Net.Protocol.IvkDecryptParameters.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Tron.Net.Protocol.DecryptNotes> __Marshaller_protocol_DecryptNotes = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Tron.Net.Protocol.DecryptNotes.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Tron.Net.Protocol.IvkDecryptAndMarkParameters> __Marshaller_protocol_IvkDecryptAndMarkParameters = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Tron.Net.Protocol.IvkDecryptAndMarkParameters.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Tron.Net.Protocol.DecryptNotesMarked> __Marshaller_protocol_DecryptNotesMarked = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Tron.Net.Protocol.DecryptNotesMarked.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Tron.Net.Protocol.OvkDecryptParameters> __Marshaller_protocol_OvkDecryptParameters = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Tron.Net.Protocol.OvkDecryptParameters.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Tron.Net.Protocol.ExpandedSpendingKeyMessage> __Marshaller_protocol_ExpandedSpendingKeyMessage = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Tron.Net.Protocol.ExpandedSpendingKeyMessage.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Tron.Net.Protocol.ViewingKeyMessage> __Marshaller_protocol_ViewingKeyMessage = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Tron.Net.Protocol.ViewingKeyMessage.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Tron.Net.Protocol.IncomingViewingKeyMessage> __Marshaller_protocol_IncomingViewingKeyMessage = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Tron.Net.Protocol.IncomingViewingKeyMessage.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Tron.Net.Protocol.DiversifierMessage> __Marshaller_protocol_DiversifierMessage = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Tron.Net.Protocol.DiversifierMessage.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Tron.Net.Protocol.ShieldedAddressInfo> __Marshaller_protocol_ShieldedAddressInfo = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Tron.Net.Protocol.ShieldedAddressInfo.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Tron.Net.Protocol.IncomingViewingKeyDiversifierMessage> __Marshaller_protocol_IncomingViewingKeyDiversifierMessage = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Tron.Net.Protocol.IncomingViewingKeyDiversifierMessage.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Tron.Net.Protocol.PaymentAddressMessage> __Marshaller_protocol_PaymentAddressMessage = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Tron.Net.Protocol.PaymentAddressMessage.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Tron.Net.Protocol.NoteParameters> __Marshaller_protocol_NoteParameters = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Tron.Net.Protocol.NoteParameters.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Tron.Net.Protocol.SpendResult> __Marshaller_protocol_SpendResult = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Tron.Net.Protocol.SpendResult.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Tron.Net.Protocol.PrivateParametersWithoutAsk> __Marshaller_protocol_PrivateParametersWithoutAsk = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Tron.Net.Protocol.PrivateParametersWithoutAsk.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Tron.Net.Protocol.SpendAuthSigParameters> __Marshaller_protocol_SpendAuthSigParameters = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Tron.Net.Protocol.SpendAuthSigParameters.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Tron.Net.Protocol.NfParameters> __Marshaller_protocol_NfParameters = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Tron.Net.Protocol.NfParameters.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Tron.Net.Protocol.PrivateShieldedTRC20Parameters> __Marshaller_protocol_PrivateShieldedTRC20Parameters = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Tron.Net.Protocol.PrivateShieldedTRC20Parameters.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Tron.Net.Protocol.ShieldedTRC20Parameters> __Marshaller_protocol_ShieldedTRC20Parameters = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Tron.Net.Protocol.ShieldedTRC20Parameters.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Tron.Net.Protocol.PrivateShieldedTRC20ParametersWithoutAsk> __Marshaller_protocol_PrivateShieldedTRC20ParametersWithoutAsk = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Tron.Net.Protocol.PrivateShieldedTRC20ParametersWithoutAsk.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Tron.Net.Protocol.IvkDecryptTRC20Parameters> __Marshaller_protocol_IvkDecryptTRC20Parameters = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Tron.Net.Protocol.IvkDecryptTRC20Parameters.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Tron.Net.Protocol.DecryptNotesTRC20> __Marshaller_protocol_DecryptNotesTRC20 = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Tron.Net.Protocol.DecryptNotesTRC20.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Tron.Net.Protocol.OvkDecryptTRC20Parameters> __Marshaller_protocol_OvkDecryptTRC20Parameters = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Tron.Net.Protocol.OvkDecryptTRC20Parameters.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Tron.Net.Protocol.NfTRC20Parameters> __Marshaller_protocol_NfTRC20Parameters = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Tron.Net.Protocol.NfTRC20Parameters.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Tron.Net.Protocol.NullifierResult> __Marshaller_protocol_NullifierResult = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Tron.Net.Protocol.NullifierResult.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Tron.Net.Protocol.ShieldedTRC20TriggerContractParameters> __Marshaller_protocol_ShieldedTRC20TriggerContractParameters = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Tron.Net.Protocol.ShieldedTRC20TriggerContractParameters.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Tron.Net.Protocol.TransactionInfoList> __Marshaller_protocol_TransactionInfoList = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Tron.Net.Protocol.TransactionInfoList.Parser.ParseFrom);
 
     static readonly grpc::Method<global::Tron.Net.Protocol.Account, global::Tron.Net.Protocol.Account> __Method_GetAccount = new grpc::Method<global::Tron.Net.Protocol.Account, global::Tron.Net.Protocol.Account>(
         grpc::MethodType.Unary,
@@ -768,6 +798,195 @@ namespace Tron.Net.Protocol {
         "UpdateBrokerage",
         __Marshaller_protocol_UpdateBrokerageContract,
         __Marshaller_protocol_TransactionExtention);
+
+    static readonly grpc::Method<global::Tron.Net.Protocol.PrivateParameters, global::Tron.Net.Protocol.TransactionExtention> __Method_CreateShieldedTransaction = new grpc::Method<global::Tron.Net.Protocol.PrivateParameters, global::Tron.Net.Protocol.TransactionExtention>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "CreateShieldedTransaction",
+        __Marshaller_protocol_PrivateParameters,
+        __Marshaller_protocol_TransactionExtention);
+
+    static readonly grpc::Method<global::Tron.Net.Protocol.OutputPointInfo, global::Tron.Net.Protocol.IncrementalMerkleVoucherInfo> __Method_GetMerkleTreeVoucherInfo = new grpc::Method<global::Tron.Net.Protocol.OutputPointInfo, global::Tron.Net.Protocol.IncrementalMerkleVoucherInfo>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetMerkleTreeVoucherInfo",
+        __Marshaller_protocol_OutputPointInfo,
+        __Marshaller_protocol_IncrementalMerkleVoucherInfo);
+
+    static readonly grpc::Method<global::Tron.Net.Protocol.IvkDecryptParameters, global::Tron.Net.Protocol.DecryptNotes> __Method_ScanNoteByIvk = new grpc::Method<global::Tron.Net.Protocol.IvkDecryptParameters, global::Tron.Net.Protocol.DecryptNotes>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ScanNoteByIvk",
+        __Marshaller_protocol_IvkDecryptParameters,
+        __Marshaller_protocol_DecryptNotes);
+
+    static readonly grpc::Method<global::Tron.Net.Protocol.IvkDecryptAndMarkParameters, global::Tron.Net.Protocol.DecryptNotesMarked> __Method_ScanAndMarkNoteByIvk = new grpc::Method<global::Tron.Net.Protocol.IvkDecryptAndMarkParameters, global::Tron.Net.Protocol.DecryptNotesMarked>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ScanAndMarkNoteByIvk",
+        __Marshaller_protocol_IvkDecryptAndMarkParameters,
+        __Marshaller_protocol_DecryptNotesMarked);
+
+    static readonly grpc::Method<global::Tron.Net.Protocol.OvkDecryptParameters, global::Tron.Net.Protocol.DecryptNotes> __Method_ScanNoteByOvk = new grpc::Method<global::Tron.Net.Protocol.OvkDecryptParameters, global::Tron.Net.Protocol.DecryptNotes>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ScanNoteByOvk",
+        __Marshaller_protocol_OvkDecryptParameters,
+        __Marshaller_protocol_DecryptNotes);
+
+    static readonly grpc::Method<global::Tron.Net.Protocol.EmptyMessage, global::Tron.Net.Protocol.BytesMessage> __Method_GetSpendingKey = new grpc::Method<global::Tron.Net.Protocol.EmptyMessage, global::Tron.Net.Protocol.BytesMessage>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetSpendingKey",
+        __Marshaller_protocol_EmptyMessage,
+        __Marshaller_protocol_BytesMessage);
+
+    static readonly grpc::Method<global::Tron.Net.Protocol.BytesMessage, global::Tron.Net.Protocol.ExpandedSpendingKeyMessage> __Method_GetExpandedSpendingKey = new grpc::Method<global::Tron.Net.Protocol.BytesMessage, global::Tron.Net.Protocol.ExpandedSpendingKeyMessage>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetExpandedSpendingKey",
+        __Marshaller_protocol_BytesMessage,
+        __Marshaller_protocol_ExpandedSpendingKeyMessage);
+
+    static readonly grpc::Method<global::Tron.Net.Protocol.BytesMessage, global::Tron.Net.Protocol.BytesMessage> __Method_GetAkFromAsk = new grpc::Method<global::Tron.Net.Protocol.BytesMessage, global::Tron.Net.Protocol.BytesMessage>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetAkFromAsk",
+        __Marshaller_protocol_BytesMessage,
+        __Marshaller_protocol_BytesMessage);
+
+    static readonly grpc::Method<global::Tron.Net.Protocol.BytesMessage, global::Tron.Net.Protocol.BytesMessage> __Method_GetNkFromNsk = new grpc::Method<global::Tron.Net.Protocol.BytesMessage, global::Tron.Net.Protocol.BytesMessage>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetNkFromNsk",
+        __Marshaller_protocol_BytesMessage,
+        __Marshaller_protocol_BytesMessage);
+
+    static readonly grpc::Method<global::Tron.Net.Protocol.ViewingKeyMessage, global::Tron.Net.Protocol.IncomingViewingKeyMessage> __Method_GetIncomingViewingKey = new grpc::Method<global::Tron.Net.Protocol.ViewingKeyMessage, global::Tron.Net.Protocol.IncomingViewingKeyMessage>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetIncomingViewingKey",
+        __Marshaller_protocol_ViewingKeyMessage,
+        __Marshaller_protocol_IncomingViewingKeyMessage);
+
+    static readonly grpc::Method<global::Tron.Net.Protocol.EmptyMessage, global::Tron.Net.Protocol.DiversifierMessage> __Method_GetDiversifier = new grpc::Method<global::Tron.Net.Protocol.EmptyMessage, global::Tron.Net.Protocol.DiversifierMessage>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetDiversifier",
+        __Marshaller_protocol_EmptyMessage,
+        __Marshaller_protocol_DiversifierMessage);
+
+    static readonly grpc::Method<global::Tron.Net.Protocol.EmptyMessage, global::Tron.Net.Protocol.ShieldedAddressInfo> __Method_GetNewShieldedAddress = new grpc::Method<global::Tron.Net.Protocol.EmptyMessage, global::Tron.Net.Protocol.ShieldedAddressInfo>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetNewShieldedAddress",
+        __Marshaller_protocol_EmptyMessage,
+        __Marshaller_protocol_ShieldedAddressInfo);
+
+    static readonly grpc::Method<global::Tron.Net.Protocol.IncomingViewingKeyDiversifierMessage, global::Tron.Net.Protocol.PaymentAddressMessage> __Method_GetZenPaymentAddress = new grpc::Method<global::Tron.Net.Protocol.IncomingViewingKeyDiversifierMessage, global::Tron.Net.Protocol.PaymentAddressMessage>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetZenPaymentAddress",
+        __Marshaller_protocol_IncomingViewingKeyDiversifierMessage,
+        __Marshaller_protocol_PaymentAddressMessage);
+
+    static readonly grpc::Method<global::Tron.Net.Protocol.EmptyMessage, global::Tron.Net.Protocol.BytesMessage> __Method_GetRcm = new grpc::Method<global::Tron.Net.Protocol.EmptyMessage, global::Tron.Net.Protocol.BytesMessage>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetRcm",
+        __Marshaller_protocol_EmptyMessage,
+        __Marshaller_protocol_BytesMessage);
+
+    static readonly grpc::Method<global::Tron.Net.Protocol.NoteParameters, global::Tron.Net.Protocol.SpendResult> __Method_IsSpend = new grpc::Method<global::Tron.Net.Protocol.NoteParameters, global::Tron.Net.Protocol.SpendResult>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "IsSpend",
+        __Marshaller_protocol_NoteParameters,
+        __Marshaller_protocol_SpendResult);
+
+    static readonly grpc::Method<global::Tron.Net.Protocol.PrivateParametersWithoutAsk, global::Tron.Net.Protocol.TransactionExtention> __Method_CreateShieldedTransactionWithoutSpendAuthSig = new grpc::Method<global::Tron.Net.Protocol.PrivateParametersWithoutAsk, global::Tron.Net.Protocol.TransactionExtention>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "CreateShieldedTransactionWithoutSpendAuthSig",
+        __Marshaller_protocol_PrivateParametersWithoutAsk,
+        __Marshaller_protocol_TransactionExtention);
+
+    static readonly grpc::Method<global::Tron.Net.Protocol.Transaction, global::Tron.Net.Protocol.BytesMessage> __Method_GetShieldTransactionHash = new grpc::Method<global::Tron.Net.Protocol.Transaction, global::Tron.Net.Protocol.BytesMessage>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetShieldTransactionHash",
+        __Marshaller_protocol_Transaction,
+        __Marshaller_protocol_BytesMessage);
+
+    static readonly grpc::Method<global::Tron.Net.Protocol.SpendAuthSigParameters, global::Tron.Net.Protocol.BytesMessage> __Method_CreateSpendAuthSig = new grpc::Method<global::Tron.Net.Protocol.SpendAuthSigParameters, global::Tron.Net.Protocol.BytesMessage>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "CreateSpendAuthSig",
+        __Marshaller_protocol_SpendAuthSigParameters,
+        __Marshaller_protocol_BytesMessage);
+
+    static readonly grpc::Method<global::Tron.Net.Protocol.NfParameters, global::Tron.Net.Protocol.BytesMessage> __Method_CreateShieldNullifier = new grpc::Method<global::Tron.Net.Protocol.NfParameters, global::Tron.Net.Protocol.BytesMessage>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "CreateShieldNullifier",
+        __Marshaller_protocol_NfParameters,
+        __Marshaller_protocol_BytesMessage);
+
+    static readonly grpc::Method<global::Tron.Net.Protocol.PrivateShieldedTRC20Parameters, global::Tron.Net.Protocol.ShieldedTRC20Parameters> __Method_CreateShieldedContractParameters = new grpc::Method<global::Tron.Net.Protocol.PrivateShieldedTRC20Parameters, global::Tron.Net.Protocol.ShieldedTRC20Parameters>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "CreateShieldedContractParameters",
+        __Marshaller_protocol_PrivateShieldedTRC20Parameters,
+        __Marshaller_protocol_ShieldedTRC20Parameters);
+
+    static readonly grpc::Method<global::Tron.Net.Protocol.PrivateShieldedTRC20ParametersWithoutAsk, global::Tron.Net.Protocol.ShieldedTRC20Parameters> __Method_CreateShieldedContractParametersWithoutAsk = new grpc::Method<global::Tron.Net.Protocol.PrivateShieldedTRC20ParametersWithoutAsk, global::Tron.Net.Protocol.ShieldedTRC20Parameters>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "CreateShieldedContractParametersWithoutAsk",
+        __Marshaller_protocol_PrivateShieldedTRC20ParametersWithoutAsk,
+        __Marshaller_protocol_ShieldedTRC20Parameters);
+
+    static readonly grpc::Method<global::Tron.Net.Protocol.IvkDecryptTRC20Parameters, global::Tron.Net.Protocol.DecryptNotesTRC20> __Method_ScanShieldedTRC20NotesByIvk = new grpc::Method<global::Tron.Net.Protocol.IvkDecryptTRC20Parameters, global::Tron.Net.Protocol.DecryptNotesTRC20>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ScanShieldedTRC20NotesByIvk",
+        __Marshaller_protocol_IvkDecryptTRC20Parameters,
+        __Marshaller_protocol_DecryptNotesTRC20);
+
+    static readonly grpc::Method<global::Tron.Net.Protocol.OvkDecryptTRC20Parameters, global::Tron.Net.Protocol.DecryptNotesTRC20> __Method_ScanShieldedTRC20NotesByOvk = new grpc::Method<global::Tron.Net.Protocol.OvkDecryptTRC20Parameters, global::Tron.Net.Protocol.DecryptNotesTRC20>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ScanShieldedTRC20NotesByOvk",
+        __Marshaller_protocol_OvkDecryptTRC20Parameters,
+        __Marshaller_protocol_DecryptNotesTRC20);
+
+    static readonly grpc::Method<global::Tron.Net.Protocol.NfTRC20Parameters, global::Tron.Net.Protocol.NullifierResult> __Method_IsShieldedTRC20ContractNoteSpent = new grpc::Method<global::Tron.Net.Protocol.NfTRC20Parameters, global::Tron.Net.Protocol.NullifierResult>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "IsShieldedTRC20ContractNoteSpent",
+        __Marshaller_protocol_NfTRC20Parameters,
+        __Marshaller_protocol_NullifierResult);
+
+    static readonly grpc::Method<global::Tron.Net.Protocol.ShieldedTRC20TriggerContractParameters, global::Tron.Net.Protocol.BytesMessage> __Method_GetTriggerInputForShieldedTRC20Contract = new grpc::Method<global::Tron.Net.Protocol.ShieldedTRC20TriggerContractParameters, global::Tron.Net.Protocol.BytesMessage>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetTriggerInputForShieldedTRC20Contract",
+        __Marshaller_protocol_ShieldedTRC20TriggerContractParameters,
+        __Marshaller_protocol_BytesMessage);
+
+    static readonly grpc::Method<global::Tron.Net.Protocol.Transaction, global::Tron.Net.Protocol.TransactionExtention> __Method_CreateCommonTransaction = new grpc::Method<global::Tron.Net.Protocol.Transaction, global::Tron.Net.Protocol.TransactionExtention>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "CreateCommonTransaction",
+        __Marshaller_protocol_Transaction,
+        __Marshaller_protocol_TransactionExtention);
+
+    static readonly grpc::Method<global::Tron.Net.Protocol.NumberMessage, global::Tron.Net.Protocol.TransactionInfoList> __Method_GetTransactionInfoByBlockNum = new grpc::Method<global::Tron.Net.Protocol.NumberMessage, global::Tron.Net.Protocol.TransactionInfoList>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetTransactionInfoByBlockNum",
+        __Marshaller_protocol_NumberMessage,
+        __Marshaller_protocol_TransactionInfoList);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -1543,6 +1762,153 @@ namespace Tron.Net.Protocol {
       }
 
       public virtual global::System.Threading.Tasks.Task<global::Tron.Net.Protocol.TransactionExtention> UpdateBrokerage(global::Tron.Net.Protocol.UpdateBrokerageContract request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// for shiededTransaction
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      public virtual global::System.Threading.Tasks.Task<global::Tron.Net.Protocol.TransactionExtention> CreateShieldedTransaction(global::Tron.Net.Protocol.PrivateParameters request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      public virtual global::System.Threading.Tasks.Task<global::Tron.Net.Protocol.IncrementalMerkleVoucherInfo> GetMerkleTreeVoucherInfo(global::Tron.Net.Protocol.OutputPointInfo request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      public virtual global::System.Threading.Tasks.Task<global::Tron.Net.Protocol.DecryptNotes> ScanNoteByIvk(global::Tron.Net.Protocol.IvkDecryptParameters request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      public virtual global::System.Threading.Tasks.Task<global::Tron.Net.Protocol.DecryptNotesMarked> ScanAndMarkNoteByIvk(global::Tron.Net.Protocol.IvkDecryptAndMarkParameters request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      public virtual global::System.Threading.Tasks.Task<global::Tron.Net.Protocol.DecryptNotes> ScanNoteByOvk(global::Tron.Net.Protocol.OvkDecryptParameters request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      public virtual global::System.Threading.Tasks.Task<global::Tron.Net.Protocol.BytesMessage> GetSpendingKey(global::Tron.Net.Protocol.EmptyMessage request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      public virtual global::System.Threading.Tasks.Task<global::Tron.Net.Protocol.ExpandedSpendingKeyMessage> GetExpandedSpendingKey(global::Tron.Net.Protocol.BytesMessage request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      public virtual global::System.Threading.Tasks.Task<global::Tron.Net.Protocol.BytesMessage> GetAkFromAsk(global::Tron.Net.Protocol.BytesMessage request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      public virtual global::System.Threading.Tasks.Task<global::Tron.Net.Protocol.BytesMessage> GetNkFromNsk(global::Tron.Net.Protocol.BytesMessage request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      public virtual global::System.Threading.Tasks.Task<global::Tron.Net.Protocol.IncomingViewingKeyMessage> GetIncomingViewingKey(global::Tron.Net.Protocol.ViewingKeyMessage request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      public virtual global::System.Threading.Tasks.Task<global::Tron.Net.Protocol.DiversifierMessage> GetDiversifier(global::Tron.Net.Protocol.EmptyMessage request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      public virtual global::System.Threading.Tasks.Task<global::Tron.Net.Protocol.ShieldedAddressInfo> GetNewShieldedAddress(global::Tron.Net.Protocol.EmptyMessage request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      public virtual global::System.Threading.Tasks.Task<global::Tron.Net.Protocol.PaymentAddressMessage> GetZenPaymentAddress(global::Tron.Net.Protocol.IncomingViewingKeyDiversifierMessage request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      public virtual global::System.Threading.Tasks.Task<global::Tron.Net.Protocol.BytesMessage> GetRcm(global::Tron.Net.Protocol.EmptyMessage request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      public virtual global::System.Threading.Tasks.Task<global::Tron.Net.Protocol.SpendResult> IsSpend(global::Tron.Net.Protocol.NoteParameters request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      public virtual global::System.Threading.Tasks.Task<global::Tron.Net.Protocol.TransactionExtention> CreateShieldedTransactionWithoutSpendAuthSig(global::Tron.Net.Protocol.PrivateParametersWithoutAsk request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      public virtual global::System.Threading.Tasks.Task<global::Tron.Net.Protocol.BytesMessage> GetShieldTransactionHash(global::Tron.Net.Protocol.Transaction request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      public virtual global::System.Threading.Tasks.Task<global::Tron.Net.Protocol.BytesMessage> CreateSpendAuthSig(global::Tron.Net.Protocol.SpendAuthSigParameters request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      public virtual global::System.Threading.Tasks.Task<global::Tron.Net.Protocol.BytesMessage> CreateShieldNullifier(global::Tron.Net.Protocol.NfParameters request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      ///for shielded contract
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      public virtual global::System.Threading.Tasks.Task<global::Tron.Net.Protocol.ShieldedTRC20Parameters> CreateShieldedContractParameters(global::Tron.Net.Protocol.PrivateShieldedTRC20Parameters request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      public virtual global::System.Threading.Tasks.Task<global::Tron.Net.Protocol.ShieldedTRC20Parameters> CreateShieldedContractParametersWithoutAsk(global::Tron.Net.Protocol.PrivateShieldedTRC20ParametersWithoutAsk request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      public virtual global::System.Threading.Tasks.Task<global::Tron.Net.Protocol.DecryptNotesTRC20> ScanShieldedTRC20NotesByIvk(global::Tron.Net.Protocol.IvkDecryptTRC20Parameters request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      public virtual global::System.Threading.Tasks.Task<global::Tron.Net.Protocol.DecryptNotesTRC20> ScanShieldedTRC20NotesByOvk(global::Tron.Net.Protocol.OvkDecryptTRC20Parameters request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      public virtual global::System.Threading.Tasks.Task<global::Tron.Net.Protocol.NullifierResult> IsShieldedTRC20ContractNoteSpent(global::Tron.Net.Protocol.NfTRC20Parameters request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      public virtual global::System.Threading.Tasks.Task<global::Tron.Net.Protocol.BytesMessage> GetTriggerInputForShieldedTRC20Contract(global::Tron.Net.Protocol.ShieldedTRC20TriggerContractParameters request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      public virtual global::System.Threading.Tasks.Task<global::Tron.Net.Protocol.TransactionExtention> CreateCommonTransaction(global::Tron.Net.Protocol.Transaction request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      public virtual global::System.Threading.Tasks.Task<global::Tron.Net.Protocol.TransactionInfoList> GetTransactionInfoByBlockNum(global::Tron.Net.Protocol.NumberMessage request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -4436,6 +4802,494 @@ namespace Tron.Net.Protocol {
       {
         return CallInvoker.AsyncUnaryCall(__Method_UpdateBrokerage, null, options, request);
       }
+      /// <summary>
+      /// for shiededTransaction
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Tron.Net.Protocol.TransactionExtention CreateShieldedTransaction(global::Tron.Net.Protocol.PrivateParameters request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateShieldedTransaction(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// for shiededTransaction
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Tron.Net.Protocol.TransactionExtention CreateShieldedTransaction(global::Tron.Net.Protocol.PrivateParameters request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_CreateShieldedTransaction, null, options, request);
+      }
+      /// <summary>
+      /// for shiededTransaction
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Tron.Net.Protocol.TransactionExtention> CreateShieldedTransactionAsync(global::Tron.Net.Protocol.PrivateParameters request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateShieldedTransactionAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// for shiededTransaction
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Tron.Net.Protocol.TransactionExtention> CreateShieldedTransactionAsync(global::Tron.Net.Protocol.PrivateParameters request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_CreateShieldedTransaction, null, options, request);
+      }
+      public virtual global::Tron.Net.Protocol.IncrementalMerkleVoucherInfo GetMerkleTreeVoucherInfo(global::Tron.Net.Protocol.OutputPointInfo request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetMerkleTreeVoucherInfo(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      public virtual global::Tron.Net.Protocol.IncrementalMerkleVoucherInfo GetMerkleTreeVoucherInfo(global::Tron.Net.Protocol.OutputPointInfo request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetMerkleTreeVoucherInfo, null, options, request);
+      }
+      public virtual grpc::AsyncUnaryCall<global::Tron.Net.Protocol.IncrementalMerkleVoucherInfo> GetMerkleTreeVoucherInfoAsync(global::Tron.Net.Protocol.OutputPointInfo request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetMerkleTreeVoucherInfoAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      public virtual grpc::AsyncUnaryCall<global::Tron.Net.Protocol.IncrementalMerkleVoucherInfo> GetMerkleTreeVoucherInfoAsync(global::Tron.Net.Protocol.OutputPointInfo request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetMerkleTreeVoucherInfo, null, options, request);
+      }
+      public virtual global::Tron.Net.Protocol.DecryptNotes ScanNoteByIvk(global::Tron.Net.Protocol.IvkDecryptParameters request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ScanNoteByIvk(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      public virtual global::Tron.Net.Protocol.DecryptNotes ScanNoteByIvk(global::Tron.Net.Protocol.IvkDecryptParameters request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ScanNoteByIvk, null, options, request);
+      }
+      public virtual grpc::AsyncUnaryCall<global::Tron.Net.Protocol.DecryptNotes> ScanNoteByIvkAsync(global::Tron.Net.Protocol.IvkDecryptParameters request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ScanNoteByIvkAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      public virtual grpc::AsyncUnaryCall<global::Tron.Net.Protocol.DecryptNotes> ScanNoteByIvkAsync(global::Tron.Net.Protocol.IvkDecryptParameters request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ScanNoteByIvk, null, options, request);
+      }
+      public virtual global::Tron.Net.Protocol.DecryptNotesMarked ScanAndMarkNoteByIvk(global::Tron.Net.Protocol.IvkDecryptAndMarkParameters request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ScanAndMarkNoteByIvk(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      public virtual global::Tron.Net.Protocol.DecryptNotesMarked ScanAndMarkNoteByIvk(global::Tron.Net.Protocol.IvkDecryptAndMarkParameters request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ScanAndMarkNoteByIvk, null, options, request);
+      }
+      public virtual grpc::AsyncUnaryCall<global::Tron.Net.Protocol.DecryptNotesMarked> ScanAndMarkNoteByIvkAsync(global::Tron.Net.Protocol.IvkDecryptAndMarkParameters request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ScanAndMarkNoteByIvkAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      public virtual grpc::AsyncUnaryCall<global::Tron.Net.Protocol.DecryptNotesMarked> ScanAndMarkNoteByIvkAsync(global::Tron.Net.Protocol.IvkDecryptAndMarkParameters request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ScanAndMarkNoteByIvk, null, options, request);
+      }
+      public virtual global::Tron.Net.Protocol.DecryptNotes ScanNoteByOvk(global::Tron.Net.Protocol.OvkDecryptParameters request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ScanNoteByOvk(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      public virtual global::Tron.Net.Protocol.DecryptNotes ScanNoteByOvk(global::Tron.Net.Protocol.OvkDecryptParameters request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ScanNoteByOvk, null, options, request);
+      }
+      public virtual grpc::AsyncUnaryCall<global::Tron.Net.Protocol.DecryptNotes> ScanNoteByOvkAsync(global::Tron.Net.Protocol.OvkDecryptParameters request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ScanNoteByOvkAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      public virtual grpc::AsyncUnaryCall<global::Tron.Net.Protocol.DecryptNotes> ScanNoteByOvkAsync(global::Tron.Net.Protocol.OvkDecryptParameters request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ScanNoteByOvk, null, options, request);
+      }
+      public virtual global::Tron.Net.Protocol.BytesMessage GetSpendingKey(global::Tron.Net.Protocol.EmptyMessage request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetSpendingKey(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      public virtual global::Tron.Net.Protocol.BytesMessage GetSpendingKey(global::Tron.Net.Protocol.EmptyMessage request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetSpendingKey, null, options, request);
+      }
+      public virtual grpc::AsyncUnaryCall<global::Tron.Net.Protocol.BytesMessage> GetSpendingKeyAsync(global::Tron.Net.Protocol.EmptyMessage request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetSpendingKeyAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      public virtual grpc::AsyncUnaryCall<global::Tron.Net.Protocol.BytesMessage> GetSpendingKeyAsync(global::Tron.Net.Protocol.EmptyMessage request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetSpendingKey, null, options, request);
+      }
+      public virtual global::Tron.Net.Protocol.ExpandedSpendingKeyMessage GetExpandedSpendingKey(global::Tron.Net.Protocol.BytesMessage request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetExpandedSpendingKey(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      public virtual global::Tron.Net.Protocol.ExpandedSpendingKeyMessage GetExpandedSpendingKey(global::Tron.Net.Protocol.BytesMessage request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetExpandedSpendingKey, null, options, request);
+      }
+      public virtual grpc::AsyncUnaryCall<global::Tron.Net.Protocol.ExpandedSpendingKeyMessage> GetExpandedSpendingKeyAsync(global::Tron.Net.Protocol.BytesMessage request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetExpandedSpendingKeyAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      public virtual grpc::AsyncUnaryCall<global::Tron.Net.Protocol.ExpandedSpendingKeyMessage> GetExpandedSpendingKeyAsync(global::Tron.Net.Protocol.BytesMessage request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetExpandedSpendingKey, null, options, request);
+      }
+      public virtual global::Tron.Net.Protocol.BytesMessage GetAkFromAsk(global::Tron.Net.Protocol.BytesMessage request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetAkFromAsk(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      public virtual global::Tron.Net.Protocol.BytesMessage GetAkFromAsk(global::Tron.Net.Protocol.BytesMessage request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetAkFromAsk, null, options, request);
+      }
+      public virtual grpc::AsyncUnaryCall<global::Tron.Net.Protocol.BytesMessage> GetAkFromAskAsync(global::Tron.Net.Protocol.BytesMessage request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetAkFromAskAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      public virtual grpc::AsyncUnaryCall<global::Tron.Net.Protocol.BytesMessage> GetAkFromAskAsync(global::Tron.Net.Protocol.BytesMessage request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetAkFromAsk, null, options, request);
+      }
+      public virtual global::Tron.Net.Protocol.BytesMessage GetNkFromNsk(global::Tron.Net.Protocol.BytesMessage request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetNkFromNsk(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      public virtual global::Tron.Net.Protocol.BytesMessage GetNkFromNsk(global::Tron.Net.Protocol.BytesMessage request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetNkFromNsk, null, options, request);
+      }
+      public virtual grpc::AsyncUnaryCall<global::Tron.Net.Protocol.BytesMessage> GetNkFromNskAsync(global::Tron.Net.Protocol.BytesMessage request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetNkFromNskAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      public virtual grpc::AsyncUnaryCall<global::Tron.Net.Protocol.BytesMessage> GetNkFromNskAsync(global::Tron.Net.Protocol.BytesMessage request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetNkFromNsk, null, options, request);
+      }
+      public virtual global::Tron.Net.Protocol.IncomingViewingKeyMessage GetIncomingViewingKey(global::Tron.Net.Protocol.ViewingKeyMessage request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetIncomingViewingKey(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      public virtual global::Tron.Net.Protocol.IncomingViewingKeyMessage GetIncomingViewingKey(global::Tron.Net.Protocol.ViewingKeyMessage request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetIncomingViewingKey, null, options, request);
+      }
+      public virtual grpc::AsyncUnaryCall<global::Tron.Net.Protocol.IncomingViewingKeyMessage> GetIncomingViewingKeyAsync(global::Tron.Net.Protocol.ViewingKeyMessage request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetIncomingViewingKeyAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      public virtual grpc::AsyncUnaryCall<global::Tron.Net.Protocol.IncomingViewingKeyMessage> GetIncomingViewingKeyAsync(global::Tron.Net.Protocol.ViewingKeyMessage request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetIncomingViewingKey, null, options, request);
+      }
+      public virtual global::Tron.Net.Protocol.DiversifierMessage GetDiversifier(global::Tron.Net.Protocol.EmptyMessage request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetDiversifier(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      public virtual global::Tron.Net.Protocol.DiversifierMessage GetDiversifier(global::Tron.Net.Protocol.EmptyMessage request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetDiversifier, null, options, request);
+      }
+      public virtual grpc::AsyncUnaryCall<global::Tron.Net.Protocol.DiversifierMessage> GetDiversifierAsync(global::Tron.Net.Protocol.EmptyMessage request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetDiversifierAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      public virtual grpc::AsyncUnaryCall<global::Tron.Net.Protocol.DiversifierMessage> GetDiversifierAsync(global::Tron.Net.Protocol.EmptyMessage request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetDiversifier, null, options, request);
+      }
+      public virtual global::Tron.Net.Protocol.ShieldedAddressInfo GetNewShieldedAddress(global::Tron.Net.Protocol.EmptyMessage request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetNewShieldedAddress(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      public virtual global::Tron.Net.Protocol.ShieldedAddressInfo GetNewShieldedAddress(global::Tron.Net.Protocol.EmptyMessage request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetNewShieldedAddress, null, options, request);
+      }
+      public virtual grpc::AsyncUnaryCall<global::Tron.Net.Protocol.ShieldedAddressInfo> GetNewShieldedAddressAsync(global::Tron.Net.Protocol.EmptyMessage request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetNewShieldedAddressAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      public virtual grpc::AsyncUnaryCall<global::Tron.Net.Protocol.ShieldedAddressInfo> GetNewShieldedAddressAsync(global::Tron.Net.Protocol.EmptyMessage request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetNewShieldedAddress, null, options, request);
+      }
+      public virtual global::Tron.Net.Protocol.PaymentAddressMessage GetZenPaymentAddress(global::Tron.Net.Protocol.IncomingViewingKeyDiversifierMessage request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetZenPaymentAddress(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      public virtual global::Tron.Net.Protocol.PaymentAddressMessage GetZenPaymentAddress(global::Tron.Net.Protocol.IncomingViewingKeyDiversifierMessage request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetZenPaymentAddress, null, options, request);
+      }
+      public virtual grpc::AsyncUnaryCall<global::Tron.Net.Protocol.PaymentAddressMessage> GetZenPaymentAddressAsync(global::Tron.Net.Protocol.IncomingViewingKeyDiversifierMessage request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetZenPaymentAddressAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      public virtual grpc::AsyncUnaryCall<global::Tron.Net.Protocol.PaymentAddressMessage> GetZenPaymentAddressAsync(global::Tron.Net.Protocol.IncomingViewingKeyDiversifierMessage request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetZenPaymentAddress, null, options, request);
+      }
+      public virtual global::Tron.Net.Protocol.BytesMessage GetRcm(global::Tron.Net.Protocol.EmptyMessage request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetRcm(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      public virtual global::Tron.Net.Protocol.BytesMessage GetRcm(global::Tron.Net.Protocol.EmptyMessage request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetRcm, null, options, request);
+      }
+      public virtual grpc::AsyncUnaryCall<global::Tron.Net.Protocol.BytesMessage> GetRcmAsync(global::Tron.Net.Protocol.EmptyMessage request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetRcmAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      public virtual grpc::AsyncUnaryCall<global::Tron.Net.Protocol.BytesMessage> GetRcmAsync(global::Tron.Net.Protocol.EmptyMessage request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetRcm, null, options, request);
+      }
+      public virtual global::Tron.Net.Protocol.SpendResult IsSpend(global::Tron.Net.Protocol.NoteParameters request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return IsSpend(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      public virtual global::Tron.Net.Protocol.SpendResult IsSpend(global::Tron.Net.Protocol.NoteParameters request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_IsSpend, null, options, request);
+      }
+      public virtual grpc::AsyncUnaryCall<global::Tron.Net.Protocol.SpendResult> IsSpendAsync(global::Tron.Net.Protocol.NoteParameters request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return IsSpendAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      public virtual grpc::AsyncUnaryCall<global::Tron.Net.Protocol.SpendResult> IsSpendAsync(global::Tron.Net.Protocol.NoteParameters request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_IsSpend, null, options, request);
+      }
+      public virtual global::Tron.Net.Protocol.TransactionExtention CreateShieldedTransactionWithoutSpendAuthSig(global::Tron.Net.Protocol.PrivateParametersWithoutAsk request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateShieldedTransactionWithoutSpendAuthSig(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      public virtual global::Tron.Net.Protocol.TransactionExtention CreateShieldedTransactionWithoutSpendAuthSig(global::Tron.Net.Protocol.PrivateParametersWithoutAsk request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_CreateShieldedTransactionWithoutSpendAuthSig, null, options, request);
+      }
+      public virtual grpc::AsyncUnaryCall<global::Tron.Net.Protocol.TransactionExtention> CreateShieldedTransactionWithoutSpendAuthSigAsync(global::Tron.Net.Protocol.PrivateParametersWithoutAsk request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateShieldedTransactionWithoutSpendAuthSigAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      public virtual grpc::AsyncUnaryCall<global::Tron.Net.Protocol.TransactionExtention> CreateShieldedTransactionWithoutSpendAuthSigAsync(global::Tron.Net.Protocol.PrivateParametersWithoutAsk request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_CreateShieldedTransactionWithoutSpendAuthSig, null, options, request);
+      }
+      public virtual global::Tron.Net.Protocol.BytesMessage GetShieldTransactionHash(global::Tron.Net.Protocol.Transaction request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetShieldTransactionHash(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      public virtual global::Tron.Net.Protocol.BytesMessage GetShieldTransactionHash(global::Tron.Net.Protocol.Transaction request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetShieldTransactionHash, null, options, request);
+      }
+      public virtual grpc::AsyncUnaryCall<global::Tron.Net.Protocol.BytesMessage> GetShieldTransactionHashAsync(global::Tron.Net.Protocol.Transaction request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetShieldTransactionHashAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      public virtual grpc::AsyncUnaryCall<global::Tron.Net.Protocol.BytesMessage> GetShieldTransactionHashAsync(global::Tron.Net.Protocol.Transaction request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetShieldTransactionHash, null, options, request);
+      }
+      public virtual global::Tron.Net.Protocol.BytesMessage CreateSpendAuthSig(global::Tron.Net.Protocol.SpendAuthSigParameters request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateSpendAuthSig(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      public virtual global::Tron.Net.Protocol.BytesMessage CreateSpendAuthSig(global::Tron.Net.Protocol.SpendAuthSigParameters request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_CreateSpendAuthSig, null, options, request);
+      }
+      public virtual grpc::AsyncUnaryCall<global::Tron.Net.Protocol.BytesMessage> CreateSpendAuthSigAsync(global::Tron.Net.Protocol.SpendAuthSigParameters request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateSpendAuthSigAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      public virtual grpc::AsyncUnaryCall<global::Tron.Net.Protocol.BytesMessage> CreateSpendAuthSigAsync(global::Tron.Net.Protocol.SpendAuthSigParameters request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_CreateSpendAuthSig, null, options, request);
+      }
+      public virtual global::Tron.Net.Protocol.BytesMessage CreateShieldNullifier(global::Tron.Net.Protocol.NfParameters request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateShieldNullifier(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      public virtual global::Tron.Net.Protocol.BytesMessage CreateShieldNullifier(global::Tron.Net.Protocol.NfParameters request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_CreateShieldNullifier, null, options, request);
+      }
+      public virtual grpc::AsyncUnaryCall<global::Tron.Net.Protocol.BytesMessage> CreateShieldNullifierAsync(global::Tron.Net.Protocol.NfParameters request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateShieldNullifierAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      public virtual grpc::AsyncUnaryCall<global::Tron.Net.Protocol.BytesMessage> CreateShieldNullifierAsync(global::Tron.Net.Protocol.NfParameters request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_CreateShieldNullifier, null, options, request);
+      }
+      /// <summary>
+      ///for shielded contract
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Tron.Net.Protocol.ShieldedTRC20Parameters CreateShieldedContractParameters(global::Tron.Net.Protocol.PrivateShieldedTRC20Parameters request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateShieldedContractParameters(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      ///for shielded contract
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Tron.Net.Protocol.ShieldedTRC20Parameters CreateShieldedContractParameters(global::Tron.Net.Protocol.PrivateShieldedTRC20Parameters request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_CreateShieldedContractParameters, null, options, request);
+      }
+      /// <summary>
+      ///for shielded contract
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Tron.Net.Protocol.ShieldedTRC20Parameters> CreateShieldedContractParametersAsync(global::Tron.Net.Protocol.PrivateShieldedTRC20Parameters request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateShieldedContractParametersAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      ///for shielded contract
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Tron.Net.Protocol.ShieldedTRC20Parameters> CreateShieldedContractParametersAsync(global::Tron.Net.Protocol.PrivateShieldedTRC20Parameters request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_CreateShieldedContractParameters, null, options, request);
+      }
+      public virtual global::Tron.Net.Protocol.ShieldedTRC20Parameters CreateShieldedContractParametersWithoutAsk(global::Tron.Net.Protocol.PrivateShieldedTRC20ParametersWithoutAsk request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateShieldedContractParametersWithoutAsk(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      public virtual global::Tron.Net.Protocol.ShieldedTRC20Parameters CreateShieldedContractParametersWithoutAsk(global::Tron.Net.Protocol.PrivateShieldedTRC20ParametersWithoutAsk request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_CreateShieldedContractParametersWithoutAsk, null, options, request);
+      }
+      public virtual grpc::AsyncUnaryCall<global::Tron.Net.Protocol.ShieldedTRC20Parameters> CreateShieldedContractParametersWithoutAskAsync(global::Tron.Net.Protocol.PrivateShieldedTRC20ParametersWithoutAsk request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateShieldedContractParametersWithoutAskAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      public virtual grpc::AsyncUnaryCall<global::Tron.Net.Protocol.ShieldedTRC20Parameters> CreateShieldedContractParametersWithoutAskAsync(global::Tron.Net.Protocol.PrivateShieldedTRC20ParametersWithoutAsk request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_CreateShieldedContractParametersWithoutAsk, null, options, request);
+      }
+      public virtual global::Tron.Net.Protocol.DecryptNotesTRC20 ScanShieldedTRC20NotesByIvk(global::Tron.Net.Protocol.IvkDecryptTRC20Parameters request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ScanShieldedTRC20NotesByIvk(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      public virtual global::Tron.Net.Protocol.DecryptNotesTRC20 ScanShieldedTRC20NotesByIvk(global::Tron.Net.Protocol.IvkDecryptTRC20Parameters request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ScanShieldedTRC20NotesByIvk, null, options, request);
+      }
+      public virtual grpc::AsyncUnaryCall<global::Tron.Net.Protocol.DecryptNotesTRC20> ScanShieldedTRC20NotesByIvkAsync(global::Tron.Net.Protocol.IvkDecryptTRC20Parameters request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ScanShieldedTRC20NotesByIvkAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      public virtual grpc::AsyncUnaryCall<global::Tron.Net.Protocol.DecryptNotesTRC20> ScanShieldedTRC20NotesByIvkAsync(global::Tron.Net.Protocol.IvkDecryptTRC20Parameters request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ScanShieldedTRC20NotesByIvk, null, options, request);
+      }
+      public virtual global::Tron.Net.Protocol.DecryptNotesTRC20 ScanShieldedTRC20NotesByOvk(global::Tron.Net.Protocol.OvkDecryptTRC20Parameters request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ScanShieldedTRC20NotesByOvk(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      public virtual global::Tron.Net.Protocol.DecryptNotesTRC20 ScanShieldedTRC20NotesByOvk(global::Tron.Net.Protocol.OvkDecryptTRC20Parameters request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ScanShieldedTRC20NotesByOvk, null, options, request);
+      }
+      public virtual grpc::AsyncUnaryCall<global::Tron.Net.Protocol.DecryptNotesTRC20> ScanShieldedTRC20NotesByOvkAsync(global::Tron.Net.Protocol.OvkDecryptTRC20Parameters request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ScanShieldedTRC20NotesByOvkAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      public virtual grpc::AsyncUnaryCall<global::Tron.Net.Protocol.DecryptNotesTRC20> ScanShieldedTRC20NotesByOvkAsync(global::Tron.Net.Protocol.OvkDecryptTRC20Parameters request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ScanShieldedTRC20NotesByOvk, null, options, request);
+      }
+      public virtual global::Tron.Net.Protocol.NullifierResult IsShieldedTRC20ContractNoteSpent(global::Tron.Net.Protocol.NfTRC20Parameters request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return IsShieldedTRC20ContractNoteSpent(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      public virtual global::Tron.Net.Protocol.NullifierResult IsShieldedTRC20ContractNoteSpent(global::Tron.Net.Protocol.NfTRC20Parameters request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_IsShieldedTRC20ContractNoteSpent, null, options, request);
+      }
+      public virtual grpc::AsyncUnaryCall<global::Tron.Net.Protocol.NullifierResult> IsShieldedTRC20ContractNoteSpentAsync(global::Tron.Net.Protocol.NfTRC20Parameters request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return IsShieldedTRC20ContractNoteSpentAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      public virtual grpc::AsyncUnaryCall<global::Tron.Net.Protocol.NullifierResult> IsShieldedTRC20ContractNoteSpentAsync(global::Tron.Net.Protocol.NfTRC20Parameters request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_IsShieldedTRC20ContractNoteSpent, null, options, request);
+      }
+      public virtual global::Tron.Net.Protocol.BytesMessage GetTriggerInputForShieldedTRC20Contract(global::Tron.Net.Protocol.ShieldedTRC20TriggerContractParameters request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetTriggerInputForShieldedTRC20Contract(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      public virtual global::Tron.Net.Protocol.BytesMessage GetTriggerInputForShieldedTRC20Contract(global::Tron.Net.Protocol.ShieldedTRC20TriggerContractParameters request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetTriggerInputForShieldedTRC20Contract, null, options, request);
+      }
+      public virtual grpc::AsyncUnaryCall<global::Tron.Net.Protocol.BytesMessage> GetTriggerInputForShieldedTRC20ContractAsync(global::Tron.Net.Protocol.ShieldedTRC20TriggerContractParameters request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetTriggerInputForShieldedTRC20ContractAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      public virtual grpc::AsyncUnaryCall<global::Tron.Net.Protocol.BytesMessage> GetTriggerInputForShieldedTRC20ContractAsync(global::Tron.Net.Protocol.ShieldedTRC20TriggerContractParameters request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetTriggerInputForShieldedTRC20Contract, null, options, request);
+      }
+      public virtual global::Tron.Net.Protocol.TransactionExtention CreateCommonTransaction(global::Tron.Net.Protocol.Transaction request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateCommonTransaction(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      public virtual global::Tron.Net.Protocol.TransactionExtention CreateCommonTransaction(global::Tron.Net.Protocol.Transaction request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_CreateCommonTransaction, null, options, request);
+      }
+      public virtual grpc::AsyncUnaryCall<global::Tron.Net.Protocol.TransactionExtention> CreateCommonTransactionAsync(global::Tron.Net.Protocol.Transaction request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateCommonTransactionAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      public virtual grpc::AsyncUnaryCall<global::Tron.Net.Protocol.TransactionExtention> CreateCommonTransactionAsync(global::Tron.Net.Protocol.Transaction request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_CreateCommonTransaction, null, options, request);
+      }
+      public virtual global::Tron.Net.Protocol.TransactionInfoList GetTransactionInfoByBlockNum(global::Tron.Net.Protocol.NumberMessage request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetTransactionInfoByBlockNum(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      public virtual global::Tron.Net.Protocol.TransactionInfoList GetTransactionInfoByBlockNum(global::Tron.Net.Protocol.NumberMessage request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetTransactionInfoByBlockNum, null, options, request);
+      }
+      public virtual grpc::AsyncUnaryCall<global::Tron.Net.Protocol.TransactionInfoList> GetTransactionInfoByBlockNumAsync(global::Tron.Net.Protocol.NumberMessage request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetTransactionInfoByBlockNumAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      public virtual grpc::AsyncUnaryCall<global::Tron.Net.Protocol.TransactionInfoList> GetTransactionInfoByBlockNumAsync(global::Tron.Net.Protocol.NumberMessage request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetTransactionInfoByBlockNum, null, options, request);
+      }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       protected override WalletClient NewInstance(ClientBaseConfiguration configuration)
       {
@@ -4545,7 +5399,34 @@ namespace Tron.Net.Protocol {
           .AddMethod(__Method_GetNodeInfo, serviceImpl.GetNodeInfo)
           .AddMethod(__Method_GetRewardInfo, serviceImpl.GetRewardInfo)
           .AddMethod(__Method_GetBrokerageInfo, serviceImpl.GetBrokerageInfo)
-          .AddMethod(__Method_UpdateBrokerage, serviceImpl.UpdateBrokerage).Build();
+          .AddMethod(__Method_UpdateBrokerage, serviceImpl.UpdateBrokerage)
+          .AddMethod(__Method_CreateShieldedTransaction, serviceImpl.CreateShieldedTransaction)
+          .AddMethod(__Method_GetMerkleTreeVoucherInfo, serviceImpl.GetMerkleTreeVoucherInfo)
+          .AddMethod(__Method_ScanNoteByIvk, serviceImpl.ScanNoteByIvk)
+          .AddMethod(__Method_ScanAndMarkNoteByIvk, serviceImpl.ScanAndMarkNoteByIvk)
+          .AddMethod(__Method_ScanNoteByOvk, serviceImpl.ScanNoteByOvk)
+          .AddMethod(__Method_GetSpendingKey, serviceImpl.GetSpendingKey)
+          .AddMethod(__Method_GetExpandedSpendingKey, serviceImpl.GetExpandedSpendingKey)
+          .AddMethod(__Method_GetAkFromAsk, serviceImpl.GetAkFromAsk)
+          .AddMethod(__Method_GetNkFromNsk, serviceImpl.GetNkFromNsk)
+          .AddMethod(__Method_GetIncomingViewingKey, serviceImpl.GetIncomingViewingKey)
+          .AddMethod(__Method_GetDiversifier, serviceImpl.GetDiversifier)
+          .AddMethod(__Method_GetNewShieldedAddress, serviceImpl.GetNewShieldedAddress)
+          .AddMethod(__Method_GetZenPaymentAddress, serviceImpl.GetZenPaymentAddress)
+          .AddMethod(__Method_GetRcm, serviceImpl.GetRcm)
+          .AddMethod(__Method_IsSpend, serviceImpl.IsSpend)
+          .AddMethod(__Method_CreateShieldedTransactionWithoutSpendAuthSig, serviceImpl.CreateShieldedTransactionWithoutSpendAuthSig)
+          .AddMethod(__Method_GetShieldTransactionHash, serviceImpl.GetShieldTransactionHash)
+          .AddMethod(__Method_CreateSpendAuthSig, serviceImpl.CreateSpendAuthSig)
+          .AddMethod(__Method_CreateShieldNullifier, serviceImpl.CreateShieldNullifier)
+          .AddMethod(__Method_CreateShieldedContractParameters, serviceImpl.CreateShieldedContractParameters)
+          .AddMethod(__Method_CreateShieldedContractParametersWithoutAsk, serviceImpl.CreateShieldedContractParametersWithoutAsk)
+          .AddMethod(__Method_ScanShieldedTRC20NotesByIvk, serviceImpl.ScanShieldedTRC20NotesByIvk)
+          .AddMethod(__Method_ScanShieldedTRC20NotesByOvk, serviceImpl.ScanShieldedTRC20NotesByOvk)
+          .AddMethod(__Method_IsShieldedTRC20ContractNoteSpent, serviceImpl.IsShieldedTRC20ContractNoteSpent)
+          .AddMethod(__Method_GetTriggerInputForShieldedTRC20Contract, serviceImpl.GetTriggerInputForShieldedTRC20Contract)
+          .AddMethod(__Method_CreateCommonTransaction, serviceImpl.CreateCommonTransaction)
+          .AddMethod(__Method_GetTransactionInfoByBlockNum, serviceImpl.GetTransactionInfoByBlockNum).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the  service binding logic.
@@ -4652,6 +5533,33 @@ namespace Tron.Net.Protocol {
       serviceBinder.AddMethod(__Method_GetRewardInfo, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Tron.Net.Protocol.BytesMessage, global::Tron.Net.Protocol.NumberMessage>(serviceImpl.GetRewardInfo));
       serviceBinder.AddMethod(__Method_GetBrokerageInfo, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Tron.Net.Protocol.BytesMessage, global::Tron.Net.Protocol.NumberMessage>(serviceImpl.GetBrokerageInfo));
       serviceBinder.AddMethod(__Method_UpdateBrokerage, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Tron.Net.Protocol.UpdateBrokerageContract, global::Tron.Net.Protocol.TransactionExtention>(serviceImpl.UpdateBrokerage));
+      serviceBinder.AddMethod(__Method_CreateShieldedTransaction, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Tron.Net.Protocol.PrivateParameters, global::Tron.Net.Protocol.TransactionExtention>(serviceImpl.CreateShieldedTransaction));
+      serviceBinder.AddMethod(__Method_GetMerkleTreeVoucherInfo, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Tron.Net.Protocol.OutputPointInfo, global::Tron.Net.Protocol.IncrementalMerkleVoucherInfo>(serviceImpl.GetMerkleTreeVoucherInfo));
+      serviceBinder.AddMethod(__Method_ScanNoteByIvk, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Tron.Net.Protocol.IvkDecryptParameters, global::Tron.Net.Protocol.DecryptNotes>(serviceImpl.ScanNoteByIvk));
+      serviceBinder.AddMethod(__Method_ScanAndMarkNoteByIvk, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Tron.Net.Protocol.IvkDecryptAndMarkParameters, global::Tron.Net.Protocol.DecryptNotesMarked>(serviceImpl.ScanAndMarkNoteByIvk));
+      serviceBinder.AddMethod(__Method_ScanNoteByOvk, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Tron.Net.Protocol.OvkDecryptParameters, global::Tron.Net.Protocol.DecryptNotes>(serviceImpl.ScanNoteByOvk));
+      serviceBinder.AddMethod(__Method_GetSpendingKey, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Tron.Net.Protocol.EmptyMessage, global::Tron.Net.Protocol.BytesMessage>(serviceImpl.GetSpendingKey));
+      serviceBinder.AddMethod(__Method_GetExpandedSpendingKey, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Tron.Net.Protocol.BytesMessage, global::Tron.Net.Protocol.ExpandedSpendingKeyMessage>(serviceImpl.GetExpandedSpendingKey));
+      serviceBinder.AddMethod(__Method_GetAkFromAsk, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Tron.Net.Protocol.BytesMessage, global::Tron.Net.Protocol.BytesMessage>(serviceImpl.GetAkFromAsk));
+      serviceBinder.AddMethod(__Method_GetNkFromNsk, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Tron.Net.Protocol.BytesMessage, global::Tron.Net.Protocol.BytesMessage>(serviceImpl.GetNkFromNsk));
+      serviceBinder.AddMethod(__Method_GetIncomingViewingKey, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Tron.Net.Protocol.ViewingKeyMessage, global::Tron.Net.Protocol.IncomingViewingKeyMessage>(serviceImpl.GetIncomingViewingKey));
+      serviceBinder.AddMethod(__Method_GetDiversifier, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Tron.Net.Protocol.EmptyMessage, global::Tron.Net.Protocol.DiversifierMessage>(serviceImpl.GetDiversifier));
+      serviceBinder.AddMethod(__Method_GetNewShieldedAddress, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Tron.Net.Protocol.EmptyMessage, global::Tron.Net.Protocol.ShieldedAddressInfo>(serviceImpl.GetNewShieldedAddress));
+      serviceBinder.AddMethod(__Method_GetZenPaymentAddress, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Tron.Net.Protocol.IncomingViewingKeyDiversifierMessage, global::Tron.Net.Protocol.PaymentAddressMessage>(serviceImpl.GetZenPaymentAddress));
+      serviceBinder.AddMethod(__Method_GetRcm, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Tron.Net.Protocol.EmptyMessage, global::Tron.Net.Protocol.BytesMessage>(serviceImpl.GetRcm));
+      serviceBinder.AddMethod(__Method_IsSpend, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Tron.Net.Protocol.NoteParameters, global::Tron.Net.Protocol.SpendResult>(serviceImpl.IsSpend));
+      serviceBinder.AddMethod(__Method_CreateShieldedTransactionWithoutSpendAuthSig, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Tron.Net.Protocol.PrivateParametersWithoutAsk, global::Tron.Net.Protocol.TransactionExtention>(serviceImpl.CreateShieldedTransactionWithoutSpendAuthSig));
+      serviceBinder.AddMethod(__Method_GetShieldTransactionHash, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Tron.Net.Protocol.Transaction, global::Tron.Net.Protocol.BytesMessage>(serviceImpl.GetShieldTransactionHash));
+      serviceBinder.AddMethod(__Method_CreateSpendAuthSig, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Tron.Net.Protocol.SpendAuthSigParameters, global::Tron.Net.Protocol.BytesMessage>(serviceImpl.CreateSpendAuthSig));
+      serviceBinder.AddMethod(__Method_CreateShieldNullifier, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Tron.Net.Protocol.NfParameters, global::Tron.Net.Protocol.BytesMessage>(serviceImpl.CreateShieldNullifier));
+      serviceBinder.AddMethod(__Method_CreateShieldedContractParameters, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Tron.Net.Protocol.PrivateShieldedTRC20Parameters, global::Tron.Net.Protocol.ShieldedTRC20Parameters>(serviceImpl.CreateShieldedContractParameters));
+      serviceBinder.AddMethod(__Method_CreateShieldedContractParametersWithoutAsk, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Tron.Net.Protocol.PrivateShieldedTRC20ParametersWithoutAsk, global::Tron.Net.Protocol.ShieldedTRC20Parameters>(serviceImpl.CreateShieldedContractParametersWithoutAsk));
+      serviceBinder.AddMethod(__Method_ScanShieldedTRC20NotesByIvk, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Tron.Net.Protocol.IvkDecryptTRC20Parameters, global::Tron.Net.Protocol.DecryptNotesTRC20>(serviceImpl.ScanShieldedTRC20NotesByIvk));
+      serviceBinder.AddMethod(__Method_ScanShieldedTRC20NotesByOvk, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Tron.Net.Protocol.OvkDecryptTRC20Parameters, global::Tron.Net.Protocol.DecryptNotesTRC20>(serviceImpl.ScanShieldedTRC20NotesByOvk));
+      serviceBinder.AddMethod(__Method_IsShieldedTRC20ContractNoteSpent, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Tron.Net.Protocol.NfTRC20Parameters, global::Tron.Net.Protocol.NullifierResult>(serviceImpl.IsShieldedTRC20ContractNoteSpent));
+      serviceBinder.AddMethod(__Method_GetTriggerInputForShieldedTRC20Contract, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Tron.Net.Protocol.ShieldedTRC20TriggerContractParameters, global::Tron.Net.Protocol.BytesMessage>(serviceImpl.GetTriggerInputForShieldedTRC20Contract));
+      serviceBinder.AddMethod(__Method_CreateCommonTransaction, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Tron.Net.Protocol.Transaction, global::Tron.Net.Protocol.TransactionExtention>(serviceImpl.CreateCommonTransaction));
+      serviceBinder.AddMethod(__Method_GetTransactionInfoByBlockNum, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Tron.Net.Protocol.NumberMessage, global::Tron.Net.Protocol.TransactionInfoList>(serviceImpl.GetTransactionInfoByBlockNum));
     }
 
   }
@@ -4677,8 +5585,23 @@ namespace Tron.Net.Protocol {
     static readonly grpc::Marshaller<global::Tron.Net.Protocol.Transaction> __Marshaller_protocol_Transaction = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Tron.Net.Protocol.Transaction.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Tron.Net.Protocol.TransactionInfo> __Marshaller_protocol_TransactionInfo = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Tron.Net.Protocol.TransactionInfo.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Tron.Net.Protocol.AddressPrKeyPairMessage> __Marshaller_protocol_AddressPrKeyPairMessage = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Tron.Net.Protocol.AddressPrKeyPairMessage.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Tron.Net.Protocol.OutputPointInfo> __Marshaller_protocol_OutputPointInfo = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Tron.Net.Protocol.OutputPointInfo.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Tron.Net.Protocol.IncrementalMerkleVoucherInfo> __Marshaller_protocol_IncrementalMerkleVoucherInfo = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Tron.Net.Protocol.IncrementalMerkleVoucherInfo.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Tron.Net.Protocol.IvkDecryptParameters> __Marshaller_protocol_IvkDecryptParameters = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Tron.Net.Protocol.IvkDecryptParameters.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Tron.Net.Protocol.DecryptNotes> __Marshaller_protocol_DecryptNotes = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Tron.Net.Protocol.DecryptNotes.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Tron.Net.Protocol.IvkDecryptAndMarkParameters> __Marshaller_protocol_IvkDecryptAndMarkParameters = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Tron.Net.Protocol.IvkDecryptAndMarkParameters.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Tron.Net.Protocol.DecryptNotesMarked> __Marshaller_protocol_DecryptNotesMarked = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Tron.Net.Protocol.DecryptNotesMarked.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Tron.Net.Protocol.OvkDecryptParameters> __Marshaller_protocol_OvkDecryptParameters = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Tron.Net.Protocol.OvkDecryptParameters.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Tron.Net.Protocol.NoteParameters> __Marshaller_protocol_NoteParameters = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Tron.Net.Protocol.NoteParameters.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Tron.Net.Protocol.SpendResult> __Marshaller_protocol_SpendResult = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Tron.Net.Protocol.SpendResult.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Tron.Net.Protocol.IvkDecryptTRC20Parameters> __Marshaller_protocol_IvkDecryptTRC20Parameters = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Tron.Net.Protocol.IvkDecryptTRC20Parameters.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Tron.Net.Protocol.DecryptNotesTRC20> __Marshaller_protocol_DecryptNotesTRC20 = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Tron.Net.Protocol.DecryptNotesTRC20.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Tron.Net.Protocol.OvkDecryptTRC20Parameters> __Marshaller_protocol_OvkDecryptTRC20Parameters = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Tron.Net.Protocol.OvkDecryptTRC20Parameters.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Tron.Net.Protocol.NfTRC20Parameters> __Marshaller_protocol_NfTRC20Parameters = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Tron.Net.Protocol.NfTRC20Parameters.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Tron.Net.Protocol.NullifierResult> __Marshaller_protocol_NullifierResult = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Tron.Net.Protocol.NullifierResult.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Tron.Net.Protocol.TriggerSmartContract> __Marshaller_protocol_TriggerSmartContract = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Tron.Net.Protocol.TriggerSmartContract.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Tron.Net.Protocol.TransactionExtention> __Marshaller_protocol_TransactionExtention = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Tron.Net.Protocol.TransactionExtention.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Tron.Net.Protocol.TransactionInfoList> __Marshaller_protocol_TransactionInfoList = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Tron.Net.Protocol.TransactionInfoList.Parser.ParseFrom);
 
     static readonly grpc::Method<global::Tron.Net.Protocol.Account, global::Tron.Net.Protocol.Account> __Method_GetAccount = new grpc::Method<global::Tron.Net.Protocol.Account, global::Tron.Net.Protocol.Account>(
         grpc::MethodType.Unary,
@@ -4820,12 +5743,61 @@ namespace Tron.Net.Protocol {
         __Marshaller_protocol_EmptyMessage,
         __Marshaller_protocol_AddressPrKeyPairMessage);
 
-    static readonly grpc::Method<global::Tron.Net.Protocol.TriggerSmartContract, global::Tron.Net.Protocol.TransactionExtention> __Method_TriggerConstantContract = new grpc::Method<global::Tron.Net.Protocol.TriggerSmartContract, global::Tron.Net.Protocol.TransactionExtention>(
+    static readonly grpc::Method<global::Tron.Net.Protocol.OutputPointInfo, global::Tron.Net.Protocol.IncrementalMerkleVoucherInfo> __Method_GetMerkleTreeVoucherInfo = new grpc::Method<global::Tron.Net.Protocol.OutputPointInfo, global::Tron.Net.Protocol.IncrementalMerkleVoucherInfo>(
         grpc::MethodType.Unary,
         __ServiceName,
-        "TriggerConstantContract",
-        __Marshaller_protocol_TriggerSmartContract,
-        __Marshaller_protocol_TransactionExtention);
+        "GetMerkleTreeVoucherInfo",
+        __Marshaller_protocol_OutputPointInfo,
+        __Marshaller_protocol_IncrementalMerkleVoucherInfo);
+
+    static readonly grpc::Method<global::Tron.Net.Protocol.IvkDecryptParameters, global::Tron.Net.Protocol.DecryptNotes> __Method_ScanNoteByIvk = new grpc::Method<global::Tron.Net.Protocol.IvkDecryptParameters, global::Tron.Net.Protocol.DecryptNotes>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ScanNoteByIvk",
+        __Marshaller_protocol_IvkDecryptParameters,
+        __Marshaller_protocol_DecryptNotes);
+
+    static readonly grpc::Method<global::Tron.Net.Protocol.IvkDecryptAndMarkParameters, global::Tron.Net.Protocol.DecryptNotesMarked> __Method_ScanAndMarkNoteByIvk = new grpc::Method<global::Tron.Net.Protocol.IvkDecryptAndMarkParameters, global::Tron.Net.Protocol.DecryptNotesMarked>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ScanAndMarkNoteByIvk",
+        __Marshaller_protocol_IvkDecryptAndMarkParameters,
+        __Marshaller_protocol_DecryptNotesMarked);
+
+    static readonly grpc::Method<global::Tron.Net.Protocol.OvkDecryptParameters, global::Tron.Net.Protocol.DecryptNotes> __Method_ScanNoteByOvk = new grpc::Method<global::Tron.Net.Protocol.OvkDecryptParameters, global::Tron.Net.Protocol.DecryptNotes>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ScanNoteByOvk",
+        __Marshaller_protocol_OvkDecryptParameters,
+        __Marshaller_protocol_DecryptNotes);
+
+    static readonly grpc::Method<global::Tron.Net.Protocol.NoteParameters, global::Tron.Net.Protocol.SpendResult> __Method_IsSpend = new grpc::Method<global::Tron.Net.Protocol.NoteParameters, global::Tron.Net.Protocol.SpendResult>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "IsSpend",
+        __Marshaller_protocol_NoteParameters,
+        __Marshaller_protocol_SpendResult);
+
+    static readonly grpc::Method<global::Tron.Net.Protocol.IvkDecryptTRC20Parameters, global::Tron.Net.Protocol.DecryptNotesTRC20> __Method_ScanShieldedTRC20NotesByIvk = new grpc::Method<global::Tron.Net.Protocol.IvkDecryptTRC20Parameters, global::Tron.Net.Protocol.DecryptNotesTRC20>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ScanShieldedTRC20NotesByIvk",
+        __Marshaller_protocol_IvkDecryptTRC20Parameters,
+        __Marshaller_protocol_DecryptNotesTRC20);
+
+    static readonly grpc::Method<global::Tron.Net.Protocol.OvkDecryptTRC20Parameters, global::Tron.Net.Protocol.DecryptNotesTRC20> __Method_ScanShieldedTRC20NotesByOvk = new grpc::Method<global::Tron.Net.Protocol.OvkDecryptTRC20Parameters, global::Tron.Net.Protocol.DecryptNotesTRC20>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ScanShieldedTRC20NotesByOvk",
+        __Marshaller_protocol_OvkDecryptTRC20Parameters,
+        __Marshaller_protocol_DecryptNotesTRC20);
+
+    static readonly grpc::Method<global::Tron.Net.Protocol.NfTRC20Parameters, global::Tron.Net.Protocol.NullifierResult> __Method_IsShieldedTRC20ContractNoteSpent = new grpc::Method<global::Tron.Net.Protocol.NfTRC20Parameters, global::Tron.Net.Protocol.NullifierResult>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "IsShieldedTRC20ContractNoteSpent",
+        __Marshaller_protocol_NfTRC20Parameters,
+        __Marshaller_protocol_NullifierResult);
 
     static readonly grpc::Method<global::Tron.Net.Protocol.BytesMessage, global::Tron.Net.Protocol.NumberMessage> __Method_GetRewardInfo = new grpc::Method<global::Tron.Net.Protocol.BytesMessage, global::Tron.Net.Protocol.NumberMessage>(
         grpc::MethodType.Unary,
@@ -4840,6 +5812,20 @@ namespace Tron.Net.Protocol {
         "GetBrokerageInfo",
         __Marshaller_protocol_BytesMessage,
         __Marshaller_protocol_NumberMessage);
+
+    static readonly grpc::Method<global::Tron.Net.Protocol.TriggerSmartContract, global::Tron.Net.Protocol.TransactionExtention> __Method_TriggerConstantContract = new grpc::Method<global::Tron.Net.Protocol.TriggerSmartContract, global::Tron.Net.Protocol.TransactionExtention>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "TriggerConstantContract",
+        __Marshaller_protocol_TriggerSmartContract,
+        __Marshaller_protocol_TransactionExtention);
+
+    static readonly grpc::Method<global::Tron.Net.Protocol.NumberMessage, global::Tron.Net.Protocol.TransactionInfoList> __Method_GetTransactionInfoByBlockNum = new grpc::Method<global::Tron.Net.Protocol.NumberMessage, global::Tron.Net.Protocol.TransactionInfoList>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetTransactionInfoByBlockNum",
+        __Marshaller_protocol_NumberMessage,
+        __Marshaller_protocol_TransactionInfoList);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -4981,7 +5967,42 @@ namespace Tron.Net.Protocol {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
 
-      public virtual global::System.Threading.Tasks.Task<global::Tron.Net.Protocol.TransactionExtention> TriggerConstantContract(global::Tron.Net.Protocol.TriggerSmartContract request, grpc::ServerCallContext context)
+      public virtual global::System.Threading.Tasks.Task<global::Tron.Net.Protocol.IncrementalMerkleVoucherInfo> GetMerkleTreeVoucherInfo(global::Tron.Net.Protocol.OutputPointInfo request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      public virtual global::System.Threading.Tasks.Task<global::Tron.Net.Protocol.DecryptNotes> ScanNoteByIvk(global::Tron.Net.Protocol.IvkDecryptParameters request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      public virtual global::System.Threading.Tasks.Task<global::Tron.Net.Protocol.DecryptNotesMarked> ScanAndMarkNoteByIvk(global::Tron.Net.Protocol.IvkDecryptAndMarkParameters request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      public virtual global::System.Threading.Tasks.Task<global::Tron.Net.Protocol.DecryptNotes> ScanNoteByOvk(global::Tron.Net.Protocol.OvkDecryptParameters request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      public virtual global::System.Threading.Tasks.Task<global::Tron.Net.Protocol.SpendResult> IsSpend(global::Tron.Net.Protocol.NoteParameters request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      public virtual global::System.Threading.Tasks.Task<global::Tron.Net.Protocol.DecryptNotesTRC20> ScanShieldedTRC20NotesByIvk(global::Tron.Net.Protocol.IvkDecryptTRC20Parameters request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      public virtual global::System.Threading.Tasks.Task<global::Tron.Net.Protocol.DecryptNotesTRC20> ScanShieldedTRC20NotesByOvk(global::Tron.Net.Protocol.OvkDecryptTRC20Parameters request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      public virtual global::System.Threading.Tasks.Task<global::Tron.Net.Protocol.NullifierResult> IsShieldedTRC20ContractNoteSpent(global::Tron.Net.Protocol.NfTRC20Parameters request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -4992,6 +6013,16 @@ namespace Tron.Net.Protocol {
       }
 
       public virtual global::System.Threading.Tasks.Task<global::Tron.Net.Protocol.NumberMessage> GetBrokerageInfo(global::Tron.Net.Protocol.BytesMessage request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      public virtual global::System.Threading.Tasks.Task<global::Tron.Net.Protocol.TransactionExtention> TriggerConstantContract(global::Tron.Net.Protocol.TriggerSmartContract request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      public virtual global::System.Threading.Tasks.Task<global::Tron.Net.Protocol.TransactionInfoList> GetTransactionInfoByBlockNum(global::Tron.Net.Protocol.NumberMessage request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -5481,21 +6512,133 @@ namespace Tron.Net.Protocol {
       {
         return CallInvoker.AsyncUnaryCall(__Method_GenerateAddress, null, options, request);
       }
-      public virtual global::Tron.Net.Protocol.TransactionExtention TriggerConstantContract(global::Tron.Net.Protocol.TriggerSmartContract request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual global::Tron.Net.Protocol.IncrementalMerkleVoucherInfo GetMerkleTreeVoucherInfo(global::Tron.Net.Protocol.OutputPointInfo request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
-        return TriggerConstantContract(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+        return GetMerkleTreeVoucherInfo(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
-      public virtual global::Tron.Net.Protocol.TransactionExtention TriggerConstantContract(global::Tron.Net.Protocol.TriggerSmartContract request, grpc::CallOptions options)
+      public virtual global::Tron.Net.Protocol.IncrementalMerkleVoucherInfo GetMerkleTreeVoucherInfo(global::Tron.Net.Protocol.OutputPointInfo request, grpc::CallOptions options)
       {
-        return CallInvoker.BlockingUnaryCall(__Method_TriggerConstantContract, null, options, request);
+        return CallInvoker.BlockingUnaryCall(__Method_GetMerkleTreeVoucherInfo, null, options, request);
       }
-      public virtual grpc::AsyncUnaryCall<global::Tron.Net.Protocol.TransactionExtention> TriggerConstantContractAsync(global::Tron.Net.Protocol.TriggerSmartContract request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Tron.Net.Protocol.IncrementalMerkleVoucherInfo> GetMerkleTreeVoucherInfoAsync(global::Tron.Net.Protocol.OutputPointInfo request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
-        return TriggerConstantContractAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+        return GetMerkleTreeVoucherInfoAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
-      public virtual grpc::AsyncUnaryCall<global::Tron.Net.Protocol.TransactionExtention> TriggerConstantContractAsync(global::Tron.Net.Protocol.TriggerSmartContract request, grpc::CallOptions options)
+      public virtual grpc::AsyncUnaryCall<global::Tron.Net.Protocol.IncrementalMerkleVoucherInfo> GetMerkleTreeVoucherInfoAsync(global::Tron.Net.Protocol.OutputPointInfo request, grpc::CallOptions options)
       {
-        return CallInvoker.AsyncUnaryCall(__Method_TriggerConstantContract, null, options, request);
+        return CallInvoker.AsyncUnaryCall(__Method_GetMerkleTreeVoucherInfo, null, options, request);
+      }
+      public virtual global::Tron.Net.Protocol.DecryptNotes ScanNoteByIvk(global::Tron.Net.Protocol.IvkDecryptParameters request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ScanNoteByIvk(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      public virtual global::Tron.Net.Protocol.DecryptNotes ScanNoteByIvk(global::Tron.Net.Protocol.IvkDecryptParameters request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ScanNoteByIvk, null, options, request);
+      }
+      public virtual grpc::AsyncUnaryCall<global::Tron.Net.Protocol.DecryptNotes> ScanNoteByIvkAsync(global::Tron.Net.Protocol.IvkDecryptParameters request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ScanNoteByIvkAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      public virtual grpc::AsyncUnaryCall<global::Tron.Net.Protocol.DecryptNotes> ScanNoteByIvkAsync(global::Tron.Net.Protocol.IvkDecryptParameters request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ScanNoteByIvk, null, options, request);
+      }
+      public virtual global::Tron.Net.Protocol.DecryptNotesMarked ScanAndMarkNoteByIvk(global::Tron.Net.Protocol.IvkDecryptAndMarkParameters request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ScanAndMarkNoteByIvk(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      public virtual global::Tron.Net.Protocol.DecryptNotesMarked ScanAndMarkNoteByIvk(global::Tron.Net.Protocol.IvkDecryptAndMarkParameters request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ScanAndMarkNoteByIvk, null, options, request);
+      }
+      public virtual grpc::AsyncUnaryCall<global::Tron.Net.Protocol.DecryptNotesMarked> ScanAndMarkNoteByIvkAsync(global::Tron.Net.Protocol.IvkDecryptAndMarkParameters request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ScanAndMarkNoteByIvkAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      public virtual grpc::AsyncUnaryCall<global::Tron.Net.Protocol.DecryptNotesMarked> ScanAndMarkNoteByIvkAsync(global::Tron.Net.Protocol.IvkDecryptAndMarkParameters request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ScanAndMarkNoteByIvk, null, options, request);
+      }
+      public virtual global::Tron.Net.Protocol.DecryptNotes ScanNoteByOvk(global::Tron.Net.Protocol.OvkDecryptParameters request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ScanNoteByOvk(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      public virtual global::Tron.Net.Protocol.DecryptNotes ScanNoteByOvk(global::Tron.Net.Protocol.OvkDecryptParameters request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ScanNoteByOvk, null, options, request);
+      }
+      public virtual grpc::AsyncUnaryCall<global::Tron.Net.Protocol.DecryptNotes> ScanNoteByOvkAsync(global::Tron.Net.Protocol.OvkDecryptParameters request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ScanNoteByOvkAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      public virtual grpc::AsyncUnaryCall<global::Tron.Net.Protocol.DecryptNotes> ScanNoteByOvkAsync(global::Tron.Net.Protocol.OvkDecryptParameters request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ScanNoteByOvk, null, options, request);
+      }
+      public virtual global::Tron.Net.Protocol.SpendResult IsSpend(global::Tron.Net.Protocol.NoteParameters request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return IsSpend(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      public virtual global::Tron.Net.Protocol.SpendResult IsSpend(global::Tron.Net.Protocol.NoteParameters request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_IsSpend, null, options, request);
+      }
+      public virtual grpc::AsyncUnaryCall<global::Tron.Net.Protocol.SpendResult> IsSpendAsync(global::Tron.Net.Protocol.NoteParameters request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return IsSpendAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      public virtual grpc::AsyncUnaryCall<global::Tron.Net.Protocol.SpendResult> IsSpendAsync(global::Tron.Net.Protocol.NoteParameters request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_IsSpend, null, options, request);
+      }
+      public virtual global::Tron.Net.Protocol.DecryptNotesTRC20 ScanShieldedTRC20NotesByIvk(global::Tron.Net.Protocol.IvkDecryptTRC20Parameters request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ScanShieldedTRC20NotesByIvk(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      public virtual global::Tron.Net.Protocol.DecryptNotesTRC20 ScanShieldedTRC20NotesByIvk(global::Tron.Net.Protocol.IvkDecryptTRC20Parameters request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ScanShieldedTRC20NotesByIvk, null, options, request);
+      }
+      public virtual grpc::AsyncUnaryCall<global::Tron.Net.Protocol.DecryptNotesTRC20> ScanShieldedTRC20NotesByIvkAsync(global::Tron.Net.Protocol.IvkDecryptTRC20Parameters request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ScanShieldedTRC20NotesByIvkAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      public virtual grpc::AsyncUnaryCall<global::Tron.Net.Protocol.DecryptNotesTRC20> ScanShieldedTRC20NotesByIvkAsync(global::Tron.Net.Protocol.IvkDecryptTRC20Parameters request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ScanShieldedTRC20NotesByIvk, null, options, request);
+      }
+      public virtual global::Tron.Net.Protocol.DecryptNotesTRC20 ScanShieldedTRC20NotesByOvk(global::Tron.Net.Protocol.OvkDecryptTRC20Parameters request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ScanShieldedTRC20NotesByOvk(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      public virtual global::Tron.Net.Protocol.DecryptNotesTRC20 ScanShieldedTRC20NotesByOvk(global::Tron.Net.Protocol.OvkDecryptTRC20Parameters request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ScanShieldedTRC20NotesByOvk, null, options, request);
+      }
+      public virtual grpc::AsyncUnaryCall<global::Tron.Net.Protocol.DecryptNotesTRC20> ScanShieldedTRC20NotesByOvkAsync(global::Tron.Net.Protocol.OvkDecryptTRC20Parameters request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ScanShieldedTRC20NotesByOvkAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      public virtual grpc::AsyncUnaryCall<global::Tron.Net.Protocol.DecryptNotesTRC20> ScanShieldedTRC20NotesByOvkAsync(global::Tron.Net.Protocol.OvkDecryptTRC20Parameters request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ScanShieldedTRC20NotesByOvk, null, options, request);
+      }
+      public virtual global::Tron.Net.Protocol.NullifierResult IsShieldedTRC20ContractNoteSpent(global::Tron.Net.Protocol.NfTRC20Parameters request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return IsShieldedTRC20ContractNoteSpent(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      public virtual global::Tron.Net.Protocol.NullifierResult IsShieldedTRC20ContractNoteSpent(global::Tron.Net.Protocol.NfTRC20Parameters request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_IsShieldedTRC20ContractNoteSpent, null, options, request);
+      }
+      public virtual grpc::AsyncUnaryCall<global::Tron.Net.Protocol.NullifierResult> IsShieldedTRC20ContractNoteSpentAsync(global::Tron.Net.Protocol.NfTRC20Parameters request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return IsShieldedTRC20ContractNoteSpentAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      public virtual grpc::AsyncUnaryCall<global::Tron.Net.Protocol.NullifierResult> IsShieldedTRC20ContractNoteSpentAsync(global::Tron.Net.Protocol.NfTRC20Parameters request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_IsShieldedTRC20ContractNoteSpent, null, options, request);
       }
       public virtual global::Tron.Net.Protocol.NumberMessage GetRewardInfo(global::Tron.Net.Protocol.BytesMessage request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
@@ -5529,6 +6672,38 @@ namespace Tron.Net.Protocol {
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetBrokerageInfo, null, options, request);
       }
+      public virtual global::Tron.Net.Protocol.TransactionExtention TriggerConstantContract(global::Tron.Net.Protocol.TriggerSmartContract request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return TriggerConstantContract(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      public virtual global::Tron.Net.Protocol.TransactionExtention TriggerConstantContract(global::Tron.Net.Protocol.TriggerSmartContract request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_TriggerConstantContract, null, options, request);
+      }
+      public virtual grpc::AsyncUnaryCall<global::Tron.Net.Protocol.TransactionExtention> TriggerConstantContractAsync(global::Tron.Net.Protocol.TriggerSmartContract request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return TriggerConstantContractAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      public virtual grpc::AsyncUnaryCall<global::Tron.Net.Protocol.TransactionExtention> TriggerConstantContractAsync(global::Tron.Net.Protocol.TriggerSmartContract request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_TriggerConstantContract, null, options, request);
+      }
+      public virtual global::Tron.Net.Protocol.TransactionInfoList GetTransactionInfoByBlockNum(global::Tron.Net.Protocol.NumberMessage request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetTransactionInfoByBlockNum(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      public virtual global::Tron.Net.Protocol.TransactionInfoList GetTransactionInfoByBlockNum(global::Tron.Net.Protocol.NumberMessage request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetTransactionInfoByBlockNum, null, options, request);
+      }
+      public virtual grpc::AsyncUnaryCall<global::Tron.Net.Protocol.TransactionInfoList> GetTransactionInfoByBlockNumAsync(global::Tron.Net.Protocol.NumberMessage request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetTransactionInfoByBlockNumAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      public virtual grpc::AsyncUnaryCall<global::Tron.Net.Protocol.TransactionInfoList> GetTransactionInfoByBlockNumAsync(global::Tron.Net.Protocol.NumberMessage request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetTransactionInfoByBlockNum, null, options, request);
+      }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       protected override WalletSolidityClient NewInstance(ClientBaseConfiguration configuration)
       {
@@ -5561,9 +6736,18 @@ namespace Tron.Net.Protocol {
           .AddMethod(__Method_GetTransactionById, serviceImpl.GetTransactionById)
           .AddMethod(__Method_GetTransactionInfoById, serviceImpl.GetTransactionInfoById)
           .AddMethod(__Method_GenerateAddress, serviceImpl.GenerateAddress)
-          .AddMethod(__Method_TriggerConstantContract, serviceImpl.TriggerConstantContract)
+          .AddMethod(__Method_GetMerkleTreeVoucherInfo, serviceImpl.GetMerkleTreeVoucherInfo)
+          .AddMethod(__Method_ScanNoteByIvk, serviceImpl.ScanNoteByIvk)
+          .AddMethod(__Method_ScanAndMarkNoteByIvk, serviceImpl.ScanAndMarkNoteByIvk)
+          .AddMethod(__Method_ScanNoteByOvk, serviceImpl.ScanNoteByOvk)
+          .AddMethod(__Method_IsSpend, serviceImpl.IsSpend)
+          .AddMethod(__Method_ScanShieldedTRC20NotesByIvk, serviceImpl.ScanShieldedTRC20NotesByIvk)
+          .AddMethod(__Method_ScanShieldedTRC20NotesByOvk, serviceImpl.ScanShieldedTRC20NotesByOvk)
+          .AddMethod(__Method_IsShieldedTRC20ContractNoteSpent, serviceImpl.IsShieldedTRC20ContractNoteSpent)
           .AddMethod(__Method_GetRewardInfo, serviceImpl.GetRewardInfo)
-          .AddMethod(__Method_GetBrokerageInfo, serviceImpl.GetBrokerageInfo).Build();
+          .AddMethod(__Method_GetBrokerageInfo, serviceImpl.GetBrokerageInfo)
+          .AddMethod(__Method_TriggerConstantContract, serviceImpl.TriggerConstantContract)
+          .AddMethod(__Method_GetTransactionInfoByBlockNum, serviceImpl.GetTransactionInfoByBlockNum).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the  service binding logic.
@@ -5592,9 +6776,18 @@ namespace Tron.Net.Protocol {
       serviceBinder.AddMethod(__Method_GetTransactionById, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Tron.Net.Protocol.BytesMessage, global::Tron.Net.Protocol.Transaction>(serviceImpl.GetTransactionById));
       serviceBinder.AddMethod(__Method_GetTransactionInfoById, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Tron.Net.Protocol.BytesMessage, global::Tron.Net.Protocol.TransactionInfo>(serviceImpl.GetTransactionInfoById));
       serviceBinder.AddMethod(__Method_GenerateAddress, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Tron.Net.Protocol.EmptyMessage, global::Tron.Net.Protocol.AddressPrKeyPairMessage>(serviceImpl.GenerateAddress));
-      serviceBinder.AddMethod(__Method_TriggerConstantContract, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Tron.Net.Protocol.TriggerSmartContract, global::Tron.Net.Protocol.TransactionExtention>(serviceImpl.TriggerConstantContract));
+      serviceBinder.AddMethod(__Method_GetMerkleTreeVoucherInfo, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Tron.Net.Protocol.OutputPointInfo, global::Tron.Net.Protocol.IncrementalMerkleVoucherInfo>(serviceImpl.GetMerkleTreeVoucherInfo));
+      serviceBinder.AddMethod(__Method_ScanNoteByIvk, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Tron.Net.Protocol.IvkDecryptParameters, global::Tron.Net.Protocol.DecryptNotes>(serviceImpl.ScanNoteByIvk));
+      serviceBinder.AddMethod(__Method_ScanAndMarkNoteByIvk, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Tron.Net.Protocol.IvkDecryptAndMarkParameters, global::Tron.Net.Protocol.DecryptNotesMarked>(serviceImpl.ScanAndMarkNoteByIvk));
+      serviceBinder.AddMethod(__Method_ScanNoteByOvk, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Tron.Net.Protocol.OvkDecryptParameters, global::Tron.Net.Protocol.DecryptNotes>(serviceImpl.ScanNoteByOvk));
+      serviceBinder.AddMethod(__Method_IsSpend, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Tron.Net.Protocol.NoteParameters, global::Tron.Net.Protocol.SpendResult>(serviceImpl.IsSpend));
+      serviceBinder.AddMethod(__Method_ScanShieldedTRC20NotesByIvk, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Tron.Net.Protocol.IvkDecryptTRC20Parameters, global::Tron.Net.Protocol.DecryptNotesTRC20>(serviceImpl.ScanShieldedTRC20NotesByIvk));
+      serviceBinder.AddMethod(__Method_ScanShieldedTRC20NotesByOvk, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Tron.Net.Protocol.OvkDecryptTRC20Parameters, global::Tron.Net.Protocol.DecryptNotesTRC20>(serviceImpl.ScanShieldedTRC20NotesByOvk));
+      serviceBinder.AddMethod(__Method_IsShieldedTRC20ContractNoteSpent, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Tron.Net.Protocol.NfTRC20Parameters, global::Tron.Net.Protocol.NullifierResult>(serviceImpl.IsShieldedTRC20ContractNoteSpent));
       serviceBinder.AddMethod(__Method_GetRewardInfo, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Tron.Net.Protocol.BytesMessage, global::Tron.Net.Protocol.NumberMessage>(serviceImpl.GetRewardInfo));
       serviceBinder.AddMethod(__Method_GetBrokerageInfo, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Tron.Net.Protocol.BytesMessage, global::Tron.Net.Protocol.NumberMessage>(serviceImpl.GetBrokerageInfo));
+      serviceBinder.AddMethod(__Method_TriggerConstantContract, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Tron.Net.Protocol.TriggerSmartContract, global::Tron.Net.Protocol.TransactionExtention>(serviceImpl.TriggerConstantContract));
+      serviceBinder.AddMethod(__Method_GetTransactionInfoByBlockNum, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Tron.Net.Protocol.NumberMessage, global::Tron.Net.Protocol.TransactionInfoList>(serviceImpl.GetTransactionInfoByBlockNum));
     }
 
   }
